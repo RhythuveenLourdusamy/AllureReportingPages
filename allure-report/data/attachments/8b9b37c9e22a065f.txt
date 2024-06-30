@@ -1,0 +1,147 @@
+Evaluating test cases...
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "Here is the JSON structure that meets your criteria:",
+    "This JSON specifies that the segment should contain contacts who have opened any of the specified email events after '2020-08-31'.",
+    "The contacts' custom field 'cf_cf_fdeskcustomerstatus' is '127000008364'."
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the response accurately addresses the request for contacts meeting the specified criteria without any irrelevant information.
+
+======================================================================
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context indicates 'condition': 'AND', and multiple 'matches' with 'condition': 'AND'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context includes 'type': 'email_event' with 'criteria' containing 'id', 'operation': 'open', and 'dateCondition' with 'value' and 'timezone' specified."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'id': 1936, 1940, 1941, 1942, or 1943 as specified in the sentence."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context specifies 'value': '2020-08-31T00:00:00.000Z' not '2019-08-31T18:30:00.000Z' as in the expected output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "2nd node in the retrieval context covers 'type': 'contact_field' with 'criteria' that includes 'fieldId', 'fieldName': 'cf_cf_fdeskcustomerstatus', and 'comparator': 'eq'."
+    }
+]
+
+
+Score: 0.6
+Reason: The score is 0.60 because the first node in retrieval context aligns with the condition 'AND' and the 'email_event' type with some criteria details, while the second node matches the 'contact_field' type and its criteria. However, specific 'id' values and 'dateCondition' values in the expected output are not found in the retrieval context.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.6, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.60 because the first node in retrieval context aligns with the condition 'AND' and the 'email_event' type with some criteria details, while the second node matches the 'contact_field' type and its criteria. However, specific 'id' values and 'dateCondition' values in the expected output are not found in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the response accurately addresses the request for contacts meeting the specified criteria without any irrelevant information., error: None)
+
+For test case:
+
+  - input: Get me contacts who have opened any of the following email events after the specified dates after '2020-08-31', 'Freshdesk - 01 Day - Email Configuration - 21 Days - 5 email journey', 'Freshdesk - 04 Day - Automations - 21 Days - 5 email journey', 'Freshdesk - 07 Day - Self-service - 21 Days - 5 email journey', 'Freshdesk - 15 Day - Choose a plan - 21 Days - 5 email journey', or 'Freshdesk - 21 Day - Trial about to expire - 21 Days', and whose custom field 'cf_cf_fdeskcustomerstatus' is '127000008364'
+  - actual output: Here is the JSON structure that meets your criteria:
+
+```json
+{
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "open",
+                        "id": 1,
+                        "resourceMatchType": "specificResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "anytime",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "after",
+                                "timezone": -330,
+                                "value": "2020-08-31T00:00:00.000Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "1",
+                        "comparator": "eq",
+                        "value": "127000008364",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+``` 
+
+This JSON specifies that the segment should contain contacts who have opened any of the specified email events after '2020-08-31' and whose custom field 'cf_cf_fdeskcustomerstatus' is '127000008364'.
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 1936, "operation": "open", "dateCondition": {"value": "2020-08-31T18:30:00.000Z", "operator": "after", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 1940, "operation": "open", "dateCondition": {"value": "2019-08-31T18:30:00.000Z", "operator": "after", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 1941, "operation": "open", "dateCondition": {"value": "2019-08-31T18:30:00.000Z", "operator": "after", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 1942, "operation": "open", "dateCondition": {"value": "2019-08-31T18:30:00.000Z", "operator": "after", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 1943, "operation": "open", "dateCondition": {"value": "2019-08-31T18:30:00.000Z", "operator": "after", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "OR"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008364", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "eq"}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['Here is the JSON structure that meets your criteria:\n\n```json\n{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "open",\n                        "id": 1,\n                        "resourceMatchType": "specificResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "anytime",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "after",\n                                "timezone": -330,\n                                "value": "2020-08-31T00:00:00.000Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "1",\n                        "comparator": "eq",\n                        "value": "127000008364",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}\n``` \n\nThis JSON specifies that the segment should contain contacts who have opened any of the specified email events after \'2020-08-31\' and whose custom field \'cf_cf_fdeskcustomerstatus\' is \'127000008364\'.']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x5
+cek077zns2anjodx17j/test-cases

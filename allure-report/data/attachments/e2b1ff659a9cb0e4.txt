@@ -1,0 +1,290 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The expected output refers to 'custom_event' type with specific 'filters' values, not present in the retrieval context which only contains 'chat_activity' type with different criteria."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'filters' with 'value': 'freshsales_account_activation' are not found in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'filters' with 'value': 'freshsales_import_csv' are not found in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'filters' with 'value': 'freshsales_contact_synced' are not found in the retrieval context."
+    }
+]
+
+
+Score: 0.0
+Reason: The score is 0.00 because the expected output contains sentences referencing 'custom_event' types and specific 'filters' values which are not present in any node in retrieval context, these nodes only include 'chat_activity' type with different criteria.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups is an array",
+    "First matchGroup's condition: AND",
+    "First match in first matchGroup is of type chat_activity",
+    "First match in first matchGroup has a condition AND",
+    "First match's criteria has eventName fsales_trial_event",
+    "First match's criteria has a dateCondition with operator after",
+    "First match's criteria has a dateCondition with timezone -330",
+    "First match's criteria has a dateCondition with value 2021-08-14T18:30:00.000Z",
+    "First match's criteria has an operation performed",
+    "First match's criteria has an occurrenceCondition named FIRST_OCCURRENCE",
+    "First match's criteria occurrenceCondition is of type date",
+    "First match's criteria occurrenceCondition has an operator after",
+    "First match's criteria occurrenceCondition has a value 2021-08-14T18:30:00.000Z",
+    "First match's criteria occurrenceCondition has a dateCondition with operator after",
+    "First match's criteria occurrenceCondition has a dateCondition with timezone -330",
+    "First match's criteria occurrenceCondition has a dateCondition with value 2021-08-14T18:30:00.000Z",
+    "Second match in first matchGroup is of type chat_activity",
+    "Second match in first matchGroup has a condition OR",
+    "Second match's criteria has eventName fsales_trial_event",
+    "Second match's criteria has a dateCondition with operator after",
+    "Second match's criteria has a dateCondition with timezone -330",
+    "Second match's criteria has a dateCondition with value 2021-08-14T18:30:00.000Z",
+    "Second match's criteria has an operation performed",
+    "Second match's criteria has an occurrenceCondition named FIRST_OCCURRENCE",
+    "Second match's criteria occurrenceCondition is of type date",
+    "Second match's criteria occurrenceCondition has an operator after",
+    "Second match's criteria occurrenceCondition has a value 2021-08-14T18:30:00.000Z",
+    "Second match's criteria occurrenceCondition has a dateCondition with operator after",
+    "Second match's criteria occurrenceCondition has a dateCondition with timezone -330",
+    "Second match's criteria occurrenceCondition has a dateCondition with value 2021-08-14T18:30:00.000Z"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'condition: AND' statement is too general and does not specify which criteria or events it relates to."
+    },
+    {
+        "verdict": "no",
+        "reason": "'matchGroups is an array' does not directly relate to the specific event names or dates mentioned in the input."
+    },
+    {
+        "verdict": "no",
+        "reason": "'First matchGroup's condition: AND' is too vague and does not provide information on the specific event names or dates."
+    },
+    {
+        "verdict": "no",
+        "reason": "'First match in first matchGroup is of type chat_activity' does not match the specified events in the input."
+    },
+    {
+        "verdict": "no",
+        "reason": "The specific condition for the 'First match in first matchGroup' is irrelevant without a connection to the required events."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The timezone specification does not match the input requirement and is not necessary for identifying the relevant contacts."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurrenceCondition has a dateCondition with operator after' is redundant because the main criteria already specify the operator after."
+    },
+    {
+        "verdict": "no",
+        "reason": "The timezone specification in the occurrenceCondition is not relevant to the input criteria."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "'Second match in first matchGroup is of type chat_activity' does not align with the specified events in the input."
+    },
+    {
+        "verdict": "no",
+        "reason": "'Second match in first matchGroup has a condition OR' is not relevant without context or connection to the specified events."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The timezone specification in the second match's criteria is not relevant to the input criteria."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurrenceCondition has a dateCondition with operator after' is redundant because the main criteria already specify the operator after."
+    },
+    {
+        "verdict": "no",
+        "reason": "The timezone specification in the second match's occurrenceCondition is not relevant to the input criteria."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.5806451612903226
+Reason: The score is 0.58 because the output includes several irrelevant elements and fails to focus specifically on the requested 'fsales_trial_event' with the exact event names and dates mentioned. It is not higher due to the inclusion of general statements, unrelated timezone specifications, and redundant conditions that do not directly correspond to the input.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.00 because the expected output contains sentences referencing 'custom_event' types and specific 'filters' values which are not present in any node in retrieval context, these nodes only include 'chat_activity' type with different criteria., error: None)
+  - ❌ Answer Relevancy (score: 0.5806451612903226, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.58 because the output includes several irrelevant elements and fails to focus specifically on the requested 'fsales_trial_event' with the exact event names and dates mentioned. It is not higher due to the inclusion of general statements, unrelated timezone specifications, and redundant conditions that do not directly correspond to the input., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed the 'fsales_trial_event' event with 'freshsales_account_activation' in the name after 2021-08-14T18:30:00.000Z. Additionally, get contacts who have performed the 'fsales_trial_event' event with 'freshsales_import_csv' or 'freshsales_contact_synced' in the name after 2021-08-14T18:30:00.000Z.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "chat_activity",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_event",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-08-14T18:30:00.000Z"
+                        },
+                        "operation": "performed",
+                        "occurrenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-08-14T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "after",
+                                "timezone": -330,
+                                "value": "2021-08-14T18:30:00.000Z"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "chat_activity",
+                    "condition": "OR",
+                    "criteria": {
+                        "eventName": "fsales_trial_event",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-08-14T18:30:00.000Z"
+                        },
+                        "operation": "performed",
+                        "occurrenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-08-14T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "after",
+                                "timezone": -330,
+                                "value": "2021-08-14T18:30:00.000Z"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_account_activation", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-08-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_import_csv", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-08-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_contact_synced", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-08-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "chat_activity",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_event",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-08-14T18:30:00.000Z"\n                        },\n                        "operation": "performed",\n                        "occurrenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-08-14T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "after",\n                                "timezone": -330,\n                                "value": "2021-08-14T18:30:00.000Z"\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "chat_activity",\n                    "condition": "OR",\n                    "criteria": {\n                        "eventName": "fsales_trial_event",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-08-14T18:30:00.000Z"\n                        },\n                        "operation": "performed",\n                        "occurrenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-08-14T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "after",\n                                "timezone": -330,\n                                "value": "2021-08-14T18:30:00.000Z"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 0.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0yd
+snv077zup7n0lkr7aqg/test-cases

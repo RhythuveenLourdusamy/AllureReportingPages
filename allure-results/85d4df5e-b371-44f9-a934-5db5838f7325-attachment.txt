@@ -1,0 +1,298 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'fieldType' in the 1st node is 'big_number', not 'date_time' as in the expected output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'value' and 'fieldId' in the 2nd node match the expected output ('value': '127000008897', 'fieldId': '9e1bd83e-c2c5-4277-98aa-04d605e59721')."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldType' in the 3rd node is 'big_number', not 'date_time' as in the expected output."
+    }
+]
+
+
+Score: 0.3333333333333333
+Reason: The score is 0.33 because the information for the 2nd node in the retrieval context matches the expected output, specifically the 'value' and 'fieldId' correspond to the expected 'value' of '127000008897' and 'fieldId' of '9e1bd83e-c2c5-4277-98aa-04d605e59721'. However, mismatches in 'fieldType' for the 1st and 3rd nodes in the retrieval context contribute to the lower score, as they are listed as 'big_number' instead of the expected 'date_time'.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups",
+    "condition: AND",
+    "matches",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 567249d2-4a76-4527-97ea-bcef556f674d",
+    "fieldName: cf_cf_fservicesignupdate",
+    "columnName: cf_datetime13",
+    "fieldType: big_number",
+    "comparator: after",
+    "value: 2020-10-12",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 9e1bd83e-c2c5-4277-98aa-04d605e59721",
+    "fieldName: cf_cf_fservicecustomerstatus",
+    "columnName: cf_bigint102",
+    "fieldType: big_number",
+    "comparator: eq",
+    "value: 127000008897",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 567249d2-4a76-4527-97ea-bcef556f674d",
+    "fieldName: cf_cf_fservicesignupdate",
+    "columnName: cf_datetime13",
+    "fieldType: big_number",
+    "comparator: before",
+    "value: 2021-02-02",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is completely relevant to the input, with no irrelevant statements provided.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.3333333333333333, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.33 because the information for the 2nd node in the retrieval context matches the expected output, specifically the 'value' and 'fieldId' correspond to the expected 'value' of '127000008897' and 'fieldId' of '9e1bd83e-c2c5-4277-98aa-04d605e59721'. However, mismatches in 'fieldType' for the 1st and 3rd nodes in the retrieval context contribute to the lower score, as they are listed as 'big_number' instead of the expected 'date_time'., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is completely relevant to the input, with no irrelevant statements provided., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fservicesignupdate' is after '2020-10-12', whose custom field 'cf_cf_fservicecustomerstatus' is '127000008897', and whose custom field 'cf_cf_fservicesignupdate' is before '2021-02-02'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d",
+                        "fieldName": "cf_cf_fservicesignupdate",
+                        "columnName": "cf_datetime13",
+                        "fieldType": "big_number",
+                        "comparator": "after",
+                        "value": "2020-10-12",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",
+                        "fieldName": "cf_cf_fservicecustomerstatus",
+                        "columnName": "cf_bigint102",
+                        "fieldType": "big_number",
+                        "comparator": "eq",
+                        "value": "127000008897",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d",
+                        "fieldName": "cf_cf_fservicesignupdate",
+                        "columnName": "cf_datetime13",
+                        "fieldType": "big_number",
+                        "comparator": "before",
+                        "value": "2021-02-02",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "2020-10-12T00:00:00.000Z", "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d", "fieldName": "cf_cf_fservicesignupdate", "fieldType": "date_time", "columnName": "cf_datetime_13", "comparator": "after"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008897", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "2021-02-02T00:00:00.000Z", "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d", "fieldName": "cf_cf_fservicesignupdate", "fieldType": "date_time", "columnName": "cf_datetime_13", "comparator": "before"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d",\n                        "fieldName": "cf_cf_fservicesignupdate",\n                        "columnName": "cf_datetime13",\n                        "fieldType": "big_number",\n                        "comparator": "after",\n                        "value": "2020-10-12",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",\n                        "fieldName": "cf_cf_fservicecustomerstatus",\n                        "columnName": "cf_bigint102",\n                        "fieldType": "big_number",\n                        "comparator": "eq",\n                        "value": "127000008897",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d",\n                        "fieldName": "cf_cf_fservicesignupdate",\n                        "columnName": "cf_datetime13",\n                        "fieldType": "big_number",\n                        "comparator": "before",\n                        "value": "2021-02-02",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xa
+ndv076gup7nvir3kvnz/test-cases

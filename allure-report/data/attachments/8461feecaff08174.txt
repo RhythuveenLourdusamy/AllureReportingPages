@@ -1,0 +1,198 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 'matchGroups' node contains a 'matches' node with a 'type' of 'custom_event' which has a 'filters' array including a filter with 'value': 'freshmarketer_domain_added'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'matchGroups' node contains a 'matches' node with 'criteria' having 'eventName': 'fsales_trial_events'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'matchGroups' node contains a 'matches' node with 'criteria' having 'operation': 'performed'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'matchGroups' node contains a 'matches' node with 'criteria' having a 'dateCondition' with 'value': '2021-08-14T18:30:00.000Z' and 'operator': 'after'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no 'columnName' key present in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no 'comparator' key present in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'condition' within the 'matchGroups' node is 'AND', not 'OR' as stated in the expected output."
+    }
+]
+
+
+Score: 0.5714285714285714
+Reason: The score is 0.57 because the 'matchGroups' node in retrieval context) includes relevant details like the 'type', 'filters' value, 'criteria' with 'eventName', 'operation', and 'dateCondition' that align with sentences 1, 2, 3, and 4 in the expected output. However, discrepancies such as the absence of 'columnName' and 'comparator' keys, and a mismatch in the 'condition' value, affect the score.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "custom_event",
+    "AND",
+    "eventName: fsales_trial_events",
+    "dateCondition: operator after",
+    "timezone: -330",
+    "value: 2021-08-14T18:30:00.000Z",
+    "operation: performed",
+    "FIRST_OCCURRENCE",
+    "date",
+    "operator: after",
+    "value: freshmarketer_domain_added",
+    "dateCondition: operator anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The statement 'AND' is not informative on its own regarding the contacts who performed the event with the specific name after a given date."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The statement 'AND' is not informative on its own regarding the contacts who performed the event with the specific name after a given date."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The term 'FIRST_OCCURRENCE' does not directly relate to the query for contacts based on the specified event name and date."
+    },
+    {
+        "verdict": "no",
+        "reason": "The word 'date' is too vague and does not directly answer the input regarding the specific event and date criteria."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The statement 'dateCondition: operator anytime' does not provide information relevant to the specific date condition requested in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The statement 'value: 2024-06-18T13:09:00.108Z' is not relevant to the input, which asks for events after 2021-08-14T18:30:00.000Z."
+    }
+]
+
+
+Score: 0.6
+Reason: The score is 0.60 because the output partially addresses the query about contacts related to a specific event and timeframe but includes irrelevant or imprecise details that do not fully meet the input's criteria.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.5714285714285714, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.57 because the 'matchGroups' node in retrieval context) includes relevant details like the 'type', 'filters' value, 'criteria' with 'eventName', 'operation', and 'dateCondition' that align with sentences 1, 2, 3, and 4 in the expected output. However, discrepancies such as the absence of 'columnName' and 'comparator' keys, and a mismatch in the 'condition' value, affect the score., error: None)
+  - ✅ Answer Relevancy (score: 0.6, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.60 because the output partially addresses the query about contacts related to a specific event and timeframe but includes irrelevant or imprecise details that do not fully meet the input's criteria., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed the 'fsales_trial_events' event with 'freshmarketer_domain_added' in the name after 2021-08-14T18:30:00.000Z
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-08-14T18:30:00.000Z"
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "freshmarketer_domain_added",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshmarketer_domain_added", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-08-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-08-14T18:30:00.000Z"\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "freshmarketer_domain_added",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z"\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0yi
+9dz0787up7nqnnnzua9/test-cases

@@ -1,0 +1,209 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The sentence can be attributed to the 1st node in the retrieval context, specifically the criteria object with fieldId 'd78c9637-325a-4b58-81fb-b98e186cc6d9' and value '127000008368'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 2nd node in the retrieval context has a different 'fieldId' ('f8704001-34c2-456c-b76c-7571d2315f90') compared to the expected 'fieldId' ('6c10e8c1-eb93-47c6-9550-4b1d4dc0f817')."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 2nd node's 'columnName' in the retrieval context is 'cf_datetime08', whereas the expected 'columnName' is 'cf_datetime_19'."
+    }
+]
+
+
+Score: 0.3333333333333333
+Reason: The score is 0.33 because only the 1st sentence in the expected output aligns with the 1st node in the retrieval context, while the 2nd sentence has discrepancies in both 'fieldId' and 'columnName' with the 2nd node in the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "condition: AND",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "fieldName: cf_cf_fdeskcustomerstatus",
+    "columnName: cf_bigint91",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 127000008368",
+    "secondValue: null",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: f8704001-34c2-456c-b76c-7571d2315f90",
+    "fieldName: cf_cf_fdesksignupdate",
+    "columnName: cf_datetime08",
+    "fieldType: date_time",
+    "comparator: after",
+    "value: 2020-06-01T00:00:00.000Z",
+    "secondValue: null"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is fully relevant and there are no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.3333333333333333, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.33 because only the 1st sentence in the expected output aligns with the 1st node in the retrieval context, while the 2nd sentence has discrepancies in both 'fieldId' and 'columnName' with the 2nd node in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is fully relevant and there are no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts who have the 'cf_cf_fdeskcustomerstatus' field is '127000008368' and have a 'cf_cf_fdesksignupdate' field after '2020-06-01'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "127000008368",
+                        "secondValue": null
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "f8704001-34c2-456c-b76c-7571d2315f90",
+                        "fieldName": "cf_cf_fdesksignupdate",
+                        "columnName": "cf_datetime08",
+                        "fieldType": "date_time",
+                        "comparator": "after",
+                        "value": "2020-06-01T00:00:00.000Z",
+                        "secondValue": null
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008368", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "2020-06-01T00:00:00.000Z", "fieldId": "6c10e8c1-eb93-47c6-9550-4b1d4dc0f817", "fieldName": "cf_cf_fdesksignupdate", "fieldType": "date_time", "columnName": "cf_datetime_19", "comparator": "after"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "127000008368",\n                        "secondValue": null\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "f8704001-34c2-456c-b76c-7571d2315f90",\n                        "fieldName": "cf_cf_fdesksignupdate",\n                        "columnName": "cf_datetime08",\n                        "fieldType": "date_time",\n                        "comparator": "after",\n                        "value": "2020-06-01T00:00:00.000Z",\n                        "secondValue": null\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xd
+8d90787ns2ab84ejf10/test-cases

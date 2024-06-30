@@ -1,0 +1,241 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'value' for 'cf_cf_fteamsignupdate' in the expected output is '90' with 'comparator' 'last_n_days', while in the 1st node of the retrieval context, 'value' is a specific date range with 'comparator' 'between'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'value' and 'comparator' for 'cf_cf_fteamcustomerstatus' in the expected output ('127000008969' and 'eq') match the 'value' and 'comparator' in the 2nd node of the retrieval context..."
+    }
+]
+
+
+Score: 0.5
+Reason: The score is 0.50 because the 2nd sentence in the expected output matches the 2nd node in retrieval context regarding 'value' and 'comparator' for 'cf_cf_fteamcustomerstatus'. However, the 1st sentence in the expected output does not match the 1st node in retrieval context due to a discrepancy in 'value' and 'comparator' for 'cf_cf_fteamsignupdate'.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups",
+    "condition: AND",
+    "matches",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 456bf883-0b5c-4b22-bc5a-cf038490433b",
+    "fieldName: cf_cf_fteamsignupdate",
+    "columnName: cf_datetime15",
+    "fieldType: date",
+    "comparator: between",
+    "value: 2024-06-25T00:00:00.000Z",
+    "secondValue: 2024-09-24T23:59:59.999Z",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+    "fieldName: cf_cf_fteamcustomerstatus",
+    "columnName: cf_bigint109",
+    "fieldType: number",
+    "comparator: eq",
+    "value: 127000008969",
+    "secondValue: null",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'value: 2024-06-25T00:00:00.000Z' statement made in the actual output is irrelevant to the input, which asks for contacts within the last 90 days, not a fixed date range in the future."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: 2024-09-24T23:59:59.999Z' statement made in the actual output is irrelevant to the input, which asks for contacts within the last 90 days, not a fixed date range in the future."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.9259259259259259
+Reason: The score is 0.93 because while the response was largely relevant, specifying a date range in the future is not pertinent to the request for contacts within the last 90 days.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.5, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.50 because the 2nd sentence in the expected output matches the 2nd node in retrieval context regarding 'value' and 'comparator' for 'cf_cf_fteamcustomerstatus'. However, the 1st sentence in the expected output does not match the 1st node in retrieval context due to a discrepancy in 'value' and 'comparator' for 'cf_cf_fteamsignupdate'., error: None)
+  - ✅ Answer Relevancy (score: 0.9259259259259259, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.93 because while the response was largely relevant, specifying a date range in the future is not pertinent to the request for contacts within the last 90 days., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fteamsignupdate' is within the last 90 days and whose custom field 'cf_cf_fteamcustomerstatus' is '127000008969'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "456bf883-0b5c-4b22-bc5a-cf038490433b",
+                        "fieldName": "cf_cf_fteamsignupdate",
+                        "columnName": "cf_datetime15",
+                        "fieldType": "date",
+                        "comparator": "between",
+                        "value": "2024-06-25T00:00:00.000Z",
+                        "secondValue": "2024-09-24T23:59:59.999Z",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+                        "fieldName": "cf_cf_fteamcustomerstatus",
+                        "columnName": "cf_bigint109",
+                        "fieldType": "number",
+                        "comparator": "eq",
+                        "value": "127000008969",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "90", "fieldId": "456bf883-0b5c-4b22-bc5a-cf038490433b", "fieldName": "cf_cf_fteamsignupdate", "fieldType": "date_time", "columnName": "cf_datetime_15", "comparator": "last_n_days"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008969", "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e", "fieldName": "cf_cf_fteamcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_109", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "456bf883-0b5c-4b22-bc5a-cf038490433b",\n                        "fieldName": "cf_cf_fteamsignupdate",\n                        "columnName": "cf_datetime15",\n                        "fieldType": "date",\n                        "comparator": "between",\n                        "value": "2024-06-25T00:00:00.000Z",\n                        "secondValue": "2024-09-24T23:59:59.999Z",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",\n                        "fieldName": "cf_cf_fteamcustomerstatus",\n                        "columnName": "cf_bigint109",\n                        "fieldType": "number",\n                        "comparator": "eq",\n                        "value": "127000008969",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wt
+hlp075qup7npolt6j9g/test-cases

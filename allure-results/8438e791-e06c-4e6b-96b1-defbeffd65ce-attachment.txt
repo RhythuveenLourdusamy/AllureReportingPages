@@ -1,0 +1,308 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context explicitly lists 'custom_event' in MatchType Enum and 'contains' in Comparator Enum."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context defines 'criteria' with 'eventName': 'allocadia_events', 'operation': 'performed', and 'dateCondition' with 'value': '2021-04-27T18:30:00.000Z', which is exactly what is described in this sentence."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context includes a 'condition' within MatchGroup as 'AND', which matches the condition stated in this sentence."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context defines 'filters' with 'value': '4390557', 'fieldId': 'allocadia_asset_id', and 'comparator': 'contains', which matches this sentence."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context defines multiple 'filters' with different 'value' entries ('4084321', '4545648') for 'allocadia_asset_id', and the MatchGroup has a 'condition' of 'OR'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context shows the SegmentConfiguration with an overall 'condition' of 'AND', matching the condition in this sentence."
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because every sentence in the expected output is directly supported by the corresponding information found in the 1st node in the retrieval context, ensuring a perfect match.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "import json",
+    "from typing import List, Any",
+    "from enum import Enum",
+    "class Condition(Enum): AND = "AND" OR = "OR"",
+    "class MatchType(Enum): SM_LEADGEN_EVENT = "SM_LEADGEN_EVENT" CHAT_ACTIVITY = "CHAT_ACTIVITY" contact_field = "contact_field" list_membership = "list_membership" journey_event = "journey_event" email_event = "email_event" form_event = "form_event" page_visit_event = "page_visit_event" custom_event = "custom_event" whatsapp_event = "whatsapp_event" sms_event = "sms_event" landing_page_event = "landing_page_event" shopify_event = "shopify_event" company_field = "company_field" CUSTOMER_ACTIVITY = "CUSTOMER_ACTIVITY" woocommerce_event = "woocommerce_event"",
+    "class Comparator(Enum): FIRST_OCCURRENCE = "FIRST_OCCURRENCE" LAST_OCCURRENCE = "LAST_OCCURRENCE" eq = "eq" neq = "neq" contains = "contains" does_not_contain = "does_not_contain" starts_with = "starts_with" ends_with = "ends_with" lesser_than = "lesser_than" greater_than = "greater_than" lesser_than_or_equals = "lesser_than_or_equals" greater_than_or_equals = "greater_than_or_equals" before = "before" after = "after" anytime = "anytime" is_empty = "is_empty" is_not_empty = "is_not_empty" on = "on" between = "between" before_nth_day = "before_nth_day" last_n_days = "last_n_days" last_n_days_including_today = "last_n_days_including_today" next_n_days = "next_n_days" next_n_days_including_today = "next_n_days_including_today" yesterday = "yesterday" today = "today" tomorrow = "tomorrow" last_week = "last_week" this_week = "this_week" next_week = "next_week" last_month = "last_month" this_month = "this_month" next_month = "next_month" _in = "in" not_in = "not_in"",
+    "class SegmentConfiguration: condition: Condition matchGroups: List['MatchGroup']",
+    "class MatchGroup: condition: Condition matches: List['Match']",
+    "class Match: type: MatchType condition: Condition criteria: ChatEventCriteria | CompanyFieldCriteria | ContactFieldCriteria | CustomEventCriteria | D2CEventCriteria | EmailEventCriteria | FormEventCriteria | JourneyEventCriteria | LandingPageEventCriteria | LeadGenEventCriteria | ListMembershipCriteria | PageVisitEventCriteria | SmsEventCriteria | TraitCriteria | WhatsappEventCriteria | ShopifyEventCriteria",
+    "class Filter: fieldName: str fieldId: str fieldType: str columnName: str value: object secondValue: object relativeDateCount: str comparator: Comparator",
+    "The rest of the classes and enums have been omitted for brevity",
+    "Build the segment configuration matching the given criteria",
+    "segment_config = SegmentConfiguration( condition=Condition.AND, matchGroups=[ MatchGroup( condition=Condition.AND, matches=[ Match( type=MatchType.CustomEventCriteria, condition=Condition.AND, criteria=CustomEventCriteria( eventName="allocadia_events", dateCondition=DateCondition( operator=DateCondition.DateOperator.after, timezone=-330, value="2021-04-27T18:30:00.000Z" ), operation=CustomEventCriteria.CustomEventOperation.performed, occurenceCondition=OccurrenceFilterCondition( name=OccurrenceFilterCondition.OccurrenceFilterType.count, type=OccurrenceFilterCondition.OccurenceFieldType.number, operator=Comparator.anytime, value="1", dateCondition=DateCondition( operator=DateCondition.DateOperator.anytime, timezone=-330, value="2024-06-18T13:09:00.108Z" ) ) ) ), Match( type=MatchType.CustomEventCriteria, condition=Condition.AND, criteria=CustomEventCriteria( eventName="allocadia_events", dateCondition=DateCondition( operator=DateCondition.DateOperator.after, timezone=-330, value="2021-04-27T18:30:00.000Z" ), operation=CustomEventCriteria.CustomEventOperation.performed, occurenceCondition=OccurrenceFilterCondition( name=OccurrenceFilterCondition.OccurrenceFilterType.count, type=OccurrenceFilterCondition.OccurenceFieldType.number, operator=Comparator.anytime, value="1", dateCondition=DateCondition( operator=DateCondition.DateOperator.anytime, timezone=-330, value="2024-06-18T13:09:00.108Z" ) ) ) ) ] ) ] )",
+    "Convert the segment configuration to JSON",
+    "json_segment_config = json.dumps(segment_config, default=lambda o: o.__dict__, indent=2)",
+    "print(json_segment_config)"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because there are no irrelevant statements in the actual output.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 1.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 1.00 because every sentence in the expected output is directly supported by the corresponding information found in the 1st node in the retrieval context, ensuring a perfect match., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because there are no irrelevant statements in the actual output., error: None)
+
+For test case:
+
+  - input: Get me contacts who performed 'allocadia_events' where the 'allocadia_tactic_id' contains '4371904' anytime after '2021-04-27T18:30:00.000Z' and also performed 'allocadia_events' where 'allocadia_asset_id' contains '4390557' or '4084321' or '4545648' anytime after '2021-04-27T18:30:00.000Z'
+  - actual output: import json
+from typing import List, Any
+from enum import Enum
+
+class Condition(Enum):
+    AND = "AND"
+    OR = "OR"
+
+class MatchType(Enum):
+    SM_LEADGEN_EVENT = "SM_LEADGEN_EVENT"
+    CHAT_ACTIVITY = "CHAT_ACTIVITY"
+    contact_field = "contact_field"
+    list_membership = "list_membership"
+    journey_event = "journey_event"
+    email_event = "email_event"
+    form_event = "form_event"
+    page_visit_event = "page_visit_event"
+    custom_event = "custom_event"
+    whatsapp_event = "whatsapp_event"
+    sms_event = "sms_event"
+    landing_page_event = "landing_page_event"
+    shopify_event = "shopify_event"
+    company_field = "company_field"
+    CUSTOMER_ACTIVITY = "CUSTOMER_ACTIVITY"
+    woocommerce_event = "woocommerce_event"
+
+class Comparator(Enum):
+    FIRST_OCCURRENCE = "FIRST_OCCURRENCE"
+    LAST_OCCURRENCE = "LAST_OCCURRENCE"
+    eq = "eq"
+    neq = "neq"
+    contains = "contains"
+    does_not_contain = "does_not_contain"
+    starts_with = "starts_with"
+    ends_with = "ends_with"
+    lesser_than = "lesser_than"
+    greater_than = "greater_than"
+    lesser_than_or_equals = "lesser_than_or_equals"
+    greater_than_or_equals = "greater_than_or_equals"
+    before = "before"
+    after = "after"
+    anytime = "anytime"
+    is_empty = "is_empty"
+    is_not_empty = "is_not_empty"
+    on = "on"
+    between = "between"
+    before_nth_day = "before_nth_day"
+    last_n_days = "last_n_days"
+    last_n_days_including_today = "last_n_days_including_today"
+    next_n_days = "next_n_days"
+    next_n_days_including_today = "next_n_days_including_today"
+    yesterday = "yesterday"
+    today = "today"
+    tomorrow = "tomorrow"
+    last_week = "last_week"
+    this_week = "this_week"
+    next_week = "next_week"
+    last_month = "last_month"
+    this_month = "this_month"
+    next_month = "next_month"
+    _in = "in"
+    not_in = "not_in"
+
+class SegmentConfiguration:
+    condition: Condition
+    matchGroups: List['MatchGroup']
+
+class MatchGroup:
+    condition: Condition
+    matches: List['Match']
+
+class Match:
+    type: MatchType
+    condition: Condition
+    criteria: ChatEventCriteria | CompanyFieldCriteria | ContactFieldCriteria | CustomEventCriteria | D2CEventCriteria | EmailEventCriteria | FormEventCriteria | JourneyEventCriteria | LandingPageEventCriteria | LeadGenEventCriteria | ListMembershipCriteria | PageVisitEventCriteria | SmsEventCriteria | TraitCriteria | WhatsappEventCriteria | ShopifyEventCriteria
+
+class Filter:
+    fieldName: str
+    fieldId: str
+    fieldType: str
+    columnName: str
+    value: object
+    secondValue: object
+    relativeDateCount: str
+    comparator: Comparator
+
+# The rest of the classes and enums have been omitted for brevity
+
+# Build the segment configuration matching the given criteria
+segment_config = SegmentConfiguration(
+    condition=Condition.AND,
+    matchGroups=[
+        MatchGroup(
+            condition=Condition.AND,
+            matches=[
+                Match(
+                    type=MatchType.CustomEventCriteria,
+                    condition=Condition.AND,
+                    criteria=CustomEventCriteria(
+                        eventName="allocadia_events",
+                        dateCondition=DateCondition(
+                            operator=DateCondition.DateOperator.after,
+                            timezone=-330,
+                            value="2021-04-27T18:30:00.000Z"
+                        ),
+                        operation=CustomEventCriteria.CustomEventOperation.performed,
+                        occurenceCondition=OccurrenceFilterCondition(
+                            name=OccurrenceFilterCondition.OccurrenceFilterType.count,
+                            type=OccurrenceFilterCondition.OccurenceFieldType.number,
+                            operator=Comparator.anytime,
+                            value="1",
+                            dateCondition=DateCondition(
+                                operator=DateCondition.DateOperator.anytime,
+                                timezone=-330,
+                                value="2024-06-18T13:09:00.108Z"
+                            )
+                        )
+                    )
+                ),
+                Match(
+                    type=MatchType.CustomEventCriteria,
+                    condition=Condition.AND,
+                    criteria=CustomEventCriteria(
+                        eventName="allocadia_events",
+                        dateCondition=DateCondition(
+                            operator=DateCondition.DateOperator.after,
+                            timezone=-330,
+                            value="2021-04-27T18:30:00.000Z"
+                        ),
+                        operation=CustomEventCriteria.CustomEventOperation.performed,
+                        occurenceCondition=OccurrenceFilterCondition(
+                            name=OccurrenceFilterCondition.OccurrenceFilterType.count,
+                            type=OccurrenceFilterCondition.OccurenceFieldType.number,
+                            operator=Comparator.anytime,
+                            value="1",
+                            dateCondition=DateCondition(
+                                operator=DateCondition.DateOperator.anytime,
+                                timezone=-330,
+                                value="2024-06-18T13:09:00.108Z"
+                            )
+                        )
+                    )
+                )
+            ]
+        )
+    ]
+)
+
+# Convert the segment configuration to JSON
+json_segment_config = json.dumps(segment_config, default=lambda o: o.__dict__, indent=2)
+print(json_segment_config)
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "4371904", "fieldId": "allocadia_tactic_id", "fieldName": "allocadia_tactic_id", "fieldType": "string", "columnName": "ef_string_07", "comparator": "contains"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-04-27T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "4390557", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "contains"}, {"value": "4084321", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "contains"}, {"value": "4545648", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "contains"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-04-27T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "OR"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['import json\nfrom typing import List, Any\nfrom enum import Enum\n\nclass Condition(Enum):\n    AND = "AND"\n    OR = "OR"\n\nclass MatchType(Enum):\n    SM_LEADGEN_EVENT = "SM_LEADGEN_EVENT"\n    CHAT_ACTIVITY = "CHAT_ACTIVITY"\n    contact_field = "contact_field"\n    list_membership = "list_membership"\n    journey_event = "journey_event"\n    email_event = "email_event"\n    form_event = "form_event"\n    page_visit_event = "page_visit_event"\n    custom_event = "custom_event"\n    whatsapp_event = "whatsapp_event"\n    sms_event = "sms_event"\n    landing_page_event = "landing_page_event"\n    shopify_event = "shopify_event"\n    company_field = "company_field"\n    CUSTOMER_ACTIVITY = "CUSTOMER_ACTIVITY"\n    woocommerce_event = "woocommerce_event"\n\nclass Comparator(Enum):\n    FIRST_OCCURRENCE = "FIRST_OCCURRENCE"\n    LAST_OCCURRENCE = "LAST_OCCURRENCE"\n    eq = "eq"\n    neq = "neq"\n    contains = "contains"\n    does_not_contain = "does_not_contain"\n    starts_with = "starts_with"\n    ends_with = "ends_with"\n    lesser_than = "lesser_than"\n    greater_than = "greater_than"\n    lesser_than_or_equals = "lesser_than_or_equals"\n    greater_than_or_equals = "greater_than_or_equals"\n    before = "before"\n    after = "after"\n    anytime = "anytime"\n    is_empty = "is_empty"\n    is_not_empty = "is_not_empty"\n    on = "on"\n    between = "between"\n    before_nth_day = "before_nth_day"\n    last_n_days = "last_n_days"\n    last_n_days_including_today = "last_n_days_including_today"\n    next_n_days = "next_n_days"\n    next_n_days_including_today = "next_n_days_including_today"\n    yesterday = "yesterday"\n    today = "today"\n    tomorrow = "tomorrow"\n    last_week = "last_week"\n    this_week = "this_week"\n    next_week = "next_week"\n    last_month = "last_month"\n    this_month = "this_month"\n    next_month = "next_month"\n    _in = "in"\n    not_in = "not_in"\n\nclass SegmentConfiguration:\n    condition: Condition\n    matchGroups: List[\'MatchGroup\']\n\nclass MatchGroup:\n    condition: Condition\n    matches: List[\'Match\']\n\nclass Match:\n    type: MatchType\n    condition: Condition\n    criteria: ChatEventCriteria | CompanyFieldCriteria | ContactFieldCriteria | CustomEventCriteria | D2CEventCriteria | EmailEventCriteria | FormEventCriteria | JourneyEventCriteria | LandingPageEventCriteria | LeadGenEventCriteria | ListMembershipCriteria | PageVisitEventCriteria | SmsEventCriteria | TraitCriteria | WhatsappEventCriteria | ShopifyEventCriteria\n\nclass Filter:\n    fieldName: str\n    fieldId: str\n    fieldType: str\n    columnName: str\n    value: object\n    secondValue: object\n    relativeDateCount: str\n    comparator: Comparator\n\n# The rest of the classes and enums have been omitted for brevity\n\n# Build the segment configuration matching the given criteria\nsegment_config = SegmentConfiguration(\n    condition=Condition.AND,\n    matchGroups=[\n        MatchGroup(\n            condition=Condition.AND,\n            matches=[\n                Match(\n                    type=MatchType.CustomEventCriteria,\n                    condition=Condition.AND,\n                    criteria=CustomEventCriteria(\n                        eventName="allocadia_events",\n                        dateCondition=DateCondition(\n                            operator=DateCondition.DateOperator.after,\n                            timezone=-330,\n                            value="2021-04-27T18:30:00.000Z"\n                        ),\n                        operation=CustomEventCriteria.CustomEventOperation.performed,\n                        occurenceCondition=OccurrenceFilterCondition(\n                            name=OccurrenceFilterCondition.OccurrenceFilterType.count,\n                            type=OccurrenceFilterCondition.OccurenceFieldType.number,\n                            operator=Comparator.anytime,\n                            value="1",\n                            dateCondition=DateCondition(\n                                operator=DateCondition.DateOperator.anytime,\n                                timezone=-330,\n                                value="2024-06-18T13:09:00.108Z"\n                            )\n                        )\n                    )\n                ),\n                Match(\n                    type=MatchType.CustomEventCriteria,\n                    condition=Condition.AND,\n                    criteria=CustomEventCriteria(\n                        eventName="allocadia_events",\n                        dateCondition=DateCondition(\n                            operator=DateCondition.DateOperator.after,\n                            timezone=-330,\n                            value="2021-04-27T18:30:00.000Z"\n                        ),\n                        operation=CustomEventCriteria.CustomEventOperation.performed,\n                        occurenceCondition=OccurrenceFilterCondition(\n                            name=OccurrenceFilterCondition.OccurrenceFilterType.count,\n                            type=OccurrenceFilterCondition.OccurenceFieldType.number,\n                            operator=Comparator.anytime,\n                            value="1",\n                            dateCondition=DateCondition(\n                                operator=DateCondition.DateOperator.anytime,\n                                timezone=-330,\n                                value="2024-06-18T13:09:00.108Z"\n                            )\n                        )\n                    )\n                )\n            ]\n        )\n    ]\n)\n\n# Convert the segment configuration to JSON\njson_segment_config = json.dumps(segment_config, default=lambda o: o.__dict__, indent=2)\nprint(json_segment_config)']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xw
+6jb0778up7n3sff4y5i/test-cases

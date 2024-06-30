@@ -1,0 +1,351 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context specifies an 'allocadia_tactic_id' with a 'contains' comparator and value '4078197' in 'criteria' of a 'custom_event'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context specifies an 'allocadia_asset_id' with a 'contains' comparator and value '4084321' in 'criteria' of a 'custom_event'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The date '2020-11-17T18:30:00.000Z' specified in the expected output does not match the '2024-06-18T13:09:00.108Z' found in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context specifies 'eventName' as 'allocadia_events' in 'criteria' of a 'custom_event'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context specifies 'operation' as 'performed' in 'criteria' of a 'custom_event'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' value '2020-11-17T18:30:00.000Z' in the expected output does not match any 'dateCondition' values in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context specifies 'condition' as 'AND' for the 'matchGroups'."
+    }
+]
+
+
+Score: 0.7142857142857143
+Reason: The score is 0.71 because the first node in retrieval context) matches the 'allocadia_tactic_id', 'allocadia_asset_id', 'eventName', 'operation', and 'condition' as described in sentences 1, 2, 3, 4 and 5 of the expected output. However, the 'dateCondition' from sentence 3 does not match the one in the first node in retrieval context), which impacts the recall score negatively.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "condition: AND",
+    "type: custom_event",
+    "condition: AND",
+    "eventName: allocadia_events",
+    "operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0",
+    "operation: performed",
+    "name: FIRST_OCCURRENCE",
+    "type: date",
+    "operator: anytime",
+    "value: 2024-06-18T13:09:00.108Z",
+    "operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: 8f729dbf-c5f7-4c66-959e-f7c30b2956f2",
+    "fieldName: cf_allocadia_tactic_id",
+    "columnName: cf_decimal03",
+    "fieldType: decimal",
+    "comparator: contains",
+    "value: 4078197",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: 30ac69b4-9e47-472b-8d6c-e5ced2f3f2db",
+    "fieldName: cf_asset_id",
+    "columnName: cf_decimal02",
+    "fieldType: decimal",
+    "comparator: contains",
+    "value: 4084321",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The specific value '2024-06-18T13:09:00.108Z' does not pertain to the criteria given in the input."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'name: FIRST_OCCURRENCE' statement does not directly address the input's request for contacts related to a custom event."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The specific value '2024-06-18T13:09:00.108Z' is not relevant to the input's criteria."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The specific value '2024-06-18T13:09:00.108Z' is not relevant to the input's criteria."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: ' does not provide relevant information for the input's criteria."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: ' statement does not provide relevant information for the input's criteria."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    }
+]
+
+
+Score: 0.85
+Reason: The score is 0.85 because the output mostly addresses the input's criteria for contacts related to a custom event but includes irrelevant specific values and statements not pertaining to the required event details.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.7142857142857143, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.71 because the first node in retrieval context) matches the 'allocadia_tactic_id', 'allocadia_asset_id', 'eventName', 'operation', and 'condition' as described in sentences 1, 2, 3, 4 and 5 of the expected output. However, the 'dateCondition' from sentence 3 does not match the one in the first node in retrieval context), which impacts the recall score negatively., error: None)
+  - ✅ Answer Relevancy (score: 0.85, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.85 because the output mostly addresses the input's criteria for contacts related to a custom event but includes irrelevant specific values and statements not pertaining to the required event details., error: None)
+
+For test case:
+
+  - input: Get me contacts who performed the custom event 'allocadia_events' anytime, where the event's 'allocadia_tactic_id' contains '4078197' and 'allocadia_asset_id' contains '4084321'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "allocadia_events",
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "anytime",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "8f729dbf-c5f7-4c66-959e-f7c30b2956f2",
+                        "fieldName": "cf_allocadia_tactic_id",
+                        "columnName": "cf_decimal03",
+                        "fieldType": "decimal",
+                        "comparator": "contains",
+                        "value": "4078197",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "30ac69b4-9e47-472b-8d6c-e5ced2f3f2db",
+                        "fieldName": "cf_asset_id",
+                        "columnName": "cf_decimal02",
+                        "fieldType": "decimal",
+                        "comparator": "contains",
+                        "value": "4084321",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "4078197", "fieldId": "allocadia_tactic_id", "fieldName": "allocadia_tactic_id", "fieldType": "string", "columnName": "ef_string_07", "comparator": "contains"}, {"value": "4084321", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "contains"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2020-11-17T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "allocadia_events",\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "anytime",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "8f729dbf-c5f7-4c66-959e-f7c30b2956f2",\n                        "fieldName": "cf_allocadia_tactic_id",\n                        "columnName": "cf_decimal03",\n                        "fieldType": "decimal",\n                        "comparator": "contains",\n                        "value": "4078197",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "30ac69b4-9e47-472b-8d6c-e5ced2f3f2db",\n                        "fieldName": "cf_asset_id",\n                        "columnName": "cf_decimal02",\n                        "fieldType": "decimal",\n                        "comparator": "contains",\n                        "value": "4084321",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xb
+jx4076iup7n9nk42uhw/test-cases

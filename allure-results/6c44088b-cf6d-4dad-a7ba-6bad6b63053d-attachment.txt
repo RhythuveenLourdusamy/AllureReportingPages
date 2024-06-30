@@ -1,0 +1,455 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The expected output contains 'freshsales_import_csv' with a 'contains' comparator, but the retrieval context mentions 'freshsales_import_csv' with an 'after' operator and no 'contains' comparator."
+    },
+    {
+        "verdict": "no",
+        "reason": "The expected output contains 'freshsales_imap_configured' with a 'contains' comparator and a specific date, but the retrieval context mentions 'freshsales_imap_configured' with an 'after' operator and no 'contains' comparator."
+    },
+    {
+        "verdict": "no",
+        "reason": "The expected output contains 'freshsales_pipeline_added' with a 'contains' comparator and 'not_performed' operation, but the retrieval context mentions 'freshsales_pipeline_added' with an 'after' operator and 'not_performed' operation, without a 'contains' comparator."
+    },
+    {
+        "verdict": "no",
+        "reason": "The expected output contains 'freshsales_workflow_automation_created' with a 'contains' comparator and 'not_performed' operation, but the retrieval context mentions 'freshsales_workflow_automation_created' with an 'after' operator and 'not_performed' operation, without a 'contains' comparator."
+    },
+    {
+        "verdict": "no",
+        "reason": "The expected output contains 'freshsales_sales_sequence_created' with a 'contains' comparator and 'not_performed' operation, but the retrieval context mentions 'freshsales_sales_sequence_created' with an 'after' operator and 'not_performed' operation, without a 'contains' comparator."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The expected output contains 'list_membership' criteria with 'id' '38718', 'operation' 'eq', and 'specificResource' resourceMatchType, which matches the retrieval context's 'list_membership' criteria with 'id' '3000001441', 'operation' 'eq', and 'specificResource' resourceMatchType, with the exception of the actual 'id' value."
+    }
+]
+
+
+Score: 0.16666666666666666
+Reason: The score is 0.17 because the retrieval context only partially matches one criterion related to 'list_membership' with a different 'id' value, while all custom event filters and comparators in the expected output do not directly align with the retrieval context's operators and lack of 'contains' comparators.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "condition: AND within matchGroups",
+    "type: custom_event",
+    "condition: ANY for custom_event",
+    "eventName: freshsales_import_csv",
+    "operator: after for dateCondition",
+    "timezone: -330 for dateCondition",
+    "value: 2021-06-20T18:30:00.000Z for dateCondition",
+    "relativeDateCount: 0 for dateCondition",
+    "operation: performed",
+    "name: FIRST_OCCURRENCE for occurenceCondition",
+    "type: date for occurenceCondition",
+    "operator: after for occurenceCondition",
+    "value: 2021-06-20T18:30:00.000Z for occurenceCondition",
+    "operator: anytime for dateCondition inside occurenceCondition",
+    "timezone: -330 for dateCondition inside occurenceCondition",
+    "value: 2024-06-18T13:09:00.000Z for dateCondition inside occurenceCondition",
+    "relativeDateCount: 0 for dateCondition inside occurenceCondition",
+    "eventName: freshsales_imap_configured",
+    "operator: after for dateCondition",
+    "timezone: -330 for dateCondition",
+    "value: 2021-06-14T18:30:00.000Z for dateCondition",
+    "relativeDateCount: 0 for dateCondition",
+    "operation: performed",
+    "name: FIRST_OCCURRENCE for occurenceCondition",
+    "type: date for occurenceCondition",
+    "operator: after for occurenceCondition",
+    "value: 2021-06-14T18:30:00.000Z for occurenceCondition",
+    "operator: anytime for dateCondition inside occurenceCondition",
+    "timezone: -330 for dateCondition inside occurenceCondition",
+    "value: 2024-06-18T13:09:00.000Z for dateCondition inside occurenceCondition",
+    "relativeDateCount: 0 for dateCondition inside occurenceCondition",
+    "condition: ALL for custom_event",
+    "eventName: freshsales_pipeline_added",
+    "operator: after for dateCondition",
+    "timezone: -330 for dateCondition",
+    "value: 2021-06-14T18:30:00.000Z for dateCondition",
+    "relativeDateCount: 0 for dateCondition",
+    "operation: not_performed",
+    "eventName: freshsales_workflow_automation_created",
+    "operator: after for dateCondition",
+    "timezone: -330 for dateCondition",
+    "value: 2021-06-14T18:30:00.000Z for dateCondition",
+    "relativeDateCount: 0 for dateCondition",
+    "operation: not_performed",
+    "eventName: freshsales_sales_sequence_created",
+    "operator: after for dateCondition",
+    "timezone: -330 for dateCondition",
+    "value: 2021-06-14T18:30:00.000Z for dateCondition",
+    "relativeDateCount: 0 for dateCondition",
+    "operation: not_performed",
+    "type: list_membership",
+    "condition: ANY for list_membership",
+    "id: 3000001441",
+    "resourceMatchType: specificResource",
+    "operation: eq"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the actual output precisely addresses the input query without any irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.16666666666666666, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.17 because the retrieval context only partially matches one criterion related to 'list_membership' with a different 'id' value, while all custom event filters and comparators in the expected output do not directly align with the retrieval context's operators and lack of 'contains' comparators., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the actual output precisely addresses the input query without any irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts who performed the 'freshsales_import_csv' event anytime after 2021-06-20T18:30:00.000Z, and performed the 'freshsales_imap_configured' event anytime after 2021-06-14T18:30:00.000Z, and did not perform the 'freshsales_pipeline_added', 'freshsales_workflow_automation_created', or 'freshsales_sales_sequence_created' events anytime after 2021-06-14T18:30:00.000Z, and are members of the list 'Inclusion list - Digital Customers - CRM - June 2021'
+  - actual output: {
+	"condition": "AND",
+	"matchGroups": [{
+		"condition": "AND",
+		"matches": [{
+				"type": "custom_event",
+				"condition": "ANY",
+				"criteria": {
+					"eventName": "freshsales_import_csv",
+					"dateCondition": {
+						"operator": "after",
+						"timezone": -330,
+						"value": "2021-06-20T18:30:00.000Z",
+						"relativeDateCount": 0
+					},
+					"operation": "performed",
+					"occurenceCondition": {
+						"name": "FIRST_OCCURRENCE",
+						"type": "date",
+						"operator": "after",
+						"value": "2021-06-20T18:30:00.000Z",
+						"dateCondition": {
+							"operator": "anytime",
+							"timezone": -330,
+							"value": "2024-06-18T13:09:00.000Z",
+							"relativeDateCount": 0
+						}
+					}
+				}
+			},
+			{
+				"type": "custom_event",
+				"condition": "ANY",
+				"criteria": {
+					"eventName": "freshsales_imap_configured",
+					"dateCondition": {
+						"operator": "after",
+						"timezone": -330,
+						"value": "2021-06-14T18:30:00.000Z",
+						"relativeDateCount": 0
+					},
+					"operation": "performed",
+					"occurenceCondition": {
+						"name": "FIRST_OCCURRENCE",
+						"type": "date",
+						"operator": "after",
+						"value": "2021-06-14T18:30:00.000Z",
+						"dateCondition": {
+							"operator": "anytime",
+							"timezone": -330,
+							"value": "2024-06-18T13:09:00.000Z",
+							"relativeDateCount": 0
+						}
+					}
+				}
+			},
+			{
+				"type": "custom_event",
+				"condition": "ALL",
+				"criteria": {
+					"eventName": "freshsales_pipeline_added",
+					"dateCondition": {
+						"operator": "after",
+						"timezone": -330,
+						"value": "2021-06-14T18:30:00.000Z",
+						"relativeDateCount": 0
+					},
+					"operation": "not_performed"
+				}
+			},
+			{
+				"type": "custom_event",
+				"condition": "ALL",
+				"criteria": {
+					"eventName": "freshsales_workflow_automation_created",
+					"dateCondition": {
+						"operator": "after",
+						"timezone": -330,
+						"value": "2021-06-14T18:30:00.000Z",
+						"relativeDateCount": 0
+					},
+					"operation": "not_performed"
+				}
+			},
+			{
+				"type": "custom_event",
+				"condition": "ALL",
+				"criteria": {
+					"eventName": "freshsales_sales_sequence_created",
+					"dateCondition": {
+						"operator": "after",
+						"timezone": -330,
+						"value": "2021-06-14T18:30:00.000Z",
+						"relativeDateCount": 0
+					},
+					"operation": "not_performed"
+				}
+			},
+			{
+				"type": "list_membership",
+				"condition": "ANY",
+				"criteria": {
+					"id": 3000001441,
+					"resourceMatchType": "specificResource",
+					"operation": "eq"
+				}
+			}
+		]
+	}]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_import_csv", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-06-20T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_imap_configured ", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_pipeline_added", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_workflow_automation_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_sales_sequence_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "list_membership", "filters": [], "criteria": {"id": "38718", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n\t"condition": "AND",\n\t"matchGroups": [{\n\t\t"condition": "AND",\n\t\t"matches": [{\n\t\t\t\t"type": "custom_event",\n\t\t\t\t"condition": "ANY",\n\t\t\t\t"criteria": {\n\t\t\t\t\t"eventName": "freshsales_import_csv",\n\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t"value": "2021-06-20T18:30:00.000Z",\n\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t},\n\t\t\t\t\t"operation": "performed",\n\t\t\t\t\t"occurenceCondition": {\n\t\t\t\t\t\t"name": "FIRST_OCCURRENCE",\n\t\t\t\t\t\t"type": "date",\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"value": "2021-06-20T18:30:00.000Z",\n\t\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t\t"operator": "anytime",\n\t\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t\t"value": "2024-06-18T13:09:00.000Z",\n\t\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"type": "custom_event",\n\t\t\t\t"condition": "ANY",\n\t\t\t\t"criteria": {\n\t\t\t\t\t"eventName": "freshsales_imap_configured",\n\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t"value": "2021-06-14T18:30:00.000Z",\n\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t},\n\t\t\t\t\t"operation": "performed",\n\t\t\t\t\t"occurenceCondition": {\n\t\t\t\t\t\t"name": "FIRST_OCCURRENCE",\n\t\t\t\t\t\t"type": "date",\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"value": "2021-06-14T18:30:00.000Z",\n\t\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t\t"operator": "anytime",\n\t\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t\t"value": "2024-06-18T13:09:00.000Z",\n\t\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t\t}\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"type": "custom_event",\n\t\t\t\t"condition": "ALL",\n\t\t\t\t"criteria": {\n\t\t\t\t\t"eventName": "freshsales_pipeline_added",\n\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t"value": "2021-06-14T18:30:00.000Z",\n\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t},\n\t\t\t\t\t"operation": "not_performed"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"type": "custom_event",\n\t\t\t\t"condition": "ALL",\n\t\t\t\t"criteria": {\n\t\t\t\t\t"eventName": "freshsales_workflow_automation_created",\n\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t"value": "2021-06-14T18:30:00.000Z",\n\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t},\n\t\t\t\t\t"operation": "not_performed"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"type": "custom_event",\n\t\t\t\t"condition": "ALL",\n\t\t\t\t"criteria": {\n\t\t\t\t\t"eventName": "freshsales_sales_sequence_created",\n\t\t\t\t\t"dateCondition": {\n\t\t\t\t\t\t"operator": "after",\n\t\t\t\t\t\t"timezone": -330,\n\t\t\t\t\t\t"value": "2021-06-14T18:30:00.000Z",\n\t\t\t\t\t\t"relativeDateCount": 0\n\t\t\t\t\t},\n\t\t\t\t\t"operation": "not_performed"\n\t\t\t\t}\n\t\t\t},\n\t\t\t{\n\t\t\t\t"type": "list_membership",\n\t\t\t\t"condition": "ANY",\n\t\t\t\t"criteria": {\n\t\t\t\t\t"id": 3000001441,\n\t\t\t\t\t"resourceMatchType": "specificResource",\n\t\t\t\t\t"operation": "eq"\n\t\t\t\t}\n\t\t\t}\n\t\t]\n\t}]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0y2
+zyt077kup7ny7kbql5f/test-cases

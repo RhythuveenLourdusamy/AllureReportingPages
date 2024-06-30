@@ -1,0 +1,243 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'id' in the 1st node does not match with '4203' as given in the expected output; it is '4086'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node in the retrieval context mentions the 'url' with 'operation': 'not_visited' and 'comparator': 'contains' which matches the expected output."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' 'value' in the 2nd node is '2024-06-18T13:09:00.108Z', not '2019-08-10T18:30:00.000Z' as in the expected output."
+    }
+]
+
+
+Score: 0.3333333333333333
+Reason: The score is 0.33 because sentence 1 in the expected output is not supported by the 1st node in retrieval context due to a mismatch in 'id' values, and sentence 2 is partially supported by the 2nd node in retrieval context, which correctly includes the 'url' criteria but has a discrepancy in the 'dateCondition' value.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups is a list",
+    "The first item in matchGroups has a condition: AND",
+    "matches is a list within the first item of matchGroups",
+    "The first item in matches is of type list_membership",
+    "The first item in matches has a condition: AND",
+    "criteria within the first item includes an id of 4086",
+    "criteria operation within the first item is eq",
+    "The second item in matches is of type page_visit_event",
+    "The second item in matches has a condition: AND",
+    "criteria within the second item includes a url: https://www.freshworks.com/freshsales-crm/signup/",
+    "The operation for the url criteria in the second item is not_visited",
+    "The comparator for the url criteria in the second item is contains",
+    "dateCondition within the url criteria includes an operator: anytime",
+    "timezone for the dateCondition within the url criteria is -330",
+    "value for the dateCondition within the url criteria is 2024-06-18T13:09:00.108Z",
+    "relativeDateCount for the dateCondition within the url criteria is 0",
+    "occurenceCondition within the url criteria includes a name: OccurrenceFilterType",
+    "type for the occurenceCondition within the url criteria is number",
+    "operator for the occurenceCondition within the url criteria is greater_than_or_equals",
+    "value for the occurenceCondition within the url criteria is 1",
+    "dateCondition within the occurenceCondition includes an operator: anytime",
+    "timezone for the dateCondition within the occurenceCondition is -330",
+    "value for the dateCondition within the occurenceCondition is 2024-06-18T13:09:00.108Z",
+    "relativeDateCount for the dateCondition within the occurenceCondition is 0"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'value for the dateCondition within the url criteria' specifying a future date is irrelevant to the input which does not require a specific date to be mentioned."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'value for the dateCondition within the occurenceCondition' specifying a future date is irrelevant to the input which does not require a specific date to be mentioned."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.92
+Reason: The score is 0.92 because the output included specific future dates which were not required by the input, slightly reducing the relevancy of the response.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.3333333333333333, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.33 because sentence 1 in the expected output is not supported by the 1st node in retrieval context due to a mismatch in 'id' values, and sentence 2 is partially supported by the 2nd node in retrieval context, which correctly includes the 'url' criteria but has a discrepancy in the 'dateCondition' value., error: None)
+  - ✅ Answer Relevancy (score: 0.92, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.92 because the output included specific future dates which were not required by the input, slightly reducing the relevancy of the response., error: None)
+
+For test case:
+
+  - input: Get me contacts who did not visit the URL 'https://www.freshworks.com/freshsales-crm/signup/' anytime and are members of the list 'FSA_Salesforce Ebook Download Email Nurture Journey'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 4086,
+                        "operation": "eq"
+                    }
+                },
+                {
+                    "type": "page_visit_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "url": "https://www.freshworks.com/freshsales-crm/signup/",
+                        "operation": "not_visited",
+                        "comparator": "contains",
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "OccurrenceFilterType",
+                            "type": "number",
+                            "operator": "greater_than_or_equals",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "page_visit_event", "filters": [], "criteria": {"url": "https://www.freshworks.com/freshsales-crm/signup/", "operation": "not_visited", "comparator": "contains", "dateCondition": {"value": "2019-08-10T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "list_membership", "filters": [], "criteria": {"id": "4203", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 4086,\n                        "operation": "eq"\n                    }\n                },\n                {\n                    "type": "page_visit_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "url": "https://www.freshworks.com/freshsales-crm/signup/",\n                        "operation": "not_visited",\n                        "comparator": "contains",\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "OccurrenceFilterType",\n                            "type": "number",\n                            "operator": "greater_than_or_equals",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wx
+gsf077rns2a3ya1lm3v/test-cases

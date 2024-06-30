@@ -1,0 +1,350 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The expected output contains criteria with 'eventName': 'fsales_trial_event', which is not present in any of the nodes in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The expected output specifies 'operation': 'performed'/'not_performed' with respect to 'eventName', which differs from the 'operation': 'PERFORMED'/'NOT_PERFORMED' in the context of 'id' in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'dateCondition' specifying 'value': '2021-06-20T18:30:00.000Z' and 'timezone': -330 is found in the 2nd node of the retrieval context with 'value': '2021-06-20T18:30:00.000Z' and 'timezone': -330."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'value': 'freshsales_import_csv' and comparator 'contains' are found in the 2nd node of the retrieval context under 'id': 'freshsales_import_csv'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'dateCondition' specifying 'value': '2021-06-14T18:30:00.000Z' and 'timezone': -330 is found in the 3rd, 4th, and 5th nodes of the retrieval context with 'value': '2021-06-14T18:30:00.000Z' and 'timezone': -330."
+    },
+    {
+        "verdict": "no",
+        "reason": "The expected output mentions 'type': 'custom_event' which does not match any 'type' in the retrieval context, which includes 'list_membership' and 'journey_event'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'criteria' with 'id': '38718' matches the 'list_membership' node in the retrieval context with 'id': 38718."
+    }
+]
+
+
+Score: 0.5714285714285714
+Reason: The score is 0.57 because while specific 'dateCondition' values and timezones align with nodes 2, 3, 4, and 5 in the retrieval context, and the 'list_membership' criteria matches node 6, the 'eventName' and 'operation' context is not found in any nodes, and the 'type' specified is not present, indicating a moderate level of recall from the context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "Here is the structure for the segment JSON that matches the given criteria:",
+    "The condition is 'AND'.",
+    "There is a matchGroup with a condition 'AND'.",
+    "Within the matchGroup, the first match is of type 'list_membership'.",
+    "The list_membership match has a condition 'AND'.",
+    "The criteria for list_membership includes an id of 38718, a resourceMatchType of 'specificResource', and an operation 'eq'.",
+    "The second match is of type 'journey_event'.",
+    "The journey_event match has a condition 'AND'.",
+    "The criteria for this journey_event includes an id 'freshsales_import_csv', an operation 'PERFORMED'.",
+    "The dateCondition for this journey_event has an operator 'after', a timezone of -330, and a value '2021-06-20T18:30:00.000Z'.",
+    "The relativeDateCount for this dateCondition is 0.",
+    "The occurenceCondition for this journey_event is named 'count', is of type 'date', and has an operator 'anytime'.",
+    "The value for this occurenceCondition is '2024-06-18T13:09:00.108Z'.",
+    "The dateCondition for the occurenceCondition has an operator 'anytime', a timezone of -330, and a value '2024-06-18T13:09:00.108Z'.",
+    "The relativeDateCount for this occurenceCondition's dateCondition is 0.",
+    "The third match is also of type 'journey_event' with a condition 'AND'.",
+    "This journey_event's criteria includes an id 'freshsales_imap_configured', an operation 'NOT_PERFORMED'.",
+    "The dateCondition for this journey_event also has an operator 'after', a timezone of -330, and a value '2021-06-14T18:30:00.000Z'.",
+    "The relativeDateCount for this dateCondition is also 0.",
+    "The occurenceCondition for this journey_event is similar to the one mentioned earlier.",
+    "The fourth match is another 'journey_event' with a condition 'AND'.",
+    "This journey_event's criteria includes an id 'freshsales_pipeline_added', an operation 'NOT_PERFORMED'.",
+    "The dateCondition and occurenceCondition for this journey_event are similar to the previous ones.",
+    "The fifth match is again a 'journey_event' with a condition 'AND'.",
+    "This journey_event's criteria includes an id 'freshsales_workflow_automation_created', an operation 'NOT_PERFORMED'.",
+    "The dateCondition and occurenceCondition for this journey_event are similar to the previous ones."
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The statement provides an occurrence condition with a future date value, which is not relevant to the input's criteria for past events."
+    },
+    {
+        "verdict": "no",
+        "reason": "The statement provides an occurrence condition with a future date value, which is not relevant to the input's criteria for past events."
+    },
+    {
+        "verdict": "no",
+        "reason": "The statement provides an occurrence condition with a future date value, which is not relevant to the input's criteria for past events."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.8888888888888888
+Reason: The score is 0.89 because while the output is mostly relevant, it includes references to future dates which are not pertinent to the input's specific request for information about past events.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.5714285714285714, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.57 because while specific 'dateCondition' values and timezones align with nodes 2, 3, 4, and 5 in the retrieval context, and the 'list_membership' criteria matches node 6, the 'eventName' and 'operation' context is not found in any nodes, and the 'type' specified is not present, indicating a moderate level of recall from the context., error: None)
+  - ✅ Answer Relevancy (score: 0.8888888888888888, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.89 because while the output is mostly relevant, it includes references to future dates which are not pertinent to the input's specific request for information about past events., error: None)
+
+For test case:
+
+  - input: Get me contacts who are members of list 'Inclusion list - Digital Customers - CRM - June 2021', have performed the 'freshsales_import_csv' event anytime after 2021-06-20T18:30:00.000Z, and have not performed the events 'freshsales_imap_configured', 'freshsales_pipeline_added', 'freshsales_workflow_automation_created', or 'freshsales_sales_sequence_created' anytime after 2021-06-14T18:30:00.000Z
+  - actual output: Here is the structure for the segment JSON that matches the given criteria:
+
+```json
+{
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 38718,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                },
+                {
+                    "type": "journey_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": "freshsales_import_csv",
+                        "operation": "PERFORMED",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-20T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "date",
+                            "operator": "anytime",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "journey_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": "freshsales_imap_configured",
+                        "operation": "NOT_PERFORMED",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "date",
+                            "operator": "anytime",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "journey_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": "freshsales_pipeline_added",
+                        "operation": "NOT_PERFORMED",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "date",
+                            "operator": "anytime",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "journey_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": "freshsales_workflow_automation_created",
+                        "operation": "NOT_PERFORMED",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "date",
+                            "operator": "anytime",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_import_csv", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-06-20T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_imap_configured ", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_pipeline_added", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_workflow_automation_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_sales_sequence_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "list_membership", "filters": [], "criteria": {"id": "38718", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['Here is the structure for the segment JSON that matches the given criteria:\n\n```json\n{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 38718,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                },\n                {\n                    "type": "journey_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": "freshsales_import_csv",\n                        "operation": "PERFORMED",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-20T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "date",\n                            "operator": "anytime",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "journey_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": "freshsales_imap_configured",\n                        "operation": "NOT_PERFORMED",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "date",\n                            "operator": "anytime",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "journey_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": "freshsales_pipeline_added",\n                        "operation": "NOT_PERFORMED",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "date",\n                            "operator": "anytime",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "journey_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": "freshsales_workflow_automation_created",\n                        "operation": "NOT_PERFORMED",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "date",\n                            "operator": "anytime",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}\n```']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xy
+o6g077cup7n41z30hkg/test-cases

@@ -1,0 +1,258 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context mentions 'fsales_trial_events' with a 'dateCondition' of 'after 2021-10-14T18:30:00.000Z'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context mentions 'freshmarketer_website_tracking_configured' and 'fsales_trial_events' as part of the 'criteria'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context mentions 'freshsales_account_activation' and 'fsales_trial_event' as part of the 'criteria'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context mentions 'freshsales_account_activation' with a 'dateCondition' of 'after 2021-10-14T18:30:00.000Z'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not include 'ef_string_01' or any 'comparator' fields in its nodes."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no 'fsales_trial_events' with 'operation' of 'performed' and the specific 'dateCondition' node in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no 'fsales_trial_event' with 'operation' of 'performed' and the specific 'dateCondition' node in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain any mention of 'filters' with a 'fieldId', 'fieldName', 'fieldType', 'columnName', or 'comparator'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain any mention of 'filters' with a 'fieldId', 'fieldName', 'fieldType', 'columnName', or 'comparator'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain any nodes with a 'condition' key set to 'AND' that directly corresponds to the specified 'matches'."
+    }
+]
+
+
+Score: 0.4
+Reason: The score is 0.40 because the 1st node in the retrieval context aligns with the event names and date conditions mentioned in sentences 1 and 3 of the expected output. However, the lack of specific 'filters' fields such as 'ef_string_01' and 'comparator', and the absence of a direct correlation to 'condition' keys and 'matches', as noted in the sentences 2 and 4, explain the incomplete recall.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups",
+    "condition: AND",
+    "matches",
+    "type: CustomEvent",
+    "condition: AND",
+    "criteria",
+    "eventName: fsales_trial_events",
+    "dateCondition: operator: after, timezone: -330, value: 2021-10-14T18:30:00.000Z, relativeDateCount: 0",
+    "operation: performed",
+    "occurenceCondition: name: FIRST_OCCURRENCE, type: date, operator: after, value: 2021-10-14T18:30:00.000Z, dateCondition: operator: after, timezone: -330, value: 2021-10-14T18:30:00.000Z, relativeDateCount: 0",
+    "type: CustomEvent",
+    "condition: AND",
+    "criteria",
+    "eventName: fsales_trial_event",
+    "dateCondition: operator: after, timezone: -330, value: 2021-10-14T18:30:00.000Z, relativeDateCount: 0",
+    "operation: performed",
+    "occurenceCondition: name: FIRST_OCCURRENCE, type: date, operator: after, value: 2021-10-14T18:30:00.000Z, dateCondition: operator: after, timezone: -330, value: 2021-10-14T18:30:00.000Z, relativeDateCount: 0"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'matchGroups' statement made in the actual output does not directly relate to the specific criteria of events and conditions requested in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'matches' statement made in the actual output is too vague and does not specifically address the detailed conditions of the events requested in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.8947368421052632
+Reason: The score is 0.89 because the output is highly relevant, providing information on the events and conditions specified, but it includes some statements that do not directly relate to the specific criteria of events and conditions requested in the input, slightly reducing its relevancy.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.4, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.40 because the 1st node in the retrieval context aligns with the event names and date conditions mentioned in sentences 1 and 3 of the expected output. However, the lack of specific 'filters' fields such as 'ef_string_01' and 'comparator', and the absence of a direct correlation to 'condition' keys and 'matches', as noted in the sentences 2 and 4, explain the incomplete recall., error: None)
+  - ✅ Answer Relevancy (score: 0.8947368421052632, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.89 because the output is highly relevant, providing information on the events and conditions specified, but it includes some statements that do not directly relate to the specific criteria of events and conditions requested in the input, slightly reducing its relevancy., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed the 'fsales_trial_events' event with 'freshmarketer_website_tracking_configured' in the name and the 'fsales_trial_event' event with 'freshsales_account_activation' in the name, both after 2021-10-14T18:30:00.000Z.
+
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "CustomEvent",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-10-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-10-14T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "after",
+                                "timezone": -330,
+                                "value": "2021-10-14T18:30:00.000Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "CustomEvent",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_event",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-10-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-10-14T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "after",
+                                "timezone": -330,
+                                "value": "2021-10-14T18:30:00.000Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshmarketer_website_tracking_configured", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-10-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_account_activation", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-10-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "CustomEvent",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-10-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-10-14T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "after",\n                                "timezone": -330,\n                                "value": "2021-10-14T18:30:00.000Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "CustomEvent",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_event",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-10-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-10-14T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "after",\n                                "timezone": -330,\n                                "value": "2021-10-14T18:30:00.000Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0ye
+h3r0797ns2a6j41qxag/test-cases

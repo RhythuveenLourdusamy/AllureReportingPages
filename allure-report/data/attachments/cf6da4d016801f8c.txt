@@ -1,0 +1,475 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context matches the 'type', 'fieldId', 'fieldName', 'fieldType', 'comparator', and 'value'... 2nd node also matches 'fieldName', 'fieldType', 'comparator', and 'value'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context matches the 'type', 'fieldId', 'fieldName', 'fieldType', 'comparator', and 'value'... 4th node also matches 'fieldName', 'fieldType', 'comparator', and 'value'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "None of the nodes in the retrieval context specify 'type' as 'email_event' with 'id' as 11186, 11156, or 11191 with matching 'operation' and 'dateCondition'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 7th node in the retrieval context matches the 'type', 'fieldId', 'fieldName', 'fieldType', 'comparator', and 'value'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st and 2nd nodes in the retrieval context match the 'type', 'fieldId', 'fieldName', 'fieldType', 'comparator', and 'value'... 3rd and 4th nodes also match 'fieldName', 'fieldType', 'comparator', and 'value'..."
+    }
+]
+
+
+Score: 0.8
+Reason: The score is 0.80 because nodes in retrieval context correctly match the majority of criteria for types and values for contact fields, aligning with sentence numbers 1, 3, and 4 in the expected output, but fail to match the 'email_event' type with the specific 'id' values and conditions, as indicated by the absence in the retrieval context, which corresponds with sentence number 2 in the expected output.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "contact_field",
+    "AND",
+    "fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "fieldName: cf_cf_fdeskcustomerstatus",
+    "columnName: cf_bigint91",
+    "fieldType: dropdown",
+    "comparator: neq",
+    "value: 127000008364",
+    "secondValue: null",
+    "repeatAnnually: false",
+    "contact_field",
+    "AND",
+    "fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "fieldName: cf_cf_fdeskcustomerstatus",
+    "columnName: cf_bigint91",
+    "fieldType: dropdown",
+    "comparator: neq",
+    "value: 127000008365",
+    "secondValue: null",
+    "repeatAnnually: false",
+    "contact_field",
+    "AND",
+    "fieldId: 9e1bd83e-c2c5-4277-98aa-04d605e59721",
+    "fieldName: cf_cf_fservicecustomerstatus",
+    "columnName: cf_bigint102",
+    "fieldType: dropdown",
+    "comparator: neq",
+    "value: 127000008899",
+    "secondValue: null",
+    "repeatAnnually: false",
+    "contact_field",
+    "AND",
+    "fieldId: 9e1bd83e-c2c5-4277-98aa-04d605e59721",
+    "fieldName: cf_cf_fservicecustomerstatus",
+    "columnName: cf_bigint102",
+    "fieldType: dropdown",
+    "comparator: neq",
+    "value: 127000008898",
+    "secondValue: null",
+    "repeatAnnually: false",
+    "email_event",
+    "AND",
+    "operation: not_delivered",
+    "id: 0",
+    "resourceMatchType: anyResource",
+    "name: count",
+    "operator: anytime",
+    "value: 2024-06-18T13:09:00.108Z",
+    "timezone: -330",
+    "secondValue: null",
+    "relativeDateCount: 0",
+    "contact_field",
+    "AND",
+    "fieldId: 62e2fa34-868a-47cc-aaad-8da6e0ce7105",
+    "fieldName: cf_cf_customermarketing-contactstatus",
+    "columnName: cf_bigint85",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 127000008356",
+    "secondValue: null",
+    "repeatAnnually: false",
+    "contact_field",
+    "AND",
+    "fieldId: 99f95d1d-2c2e-4d38-a389-2cc3126d8842",
+    "fieldName: cf_company_email_domain",
+    "columnName: cf_str07",
+    "fieldType: text",
+    "comparator: does_not_contain",
+    "value: @freshworks.com",
+    "secondValue: null",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output fully addresses the input and there are no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 0.8, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.80 because nodes in retrieval context correctly match the majority of criteria for types and values for contact fields, aligning with sentence numbers 1, 3, and 4 in the expected output, but fail to match the 'email_event' type with the specific 'id' values and conditions, as indicated by the absence in the retrieval context, which corresponds with sentence number 2 in the expected output., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output fully addresses the input and there are no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fchatcustomerstatus' is '127000008356' and who did not receive any of the following email events anytime: 'Freshworks - CCPA - Notification', 'CCPA - FS - Reachout', 'FCaller CCPA' and whose email does not contain '@freshworks.com', and whose custom field 'cf_cf_fdeskcustomerstatus' does not equal '127000008364' or '127000008365' and 'cf_cf_fservicecustomerstatus' does not equal '127000008899' or '127000008898'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "dropdown",
+                        "comparator": "neq",
+                        "value": "127000008364",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "dropdown",
+                        "comparator": "neq",
+                        "value": "127000008365",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",
+                        "fieldName": "cf_cf_fservicecustomerstatus",
+                        "columnName": "cf_bigint102",
+                        "fieldType": "dropdown",
+                        "comparator": "neq",
+                        "value": "127000008899",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",
+                        "fieldName": "cf_cf_fservicecustomerstatus",
+                        "columnName": "cf_bigint102",
+                        "fieldType": "dropdown",
+                        "comparator": "neq",
+                        "value": "127000008898",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "not_delivered",
+                        "id": 0,
+                        "resourceMatchType": "anyResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "operator": "anytime",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "secondValue": null,
+                                "relativeDateCount": 0
+                            }
+                        },
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "secondValue": null,
+                            "relativeDateCount": 0
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "62e2fa34-868a-47cc-aaad-8da6e0ce7105",
+                        "fieldName": "cf_cf_customermarketing-contactstatus",
+                        "columnName": "cf_bigint85",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "127000008356",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "99f95d1d-2c2e-4d38-a389-2cc3126d8842",
+                        "fieldName": "cf_company_email_domain",
+                        "columnName": "cf_str07",
+                        "fieldType": "text",
+                        "comparator": "does_not_contain",
+                        "value": "@freshworks.com",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008356", "fieldId": "3d378db9-256b-465f-8f50-8d727ae30ff8", "fieldName": "cf_cf_fchatcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_090", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 11186, "operation": "not_sent", "dateCondition": {"value": "2019-12-29T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 11156, "operation": "not_sent", "dateCondition": {"value": "2019-12-29T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 11191, "operation": "not_sent", "dateCondition": {"value": "2019-12-29T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "OR"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008364", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "neq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008899", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "neq", "secondValue": ""}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008898", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "neq", "secondValue": ""}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008365", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "neq", "secondValue": ""}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "dropdown",\n                        "comparator": "neq",\n                        "value": "127000008364",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "dropdown",\n                        "comparator": "neq",\n                        "value": "127000008365",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",\n                        "fieldName": "cf_cf_fservicecustomerstatus",\n                        "columnName": "cf_bigint102",\n                        "fieldType": "dropdown",\n                        "comparator": "neq",\n                        "value": "127000008899",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",\n                        "fieldName": "cf_cf_fservicecustomerstatus",\n                        "columnName": "cf_bigint102",\n                        "fieldType": "dropdown",\n                        "comparator": "neq",\n                        "value": "127000008898",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "not_delivered",\n                        "id": 0,\n                        "resourceMatchType": "anyResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "operator": "anytime",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "secondValue": null,\n                                "relativeDateCount": 0\n                            }\n                        },\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "secondValue": null,\n                            "relativeDateCount": 0\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "62e2fa34-868a-47cc-aaad-8da6e0ce7105",\n                        "fieldName": "cf_cf_customermarketing-contactstatus",\n                        "columnName": "cf_bigint85",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "127000008356",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "99f95d1d-2c2e-4d38-a389-2cc3126d8842",\n                        "fieldName": "cf_company_email_domain",\n                        "columnName": "cf_str07",\n                        "fieldType": "text",\n                        "comparator": "does_not_contain",\n                        "value": "@freshworks.com",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x3
+7ls077xns2ax94o6hy7/test-cases

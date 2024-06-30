@@ -1,0 +1,164 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The expected output can be attributed to the 1st node in the retrieval context, specifically the criteria part with 'fieldId': '8b745e0f-82c8-42d2-a79f-1d5f87d74db1' and 'value': 'fdwhatsapp'..."
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because every aspect of the expected output is perfectly accounted for in the retrieval context, particularly the criteria in the 1st node with 'fieldId': '8b745e0f-82c8-42d2-a79f-1d5f87d74db1' and 'value': 'fdwhatsapp'. Great job on achieving complete alignment!
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups: [ ... ]",
+    "condition: AND within matchGroups",
+    "matches: [ ... ] within matchGroups",
+    "type: contact_field",
+    "condition: AND within matches",
+    "criteria: { ... }",
+    "fieldId: 8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+    "fieldName: cf_cf_fdesksignupreferrer",
+    "columnName: cf_str29",
+    "fieldType: text",
+    "comparator: contains",
+    "value: fdwhatsapp",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: ' statement made in the actual output is irrelevant because the original input asks for a specific condition where a field contains a value, not about a second value."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually: false' statement made in the actual output is irrelevant because the original input asks for contacts with a specific custom field value, not about the repetition frequency of an event or value."
+    }
+]
+
+
+Score: 0.8666666666666667
+Reason: The score is 0.87 because the output mostly addressed the request for contacts with a specific custom field containing 'fdwhatsapp'. However, it included unnecessary details about a 'secondValue' and 'repeatAnnually', which were not relevant to the input query.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 1.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 1.00 because every aspect of the expected output is perfectly accounted for in the retrieval context, particularly the criteria in the 1st node with 'fieldId': '8b745e0f-82c8-42d2-a79f-1d5f87d74db1' and 'value': 'fdwhatsapp'. Great job on achieving complete alignment!, error: None)
+  - ✅ Answer Relevancy (score: 0.8666666666666667, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.87 because the output mostly addressed the request for contacts with a specific custom field containing 'fdwhatsapp'. However, it included unnecessary details about a 'secondValue' and 'repeatAnnually', which were not relevant to the input query., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fdesksignupreferrer' contains 'fdwhatsapp'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "fdwhatsapp",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "fdwhatsapp", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains", "secondValue": ""}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "fdwhatsapp",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x6
+v6p076cup7n905vdr7v/test-cases

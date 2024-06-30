@@ -1,0 +1,188 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The criterion of 'fieldId' equals '76503c99-bf8e-4b4b-b7bf-0812e05383ba' can be attributed to the 1st node which mentions the 'fieldId': '624d44c6-c0d1-437b-ad51-ac5fdccc8674'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criterion of 'fieldName' being 'cf_campaign' can be attributed to the 1st node which mentions the 'fieldName': 'cf_marketing_campaign'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criterion of 'fieldType' being 'dropdown' can be attributed to the 1st node which mentions the 'fieldType': 'dropdown'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criterion of 'columnName' being 'cf_dropdown_187' can be attributed to the 1st node which mentions the 'columnName': 'cf_str23'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criterion of 'comparator' being 'eq' can be attributed to the 1st node which mentions the 'comparator': 'eq'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criterion of 'value' being '89613c34-fad7-4663-9976-dc37e9e785e2' can be attributed to the 1st node which mentions the 'value': '89613c34-fad7-4663-9976-dc37e9e785e2'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The condition 'OR' at the matchGroups level does not appear in the retrieval context which only specifies 'AND' as the condition."
+    }
+]
+
+
+Score: 0.8571428571428571
+Reason: The score is 0.86 because the majority of criteria from sentence 1 in the expected output, such as 'fieldId', 'fieldName', 'fieldType', 'columnName', 'comparator', and 'value', are directly attributed to the 1st node in the retrieval context. However, the 'OR' condition at the matchGroups level does not align with the 'AND' condition specified in the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups",
+    "condition: AND",
+    "matches",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 624d44c6-c0d1-437b-ad51-ac5fdccc8674",
+    "fieldName: cf_marketing_campaign",
+    "columnName: cf_str23",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 89613c34-fad7-4663-9976-dc37e9e785e2",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldName: cf_marketing_campaign' statement is not relevant to the input which specifies the field 'cf_campaign'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'columnName: cf_str23' statement is not relevant as the input does not ask for column names but rather for contacts matching a specific field condition."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldType: dropdown' statement does not directly address the input which is about retrieving contacts with a specific 'cf_campaign' value."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: ' statement is irrelevant as the input only specifies a single value for the 'cf_campaign' field."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually: false' statement does not pertain to the input's request for contact information based on a field value condition."
+    }
+]
+
+
+Score: 0.6666666666666666
+Reason: The score is 0.67 because the output provided some relevant information about obtaining contacts based on a specified field criterion, but it also included several statements unrelated to the specific field 'cf_campaign', unnecessary details about field types, column names, and additional values that were not requested in the input.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 0.8571428571428571, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.86 because the majority of criteria from sentence 1 in the expected output, such as 'fieldId', 'fieldName', 'fieldType', 'columnName', 'comparator', and 'value', are directly attributed to the 1st node in the retrieval context. However, the 'OR' condition at the matchGroups level does not align with the 'AND' condition specified in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 0.6666666666666666, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.67 because the output provided some relevant information about obtaining contacts based on a specified field criterion, but it also included several statements unrelated to the specific field 'cf_campaign', unnecessary details about field types, column names, and additional values that were not requested in the input., error: None)
+
+For test case:
+
+  - input: Get me contacts where the field 'cf_campaign' equals '89613c34-fad7-4663-9976-dc37e9e785e2
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "624d44c6-c0d1-437b-ad51-ac5fdccc8674",
+                        "fieldName": "cf_marketing_campaign",
+                        "columnName": "cf_str23",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "89613c34-fad7-4663-9976-dc37e9e785e2",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "89613c34-fad7-4663-9976-dc37e9e785e2", "fieldId": "76503c99-bf8e-4b4b-b7bf-0812e05383ba", "fieldName": "cf_campaign", "fieldType": "dropdown", "columnName": "cf_dropdown_187", "comparator": "eq"}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "624d44c6-c0d1-437b-ad51-ac5fdccc8674",\n                        "fieldName": "cf_marketing_campaign",\n                        "columnName": "cf_str23",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "89613c34-fad7-4663-9976-dc37e9e785e2",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xv
+7f8078rns2a7ph7jle8/test-cases

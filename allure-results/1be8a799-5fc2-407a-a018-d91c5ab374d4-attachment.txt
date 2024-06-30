@@ -1,0 +1,657 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fteamcustomerstatus', 'value': '127000008970'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fteamcustomerstatus', 'value': '127000008971'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain any 'email_event' with 'id': 11186."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain any 'email_event' with 'id': 11156."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain any 'email_event' with 'id': 11189."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fdeskcustomerstatus', 'value': '127000008365'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fdeskcustomerstatus', 'value': '127000008364'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fdeskcustomerstatus', 'value': '127000008899'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fdeskcustomerstatus', 'value': '127000008898'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context attributes to the sentence, specifically the part: 'type': 'contact_field', 'fieldName': 'cf_cf_fdeskcustomerstatus', 'value': '127000008356'..."
+    }
+]
+
+
+Score: 0.7
+Reason: The score is 0.70 because nodes in retrieval context reflect correspondence with the expected output for contact field criteria, such as 'cf_cf_fteamcustomerstatus' and 'cf_cf_fdeskcustomerstatus' values in the 1st and 3rd match groups. However, there is a lack of supportive information for the 'email_event' criteria with specific 'id' values in the 2nd match group, as indicated by the absence of 'email_event' nodes with 'id': 11186, 'id': 11156, and 'id': 11189.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "Here is a segment config JSON that matches the given criteria:",
+    "condition: AND",
+    "matchGroups: an array of groups",
+    "In the first group, condition: OR",
+    "First match in the first group is of type: contact_field",
+    "First match in the first group has condition: AND",
+    "First match's criteria includes fieldId: 4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+    "First match's fieldName: cf_cf_fteamcustomerstatus",
+    "First match's columnName: cf_bigint109",
+    "First match's fieldType: Enter value",
+    "First match's comparator: eq",
+    "First match's value: 127000008970",
+    "First match's secondValue: null",
+    "Second match in the first group is of type: contact_field",
+    "Second match in the first group has condition: AND",
+    "Second match's criteria includes fieldId: 4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+    "Second match's fieldName: cf_cf_fteamcustomerstatus",
+    "Second match's columnName: cf_bigint109",
+    "Second match's fieldType: Enter value",
+    "Second match's comparator: eq",
+    "Second match's value: 127000008971",
+    "Second match's secondValue: null",
+    "In the second group, condition: AND",
+    "First match in the second group is of type: email_event",
+    "First match in the second group has condition: AND",
+    "First match's criteria includes operation: not_delivered",
+    "First match's id: 37652",
+    "First match's resourceMatchType: specificResource",
+    "First match's occurenceCondition includes name: count",
+    "First match's occurenceCondition type: number",
+    "First match's occurenceCondition operator: anytime",
+    "First match's occurenceCondition value: 1",
+    "First match's dateCondition includes operator: anytime",
+    "First match's dateCondition timezone: -330",
+    "First match's dateCondition value: 2024-06-18T13:09:00.108Z",
+    "First match's dateCondition relativeDateCount: 1",
+    "Second match in the second group is of type: email_event",
+    "Second match in the second group has condition: AND",
+    "Second match's criteria includes operation: not_delivered",
+    "Second match's id: 51489",
+    "Second match's resourceMatchType: specificResource",
+    "Second match's occurenceCondition includes name: count",
+    "Second match's occurenceCondition type: number",
+    "Second match's occurenceCondition operator: anytime",
+    "Second match's occurenceCondition value: 1",
+    "Second match's dateCondition includes operator: anytime",
+    "Second match's dateCondition timezone: -330",
+    "Second match's dateCondition value: 2024-06-18T13:09:00.108Z",
+    "Second match's dateCondition relativeDateCount: 1",
+    "Third match in the second group is of type: email_event",
+    "Third match in the second group has condition: AND",
+    "Third match's criteria includes operation: not_delivered",
+    "Third match's id: 37651",
+    "Third match's resourceMatchType: specificResource",
+    "Third match's occurenceCondition includes name: count",
+    "Third match's occurenceCondition type: number",
+    "Third match's occurenceCondition operator: anytime",
+    "Third match's occurenceCondition value: 1",
+    "Third match's dateCondition includes operator: anytime",
+    "Third match's dateCondition timezone: -330",
+    "Third match's dateCondition value: 2024-06-18T13:09:00.108Z",
+    "Third match's dateCondition relativeDateCount: 1",
+    "In the third group, condition: AND",
+    "First match in the third group is of type: contact_field",
+    "First match in the third group has condition: AND",
+    "First match's criteria includes fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "First match's fieldName: cf_cf_fdeskcustomerstatus",
+    "First match's columnName: cf_bigint91",
+    "First match's fieldType: Enter value",
+    "First match's comparator: neq",
+    "First match's value: 127000008365",
+    "First match's secondValue: null",
+    "Second match in the third group is of type: contact_field",
+    "Second match in the third group has condition: AND",
+    "Second match's criteria includes fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "Second match's fieldName: cf_cf_fdeskcustomerstatus",
+    "Second match's columnName: cf_bigint91",
+    "Second match's fieldType: Enter value",
+    "Second match's comparator: neq",
+    "Second match's value: 127000008364",
+    "Second match's secondValue: null",
+    "Third match in the third group is of type: contact_field",
+    "Third match in the third group has condition: AND",
+    "Third match's criteria includes fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "Third match's fieldName: cf_cf_fdeskcustomerstatus",
+    "Third match's columnName: cf_bigint91",
+    "Third match's fieldType: Enter value",
+    "Third match's comparator: neq",
+    "Third match's value: 127000008899",
+    "Third match's secondValue: null",
+    "Fourth match in the third group is of type: contact_field",
+    "Fourth match in the third group has condition: AND",
+    "Fourth match's criteria includes fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "Fourth match's fieldName: cf_cf_fdeskcustomerstatus",
+    "Fourth match's columnName: cf_bigint91",
+    "Fourth match's fieldType: Enter value",
+    "Fourth match's comparator: neq",
+    "Fourth match's value: 127000008898",
+    "Fourth match's secondValue: null",
+    "Fifth match in the third group is of type: contact_field",
+    "Fifth match in the third group has condition: AND",
+    "Fifth match's criteria includes fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "Fifth match's fieldName: cf_cf_fdeskcustomerstatus",
+    "Fifth match's columnName: cf_bigint91",
+    "Fifth match's fieldType: Enter value",
+    "Fifth match's comparator: neq",
+    "Fifth match's value: 127000008356",
+    "Fifth match's secondValue: null"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is fully relevant to the input with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.7, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.70 because nodes in retrieval context reflect correspondence with the expected output for contact field criteria, such as 'cf_cf_fteamcustomerstatus' and 'cf_cf_fdeskcustomerstatus' values in the 1st and 3rd match groups. However, there is a lack of supportive information for the 'email_event' criteria with specific 'id' values in the 2nd match group, as indicated by the absence of 'email_event' nodes with 'id': 11186, 'id': 11156, and 'id': 11189., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is fully relevant to the input with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fteamcustomerstatus' equals '127000008970' or '127000008971' and who did not receive any of the following email events anytime: 'Freshworks - CCPA - Notification', 'CCPA - FS - Reachout', 'Freshchat-CCPA' and whose custom field 'cf_cf_fdeskcustomerstatus' does not equal '127000008365', '127000008364', '127000008899', '127000008898', or '127000008356'.
+  - actual output: Here is a segment config JSON that matches the given criteria:
+
+```json
+{
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "OR",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+                        "fieldName": "cf_cf_fteamcustomerstatus",
+                        "columnName": "cf_bigint109",
+                        "fieldType": "Enter value",
+                        "comparator": "eq",
+                        "value": "127000008970",
+                        "secondValue": null
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+                        "fieldName": "cf_cf_fteamcustomerstatus",
+                        "columnName": "cf_bigint109",
+                        "fieldType": "Enter value",
+                        "comparator": "eq",
+                        "value": "127000008971",
+                        "secondValue": null
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "not_delivered",
+                        "id": 37652,
+                        "resourceMatchType": "specificResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "anytime",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 1
+                            }
+                        },
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 1
+                        }
+                    }
+                },
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "not_delivered",
+                        "id": 51489,
+                        "resourceMatchType": "specificResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "anytime",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 1
+                            }
+                        },
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 1
+                        }
+                    }
+                },
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "not_delivered",
+                        "id": 37651,
+                        "resourceMatchType": "specificResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "anytime",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 1
+                            }
+                        },
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 1
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "Enter value",
+                        "comparator": "neq",
+                        "value": "127000008365",
+                        "secondValue": null
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "Enter value",
+                        "comparator": "neq",
+                        "value": "127000008364",
+                        "secondValue": null
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "Enter value",
+                        "comparator": "neq",
+                        "value": "127000008899",
+                        "secondValue": null
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "Enter value",
+                        "comparator": "neq",
+                        "value": "127000008898",
+                        "secondValue": null
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "Enter value",
+                        "comparator": "neq",
+                        "value": "127000008356",
+                        "secondValue": null
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008970", "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e", "fieldName": "cf_cf_fteamcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_109", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008971", "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e", "fieldName": "cf_cf_fteamcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_109", "comparator": "eq", "secondValue": ""}, "condition": "AND"}], "condition": "OR"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 11186, "operation": "not_sent", "dateCondition": {"value": "2019-12-29T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 11156, "operation": "not_sent", "dateCondition": {"value": "2019-12-29T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 11189, "operation": "not_sent", "dateCondition": {"value": "2019-12-29T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008365", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "neq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008364", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "neq", "secondValue": ""}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008899", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "neq", "secondValue": ""}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008898", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "neq", "secondValue": ""}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008356", "fieldId": "3d378db9-256b-465f-8f50-8d727ae30ff8", "fieldName": "cf_cf_fchatcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_090", "comparator": "neq", "secondValue": ""}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['Here is a segment config JSON that matches the given criteria:\n\n```json\n{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "OR",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",\n                        "fieldName": "cf_cf_fteamcustomerstatus",\n                        "columnName": "cf_bigint109",\n                        "fieldType": "Enter value",\n                        "comparator": "eq",\n                        "value": "127000008970",\n                        "secondValue": null\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",\n                        "fieldName": "cf_cf_fteamcustomerstatus",\n                        "columnName": "cf_bigint109",\n                        "fieldType": "Enter value",\n                        "comparator": "eq",\n                        "value": "127000008971",\n                        "secondValue": null\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "not_delivered",\n                        "id": 37652,\n                        "resourceMatchType": "specificResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "anytime",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 1\n                            }\n                        },\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 1\n                        }\n                    }\n                },\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "not_delivered",\n                        "id": 51489,\n                        "resourceMatchType": "specificResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "anytime",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 1\n                            }\n                        },\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 1\n                        }\n                    }\n                },\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "not_delivered",\n                        "id": 37651,\n                        "resourceMatchType": "specificResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "anytime",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 1\n                            }\n                        },\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 1\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "Enter value",\n                        "comparator": "neq",\n                        "value": "127000008365",\n                        "secondValue": null\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "Enter value",\n                        "comparator": "neq",\n                        "value": "127000008364",\n                        "secondValue": null\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "Enter value",\n                        "comparator": "neq",\n                        "value": "127000008899",\n                        "secondValue": null\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "Enter value",\n                        "comparator": "neq",\n                        "value": "127000008898",\n                        "secondValue": null\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "Enter value",\n                        "comparator": "neq",\n                        "value": "127000008356",\n                        "secondValue": null\n                    }\n                }\n            ]\n        }\n    ]\n}\n```']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x2
+7p70766up7n1jc3q4ov/test-cases

@@ -1,0 +1,149 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The sentence matches with the 1st node in the retrieval context, specifically the criteria section: 'value': '127000008365', 'fieldId': 'd78c9637-325a-4b58-81fb-b98e186cc6d9', 'fieldName': 'cf_cf_fdeskcustomerstatus', 'fieldType': 'dropdown', 'columnName': 'cf_dropdown_091', 'comparator': 'eq'..."
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because all details in the expected output align perfectly with the 1st node in the retrieval context, indicating a flawless recall.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "condition: AND",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "fieldName: cf_cf_fdeskcustomerstatus",
+    "columnName: cf_bigint91",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 127000008365",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldType: dropdown' statement made in the actual output does not directly address the input which is about retrieving contacts with a specific custom field value."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: ' statement made in the actual output is irrelevant because the input asks for a specific value in a custom field and does not indicate the need for a range or a second value."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually: false' statement made in the actual output is irrelevant to the input, which is about retrieving current contact information and does not pertain to an annually recurring event."
+    }
+]
+
+
+Score: 0.75
+Reason: The score is 0.75 because the response mostly addresses the input by attempting to retrieve contacts based on a specific custom field value but includes unnecessary details that do not pertain to the query, such as dropdown field type, second values, and non-recurring annual events.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 1.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 1.00 because all details in the expected output align perfectly with the 1st node in the retrieval context, indicating a flawless recall., error: None)
+  - ✅ Answer Relevancy (score: 0.75, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.75 because the response mostly addresses the input by attempting to retrieve contacts based on a specific custom field value but includes unnecessary details that do not pertain to the query, such as dropdown field type, second values, and non-recurring annual events., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fdeskcustomerstatus' is '127000008365'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "127000008365",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008365", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "127000008365",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wq
+ryo075kup7ni4wienoo/test-cases

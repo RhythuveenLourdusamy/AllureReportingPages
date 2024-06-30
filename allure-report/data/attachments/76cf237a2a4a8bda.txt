@@ -1,0 +1,203 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context mentions a 'custom_event' with 'fieldName': 'name', 'value': 'freshsales_web_form_created', 'comparator': 'eq'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context mentions 'criteria' with 'eventName': 'fsales_trial_event', 'operation': 'performed'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' value '2021-03-30T18:30:00.000Z' does not match the 'dateCondition' value '2021-03-30T00:00:00.000Z' in the 1st node..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'dateCondition' operator 'after' and timezone -330 are mentioned in the 1st node under 'dateCondition'..."
+    }
+]
+
+
+Score: 0.75
+Reason: The score is 0.75 because the 1st node in retrieval context provides a match for the 'custom_event' type, criteria including 'eventName' and 'operation', and the 'dateCondition' operator and timezone, corresponding to sentences 1, 2, and 3 in the expected output. However, there is a mismatch in the 'dateCondition' value described in sentence 3, as it differs from the value in the 1st node.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "The condition for matchGroups is AND.",
+    "The type is custom_event.",
+    "The condition for the type custom_event is AND.",
+    "The eventName is fsales_trial_event.",
+    "The operation is performed.",
+    "The dateCondition operator is after.",
+    "The timezone for dateCondition is -330.",
+    "The value for dateCondition is 2021-03-30T00:00:00.000Z.",
+    "The relativeDateCount for dateCondition is 0.",
+    "The name for occurenceCondition is FIRST_OCCURRENCE.",
+    "The type for occurenceCondition is date.",
+    "The operator for occurenceCondition is after.",
+    "The value for occurenceCondition is freshsales_web_form_created.",
+    "The dateCondition operator for occurenceCondition is anytime.",
+    "The timezone for the dateCondition of occurenceCondition is -330.",
+    "The value for the dateCondition of occurenceCondition is 2024-06-18T13:09:00.108Z.",
+    "The relativeDateCount for the dateCondition of occurenceCondition is 0."
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'value for occurenceCondition is freshsales_web_form_created.' statement is incorrect because the input specifies the event name as 'freshsales_web_form_created', which is not a value that should be used for occurenceCondition but rather for identifying the event name."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition operator for occurenceCondition is anytime.' statement is irrelevant because the input specifies a specific date condition 'after 2021-03-30', not 'anytime'."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    }
+]
+
+
+Score: 0.8888888888888888
+Reason: The score is 0.89 because the output is mostly relevant but includes an incorrect value for 'occurenceCondition' and an irrelevant 'dateCondition' operator, which do not align with the specific event name and date condition provided in the input.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.75, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.75 because the 1st node in retrieval context provides a match for the 'custom_event' type, criteria including 'eventName' and 'operation', and the 'dateCondition' operator and timezone, corresponding to sentences 1, 2, and 3 in the expected output. However, there is a mismatch in the 'dateCondition' value described in sentence 3, as it differs from the value in the 1st node., error: None)
+  - ✅ Answer Relevancy (score: 0.8888888888888888, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.89 because the output is mostly relevant but includes an incorrect value for 'occurenceCondition' and an irrelevant 'dateCondition' operator, which do not align with the specific event name and date condition provided in the input., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed the custom event 'fsales_trial_event' after 2021-03-30 with the event name exactly 'freshsales_web_form_created'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_event",
+                        "operation": "performed",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-03-30T00:00:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "freshsales_web_form_created",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_web_form_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "eq"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-03-30T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_event",\n                        "operation": "performed",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-03-30T00:00:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "freshsales_web_form_created",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xt
+igj0774up7naxj95tr0/test-cases

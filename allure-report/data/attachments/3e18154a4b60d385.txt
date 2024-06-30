@@ -1,0 +1,253 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context attributes to the sentence with 'fieldId': 'f8704001-34c2-456c-b76c-7571d2315f90' and 'fieldName': 'cf_cf_fservicesignupdate'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node in the retrieval context attributes to the sentence with 'fieldId': '9e1bd83e-c2c5-4277-98aa-04d605e59721' and 'fieldName': 'cf_cf_fservicecustomerstatus'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context attributes to the sentence with 'fieldType': 'date' matching 'fieldType': 'date_time'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no node in the retrieval context that contains 'columnName': 'cf_datetime_13'. The closest match is 'columnName': 'cf_datetime08'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no node in the retrieval context that contains 'comparator': 'after' with the exact 'value': '2021-02-01T00:00:00.000Z'. The retrieval context has 'value': '2021-02-01'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no node in the retrieval context that contains 'columnName': 'cf_dropdown_102'. The closest match is 'columnName': 'cf_bigint102'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no node in the retrieval context that contains 'fieldType': 'dropdown' for 'fieldName': 'cf_cf_fservicecustomerstatus'. The retrieval context has 'fieldType': 'dropdown' for a different 'fieldName'..."
+    }
+]
+
+
+Score: 0.42857142857142855
+Reason: The score is 0.43 because the first node in retrieval context supports the presence of 'fieldId' and 'fieldName' related to 'cf_cf_fservicesignupdate' in sentences 1 and 3, and the second node supports 'fieldId' and 'fieldName' for 'cf_cf_fservicecustomerstatus' in sentences 2 and 4. However, the retrieval context lacks matching 'columnName' values and exact 'comparator' terms, as seen in sentences 1, 2, 3, and 4, which reduces the overall contextual alignment.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups",
+    "condition: AND",
+    "matches",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: f8704001-34c2-456c-b76c-7571d2315f90",
+    "fieldName: cf_cf_fservicesignupdate",
+    "columnName: cf_datetime08",
+    "fieldType: date",
+    "comparator: after",
+    "value: 2021-02-01",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "criteria",
+    "fieldId: 9e1bd83e-c2c5-4277-98aa-04d605e59721",
+    "fieldName: cf_cf_fservicecustomerstatus",
+    "columnName: cf_bigint102",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 127000008897",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is fully relevant to the input with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.42857142857142855, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.43 because the first node in retrieval context supports the presence of 'fieldId' and 'fieldName' related to 'cf_cf_fservicesignupdate' in sentences 1 and 3, and the second node supports 'fieldId' and 'fieldName' for 'cf_cf_fservicecustomerstatus' in sentences 2 and 4. However, the retrieval context lacks matching 'columnName' values and exact 'comparator' terms, as seen in sentences 1, 2, 3, and 4, which reduces the overall contextual alignment., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is fully relevant to the input with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts who have the 'cf_cf_fservicesignupdate' field date after '2021-02-01' and have the 'cf_cf_fservicecustomerstatus' field equal to '127000008897'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "f8704001-34c2-456c-b76c-7571d2315f90",
+                        "fieldName": "cf_cf_fservicesignupdate",
+                        "columnName": "cf_datetime08",
+                        "fieldType": "date",
+                        "comparator": "after",
+                        "value": "2021-02-01",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",
+                        "fieldName": "cf_cf_fservicecustomerstatus",
+                        "columnName": "cf_bigint102",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "127000008897",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "OR", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "2021-02-01T00:00:00.000Z", "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d", "fieldName": "cf_cf_fservicesignupdate", "fieldType": "date_time", "columnName": "cf_datetime_13", "comparator": "after"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008897", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "2021-02-01T00:00:00.000Z", "fieldId": "567249d2-4a76-4527-97ea-bcef556f674d", "fieldName": "cf_cf_fservicesignupdate", "fieldType": "date_time", "columnName": "cf_datetime_13", "comparator": "after"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "127000008897", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "f8704001-34c2-456c-b76c-7571d2315f90",\n                        "fieldName": "cf_cf_fservicesignupdate",\n                        "columnName": "cf_datetime08",\n                        "fieldType": "date",\n                        "comparator": "after",\n                        "value": "2021-02-01",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",\n                        "fieldName": "cf_cf_fservicecustomerstatus",\n                        "columnName": "cf_bigint102",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "127000008897",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xd
+xx8076mup7ntwywgjd8/test-cases

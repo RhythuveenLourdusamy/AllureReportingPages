@@ -1,0 +1,315 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context contains 'allocadia_asset_id' which corresponds to 'fieldId': 'allocadia_asset_id' and 'value': '4404383'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 3rd node in the retrieval context contains 'allocadia_page_url' which corresponds to 'fieldName': 'cf_cf_cx2021' and 'value': 'virtual-event-customer-success-day-mea'..."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context contains 'dateCondition' with 'value': '2021-07-06T18:30:00.000Z' and 'operator': 'anytime'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no 'custom_event' type in the retrieval context; the types mentioned are 'CUSTOMER_ACTIVITY' and 'contact_field'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' in the retrieval context specifies 'operator': 'after', not 'eq'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'columnName' in the retrieval context for 'allocadia_asset_id' is 'cf_decimal03', not 'ef_string_06'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'columnName' in the retrieval context for 'allocadia_page_url' is 'cf_bigint86', not 'ef_string_11'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a 'comparator': 'contains' for 'allocadia_asset_id'."
+    }
+]
+
+
+Score: 0.375
+Reason: The score is 0.38 because the retrieval context partially aligns with the expected output. Specifically, sentence 1 relates to the 1st node in retrieval context with 'allocadia_asset_id' matching the 'fieldId' and 'value'. Sentence 3 aligns with the 3rd node's 'allocadia_page_url' and 'value'. However, the retrieval context lacks the 'custom_event' type mentioned in sentence 2, has a differing 'dateCondition' operator in sentence 1, incorrect 'columnName' mappings in sentences 1 and 3, and the absence of a 'contains' comparator for 'allocadia_asset_id'.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "CUSTOMER_ACTIVITY",
+    "eventName: allocadia_events",
+    "dateCondition operator: after",
+    "timezone: -330",
+    "value: 2021-07-06T18:30:00.000Z",
+    "secondValue: null",
+    "relativeDateCount: 0",
+    "operation: performed",
+    "OccurrenceFilterType.FIRST_OCCURRENCE",
+    "OccurenceFieldType.date",
+    "operator: after",
+    "value: 2021-07-06T18:30:00.000Z",
+    "dateCondition operator: anytime",
+    "timezone: -330",
+    "value: 2021-06-18T13:09:00.108Z",
+    "secondValue: null",
+    "relativeDateCount: 0",
+    "contact_field",
+    "fieldId: 8f729dbf-c5f7-4c66-959e-f7c30b2956f2",
+    "fieldName: cf_allocadia_tactic_id",
+    "columnName: cf_decimal03",
+    "FieldType.decimal",
+    "comparator: eq",
+    "value: 4404383",
+    "secondValue: null",
+    "repeatAnnually: false",
+    "fieldId: cf_cf_cx2021",
+    "fieldName: cf_cf_cx2021",
+    "columnName: cf_bigint86",
+    "FieldType.dropdown",
+    "comparator: contains",
+    "value: virtual-event-customer-success-day-mea",
+    "secondValue: null",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'AND' statement is a logical operator that by itself does not provide information relevant to the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition operator: anytime' statement contradicts the input requirement for events after a specific date."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'timezone: -330' statement is irrelevant as the input does not specify a need for timezone adjustment."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'value: 2021-06-18T13:09:00.108Z' statement contains a date that is not relevant to the input's time constraint."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldId: cf_cf_cx2021' statement is irrelevant as it provides information about a field ID that does not match the input's specified 'allocadia_asset_id'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldName: cf_cf_cx2021' statement is irrelevant as it does not correspond to the specified 'allocadia_page_url' or 'allocadia_asset_id' in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.8064516129032258
+Reason: The score is 0.81 because the output is mostly relevant to the input, addressing the requested 'allocadia_events' event and associated parameters, but includes several specifics, such as incorrect date values and irrelevant field identifiers, that do not align with the input's requirements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.375, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.38 because the retrieval context partially aligns with the expected output. Specifically, sentence 1 relates to the 1st node in retrieval context with 'allocadia_asset_id' matching the 'fieldId' and 'value'. Sentence 3 aligns with the 3rd node's 'allocadia_page_url' and 'value'. However, the retrieval context lacks the 'custom_event' type mentioned in sentence 2, has a differing 'dateCondition' operator in sentence 1, incorrect 'columnName' mappings in sentences 1 and 3, and the absence of a 'contains' comparator for 'allocadia_asset_id'., error: None)
+  - ✅ Answer Relevancy (score: 0.8064516129032258, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.81 because the output is mostly relevant to the input, addressing the requested 'allocadia_events' event and associated parameters, but includes several specifics, such as incorrect date values and irrelevant field identifiers, that do not align with the input's requirements., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed the 'allocadia_events' event anytime after 2021-07-06T18:30:00.000Z, with the 'allocadia_asset_id' as '4404383' and the 'allocadia_page_url' containing 'virtual-event-customer-success-day-mea'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "CUSTOMER_ACTIVITY",
+                    "criteria": {
+                        "eventName": "allocadia_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-07-06T18:30:00.000Z",
+                            "secondValue": null,
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurrenceCondition": {
+                            "name": "OccurrenceFilterType.FIRST_OCCURRENCE",
+                            "type": "OccurenceFieldType.date",
+                            "operator": "after",
+                            "value": "2021-07-06T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2021-06-18T13:09:00.108Z",
+                                "secondValue": null,
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "criteria": {
+                        "fieldId": "8f729dbf-c5f7-4c66-959e-f7c30b2956f2",
+                        "fieldName": "cf_allocadia_tactic_id",
+                        "columnName": "cf_decimal03",
+                        "fieldType": "FieldType.decimal",
+                        "comparator": "eq",
+                        "value": "4404383",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "criteria": {
+                        "fieldId": "cf_cf_cx2021",
+                        "fieldName": "cf_cf_cx2021",
+                        "columnName": "cf_bigint86",
+                        "fieldType": "FieldType.dropdown",
+                        "comparator": "contains",
+                        "value": "virtual-event-customer-success-day-mea",
+                        "secondValue": null,
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "4404383", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}, {"value": "virtual-event-customer-success-day-mea", "fieldId": "allocadia_page_url", "fieldName": "allocadia_page_url", "fieldType": "string", "columnName": "ef_string_11", "comparator": "contains"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-07-06T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "CUSTOMER_ACTIVITY",\n                    "criteria": {\n                        "eventName": "allocadia_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-07-06T18:30:00.000Z",\n                            "secondValue": null,\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurrenceCondition": {\n                            "name": "OccurrenceFilterType.FIRST_OCCURRENCE",\n                            "type": "OccurenceFieldType.date",\n                            "operator": "after",\n                            "value": "2021-07-06T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2021-06-18T13:09:00.108Z",\n                                "secondValue": null,\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "criteria": {\n                        "fieldId": "8f729dbf-c5f7-4c66-959e-f7c30b2956f2",\n                        "fieldName": "cf_allocadia_tactic_id",\n                        "columnName": "cf_decimal03",\n                        "fieldType": "FieldType.decimal",\n                        "comparator": "eq",\n                        "value": "4404383",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "criteria": {\n                        "fieldId": "cf_cf_cx2021",\n                        "fieldName": "cf_cf_cx2021",\n                        "columnName": "cf_bigint86",\n                        "fieldType": "FieldType.dropdown",\n                        "comparator": "contains",\n                        "value": "virtual-event-customer-success-day-mea",\n                        "secondValue": null,\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0yc
+trn077xup7norfehi4f/test-cases

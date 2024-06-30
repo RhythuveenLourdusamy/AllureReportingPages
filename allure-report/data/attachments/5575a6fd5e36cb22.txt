@@ -1,0 +1,146 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The sentence can be attributed to the 1st node in the retrieval context, which mentions 'condition': 'AND'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The sentence can be attributed to the 1st node in the retrieval context, which mentions 'matchGroups' with a 'condition': 'AND'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'id' value in the retrieval context is '4799', while the sentence specifies an 'id' of '4800'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The sentence can be attributed to the 1st node in the retrieval context, specifically the 'condition' within 'matches'."
+    }
+]
+
+
+Score: 0.75
+Reason: The score is 0.75 because sentences related to 'condition': 'AND' and 'matchGroups' with 'condition': 'AND' are correctly attributed to the 1st node in retrieval context, but the 'id' value mentioned does not match the 'id' in the 1st node in retrieval context, which is '4799' instead of '4800'.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups is a list",
+    "Each matchGroup contains a condition: AND",
+    "Each matchGroup contains matches",
+    "Each match has a type: list_membership",
+    "Each match has a condition: AND",
+    "Each match has criteria",
+    "The criteria has an id: 4799",
+    "The criteria has a resourceMatchType: specificResource",
+    "The criteria has an operation: eq"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is entirely relevant to the input with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.75, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.75 because sentences related to 'condition': 'AND' and 'matchGroups' with 'condition': 'AND' are correctly attributed to the 1st node in retrieval context, but the 'id' value mentioned does not match the 'id' in the 1st node in retrieval context, which is '4799' instead of '4800'., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is entirely relevant to the input with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts who are members of the list 'FSA_Freshsales over Salesforce ebook - Nurture'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 4799,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "list_membership", "filters": [], "criteria": {"id": "4800", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 4799,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wy
+7wh0760up7nmvd56zp5/test-cases

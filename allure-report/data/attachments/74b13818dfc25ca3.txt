@@ -1,0 +1,336 @@
+Evaluating test cases...
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "email_event",
+    "AND",
+    "operation: sent",
+    "id: 1",
+    "resourceMatchType: specificResource",
+    "count",
+    "number",
+    "operator: greater_than_or_equals",
+    "value: 1",
+    "after",
+    "timezone: -330",
+    "value: 2020-11-26T00:00:00.000Z",
+    "relativeDateCount: 0",
+    "contact_field",
+    "AND",
+    "fieldId: 9a2c8ff2-d789-48c5-ad2a-44c15431a902",
+    "fieldName: work_email",
+    "columnName: default",
+    "fieldType: email",
+    "comparator: does_not_contain",
+    "value: @freshworks.com",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'AND' statement is a logical operator that does not provide specific information relevant to the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'AND' statement is a logical operator that does not provide specific information relevant to the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.9285714285714286
+Reason: The score is 0.93 because the response was highly relevant to the input, but it included redundant explanations about the 'AND' logical operator, which were not necessary for answering the input query.
+
+======================================================================
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 'condition' key is set to 'AND' in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 58845."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 58848."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 58851."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 58860."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 58858."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 58854."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 59078."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 59277."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 59465."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 59513."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'email_event' having 'id': 61225."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain 'matchGroups' with 'matches' of 'contact_field' having 'fieldId': '3eb39ea9-618d-4c0a-a6e2-a5c27020fddc'."
+    }
+]
+
+
+Score: 0.043478260869565216
+Reason: The score is 0.04 because the only correspondence between the expected output and the retrieval context is the 'condition' key set to 'AND' in the first node. However, the retrieval context lacks any 'matchGroups' with 'matches' for 'email_event' and 'contact_field' that align with the specifics such as 'id' and 'fieldId' outlined in the expected output.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.043478260869565216, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.04 because the only correspondence between the expected output and the retrieval context is the 'condition' key set to 'AND' in the first node. However, the retrieval context lacks any 'matchGroups' with 'matches' for 'email_event' and 'contact_field' that align with the specifics such as 'id' and 'fieldId' outlined in the expected output., error: None)
+  - ✅ Answer Relevancy (score: 0.9285714285714286, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.93 because the response was highly relevant to the input, but it included redundant explanations about the 'AND' logical operator, which were not necessary for answering the input query., error: None)
+
+For test case:
+
+  - input: Get me contacts who received the email event 'CS-MM-CX-TheNewCXMandate-Webcast-Email3', 'CS-MM-CX-TheNewCXMandate-US-Report-Email3', 'CS-MM-CX-TheNewCXMandate-EU-Report-Email3', 'CS-MM-CX-TheNewCXMandate-UK-Report-Email3', 'CS-MM-CX-TheNewCXMandate-ANZ-Report-Email3', 'CS-MM-CX-TheNewCXMandate-SEA-Report-Email3', 'CS-MM-CX-TheNewCXMandate-MEA-Report-Email3', 'CS-MM-CX-TheNewCXMandate-Report-German-3', 'CS-MM-CX-TheNewCXMandate-Report-French-3', 'CS-MM-CX-TheNewCXMandate-Report-Dutch-3', or 'CS-MM-CX-TheNewCXMandate-Report-Swedish-3' anytime on or after '2020-11-26' and whose email does not contain '@freshworks.com'
+  - actual output: ```json
+{
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "sent",
+                        "id": 1,
+                        "resourceMatchType": "specificResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "greater_than_or_equals",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "after",
+                                "timezone": -330,
+                                "value": "2020-11-26T00:00:00.000Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "9a2c8ff2-d789-48c5-ad2a-44c15431a902",
+                        "fieldName": "work_email",
+                        "columnName": "default",
+                        "fieldType": "email",
+                        "comparator": "does_not_contain",
+                        "value": "@freshworks.com",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+```
+  - expected output: {"condition": "OR", "matchGroups": [{"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 58845, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 58848, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 58851, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 58860, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 58858, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 58854, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 59078, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 59277, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 59465, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 59513, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "email_event", "filters": [], "criteria": {"id": 61225, "operation": "sent", "dateCondition": {"value": "2020-11-26T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['```json\n{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "sent",\n                        "id": 1,\n                        "resourceMatchType": "specificResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "greater_than_or_equals",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "after",\n                                "timezone": -330,\n                                "value": "2020-11-26T00:00:00.000Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "9a2c8ff2-d789-48c5-ad2a-44c15431a902",\n                        "fieldName": "work_email",\n                        "columnName": "default",\n                        "fieldType": "email",\n                        "comparator": "does_not_contain",\n                        "value": "@freshworks.com",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}\n```']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xc
+mb5076kup7n9z7aiv0r/test-cases

@@ -1,0 +1,348 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'id' in the expected output is '36173', while in the 1st node of the retrieval context it is '43497'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'status' field in the expected output is not found in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'email_event' criteria with 'operation': 'not_sent', 'dateCondition' operator: 'last_n_days_including_today' and 'timezone': -330 is found in the 3rd node of the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'email' field in the expected output is 'email', while in the 4th node of the retrieval context it is 'emails'."
+    }
+]
+
+
+Score: 0.25
+Reason: The score is 0.25 because the 'email_event' criteria found in sentence 3 of the expected output matches the 3rd node in retrieval context, but the 'id' mentioned in sentence 1 and the 'email' field in sentence 4 differ from the 1st and 4th nodes in retrieval context, respectively, and the 'status' field in sentence 2 is not found in the retrieval context at all.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "type: list_membership",
+    "condition: AND",
+    "criteria: id 43497",
+    "resourceMatchType: specificResource",
+    "operation: eq",
+    "type: contact_field",
+    "condition: AND",
+    "criteria: fieldId 63e654ca-4d16-416b-8f53-2eb6bde8292d",
+    "fieldName: cf_freshsales_inbox_connected_status",
+    "columnName: cf_boolean05",
+    "fieldType: cf_boolean05",
+    "comparator: eq",
+    "value: 1",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: email_event",
+    "condition: AND",
+    "criteria: operation not_sent",
+    "resourceMatchType: anyResource",
+    "occurenceCondition: name count",
+    "type: number",
+    "operator: last_n_days",
+    "value: 3",
+    "dateCondition: operator last_n_days_including_today",
+    "timezone: -330",
+    "value: 2021-06-03T18:30:00.000Z",
+    "relativeDateCount: 0",
+    "dateCondition: operator last_n_days",
+    "timezone: -330",
+    "value: 2021-06-03T18:30:00.000Z",
+    "relativeDateCount: 3",
+    "type: contact_field",
+    "condition: AND",
+    "criteria: fieldId 3eb39ea9-618d-4c0a-a6e2-a5c27020fddc",
+    "fieldName: emails",
+    "columnName: default",
+    "fieldType: email",
+    "comparator: does_not_contain",
+    "value: @freshworks.com",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "This statement with the value '0' does not seem to be relevant or necessary to the provided input criteria."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    }
+]
+
+
+Score: 0.9743589743589743
+Reason: The score is 0.97 because there was a minor irrelevant detail included in the response that did not align with the input criteria.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.25, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.25 because the 'email_event' criteria found in sentence 3 of the expected output matches the 3rd node in retrieval context, but the 'id' mentioned in sentence 1 and the 'email' field in sentence 4 differ from the 1st and 4th nodes in retrieval context, respectively, and the 'status' field in sentence 2 is not found in the retrieval context at all., error: None)
+  - ✅ Answer Relevancy (score: 0.9743589743589743, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.97 because there was a minor irrelevant detail included in the response that did not align with the input criteria., error: None)
+
+For test case:
+
+  - input: Get me contacts who are members of list 'CM_CRMWeeklyList', have a status of 'Subscribed', have not been sent an email in the last 3 days including today (relative to 2021-06-03T18:30:00.000Z), and whose email does not contain '@freshworks.com'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 43497,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "63e654ca-4d16-416b-8f53-2eb6bde8292d",
+                        "fieldName": "cf_freshsales_inbox_connected_status",
+                        "columnName": "cf_boolean05",
+                        "fieldType": "cf_boolean05",
+                        "comparator": "eq",
+                        "value": "1",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "not_sent",
+                        "resourceMatchType": "anyResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "last_n_days",
+                            "value": "3",
+                            "dateCondition": {
+                                "operator": "last_n_days_including_today",
+                                "timezone": -330,
+                                "value": "2021-06-03T18:30:00.000Z",
+                                "relativeDateCount": 0
+                            }
+                        },
+                        "dateCondition": {
+                            "operator": "last_n_days",
+                            "timezone": -330,
+                            "value": "2021-06-03T18:30:00.000Z",
+                            "relativeDateCount": 3
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc",
+                        "fieldName": "emails",
+                        "columnName": "default",
+                        "fieldType": "email",
+                        "comparator": "does_not_contain",
+                        "value": "@freshworks.com",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "list_membership", "filters": [], "criteria": {"id": "36173", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Subscribed", "fieldId": "c1fb4799-b71c-444f-9bb0-f57b37dbdd8b", "fieldName": "status", "fieldType": "dropdown", "columnName": "status", "comparator": "eq"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 0, "operation": "not_sent", "dateCondition": {"value": "2021-06-03T18:30:00.000Z", "operator": "last_n_days_including_today", "timezone": -330, "relativeDateCount": "3"}, "resourceMatchType": "anyResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "@freshworks.com", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 43497,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "63e654ca-4d16-416b-8f53-2eb6bde8292d",\n                        "fieldName": "cf_freshsales_inbox_connected_status",\n                        "columnName": "cf_boolean05",\n                        "fieldType": "cf_boolean05",\n                        "comparator": "eq",\n                        "value": "1",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "not_sent",\n                        "resourceMatchType": "anyResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "last_n_days",\n                            "value": "3",\n                            "dateCondition": {\n                                "operator": "last_n_days_including_today",\n                                "timezone": -330,\n                                "value": "2021-06-03T18:30:00.000Z",\n                                "relativeDateCount": 0\n                            }\n                        },\n                        "dateCondition": {\n                            "operator": "last_n_days",\n                            "timezone": -330,\n                            "value": "2021-06-03T18:30:00.000Z",\n                            "relativeDateCount": 3\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc",\n                        "fieldName": "emails",\n                        "columnName": "default",\n                        "fieldType": "email",\n                        "comparator": "does_not_contain",\n                        "value": "@freshworks.com",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xw
+xu4078tns2a5tz9wbgh/test-cases
