@@ -1,0 +1,276 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context mentions 'fieldId': 'd78c9637-325a-4b58-81fb-b98e186cc6d9' and 'value': '127000008365' which matches the 'fieldId' and 'value' in the expected output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node in the retrieval context contains 'fieldId': 'c236c257-b2c9-4a40-96cc-8323a1773747' and 'value': '2019-02-01', which closely relates to 'fieldId': '6c10e8c1-eb93-47c6-9550-4b1d4dc0f817' and 'value': '2019-02-01T00:00:00.000Z' in the expected output."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 3rd node in the retrieval context lists countries as a single string with a delimiter '|', whereas the expected output has individual 'contact_field' entries for each country."
+    }
+]
+
+
+Score: 0.6666666666666666
+Reason: The score is 0.67 because the 1st node in retrieval context aligns with the 'fieldId' and 'value' for the customer status in the expected output, and the 2nd node's 'fieldId' and 'value' for the signup date are closely related to those in the expected output. However, the format for listing countries in the 3rd node differs from the individual entries for each country found in the expected output.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: d78c9637-325a-4b58-81fb-b98e186cc6d9",
+    "fieldName: cf_cf_fdeskcustomerstatus",
+    "columnName: cf_bigint91",
+    "fieldType: big_number",
+    "comparator: eq",
+    "value: 127000008365",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: c236c257-b2c9-4a40-96cc-8323a1773747",
+    "fieldName: cf_cf_fdesksignupdate",
+    "columnName: cf_datetime23",
+    "fieldType: date_time",
+    "comparator: after",
+    "value: 2019-02-01",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: e206aa79-3f9c-4e60-a1e5-132efe7137b7",
+    "fieldName: cf_visitor_country",
+    "columnName: cf_str66",
+    "fieldType: text",
+    "comparator: in",
+    "value: India|Dubai|Indonesia|Singapore|Algeria|Bahrain|Egypt|Iran|Iraq|Israel|Kuwait|Jordan|United Arab Emirates|Turkey|South Africa|Bangladesh|Bhutan|China|Japan|Korea|Nepal|Myanmar|Philippines|Pakistan|Thailand|Sri Lanka|Vietnam|Hong Kong",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is completely relevant to the input, with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.6666666666666666, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.67 because the 1st node in retrieval context aligns with the 'fieldId' and 'value' for the customer status in the expected output, and the 2nd node's 'fieldId' and 'value' for the signup date are closely related to those in the expected output. However, the format for listing countries in the 3rd node differs from the individual entries for each country found in the expected output., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is completely relevant to the input, with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fdeskcustomerstatus' is '127000008365' and whose custom field 'cf_cf_fdesksignupdate' is after '2019-02-01', and whose country is one of the following: 'India', 'Dubai', 'Indonesia', 'Singapore', 'Algeria', 'Bahrain', 'Egypt', 'Iran', 'Iraq', 'Israel', 'Kuwait', 'Jordan', 'United Arab Emirates', 'Turkey', 'South Africa', 'Bangladesh', 'Bhutan', 'China', 'Japan', 'Korea', 'Nepal', 'Myanmar', 'Philippines', 'Pakistan', 'Thailand', 'Sri Lanka', 'Vietnam', or 'Hong Kong'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",
+                        "fieldName": "cf_cf_fdeskcustomerstatus",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "big_number",
+                        "comparator": "eq",
+                        "value": "127000008365",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "c236c257-b2c9-4a40-96cc-8323a1773747",
+                        "fieldName": "cf_cf_fdesksignupdate",
+                        "columnName": "cf_datetime23",
+                        "fieldType": "date_time",
+                        "comparator": "after",
+                        "value": "2019-02-01",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "e206aa79-3f9c-4e60-a1e5-132efe7137b7",
+                        "fieldName": "cf_visitor_country",
+                        "columnName": "cf_str66",
+                        "fieldType": "text",
+                        "comparator": "in",
+                        "value": "India|Dubai|Indonesia|Singapore|Algeria|Bahrain|Egypt|Iran|Iraq|Israel|Kuwait|Jordan|United Arab Emirates|Turkey|South Africa|Bangladesh|Bhutan|China|Japan|Korea|Nepal|Myanmar|Philippines|Pakistan|Thailand|Sri Lanka|Vietnam|Hong Kong",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008365", "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9", "fieldName": "cf_cf_fdeskcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_091", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "2019-02-01T00:00:00.000Z", "fieldId": "6c10e8c1-eb93-47c6-9550-4b1d4dc0f817", "fieldName": "cf_cf_fdesksignupdate", "fieldType": "date_time", "columnName": "cf_datetime_19", "comparator": "after"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "India", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Dubai", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Indonesia", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Singapore", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Algeria", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Bahrain", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Egypt", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Iran", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Iraq", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Israel", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Kuwait", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Jordan", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "United Arab Emirates", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Turkey", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "South Africa", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Bangladesh", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Bhutan", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "China", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Japan", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Korea", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Nepal", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Myanmar", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Philippines", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Pakistan", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Thailand", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Sri Lanka", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Vietnam", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Hong Kong", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "d78c9637-325a-4b58-81fb-b98e186cc6d9",\n                        "fieldName": "cf_cf_fdeskcustomerstatus",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "big_number",\n                        "comparator": "eq",\n                        "value": "127000008365",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "c236c257-b2c9-4a40-96cc-8323a1773747",\n                        "fieldName": "cf_cf_fdesksignupdate",\n                        "columnName": "cf_datetime23",\n                        "fieldType": "date_time",\n                        "comparator": "after",\n                        "value": "2019-02-01",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "e206aa79-3f9c-4e60-a1e5-132efe7137b7",\n                        "fieldName": "cf_visitor_country",\n                        "columnName": "cf_str66",\n                        "fieldType": "text",\n                        "comparator": "in",\n                        "value": "India|Dubai|Indonesia|Singapore|Algeria|Bahrain|Egypt|Iran|Iraq|Israel|Kuwait|Jordan|United Arab Emirates|Turkey|South Africa|Bangladesh|Bhutan|China|Japan|Korea|Nepal|Myanmar|Philippines|Pakistan|Thailand|Sri Lanka|Vietnam|Hong Kong",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x8
+hy6076eup7nuiqcaj1l/test-cases

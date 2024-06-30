@@ -1,0 +1,71 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The retrieval context is empty, therefore no information can be attributed to the expected output."
+    }
+]
+
+
+Score: 0.0
+Reason: The score is 0.00 because the expected output refers to specific criteria for filtering contact fields, but the retrieval context does not contain any information related to these criteria or filtering processes.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "JSON:"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The statement 'JSON:' gives no information about the contacts or the custom field, so it is irrelevant to the input."
+    }
+]
+
+
+Score: 0.0
+Reason: The score is 0.00 because the output does not provide the requested information about contacts with a specific custom field value.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.00 because the expected output refers to specific criteria for filtering contact fields, but the retrieval context does not contain any information related to these criteria or filtering processes., error: None)
+  - ❌ Answer Relevancy (score: 0.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.00 because the output does not provide the requested information about contacts with a specific custom field value., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fservicecustomerstatus' is '127000008899'.
+  - actual output: 
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008899", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 0.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wp
+qc5077jns2ay7re5xyx/test-cases

@@ -1,0 +1,289 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The sentence aligns with the criteria of the custom event in the 1st node, specifically the 'value' of the 'filters' array in the 'matches' object, which contains 'freshmarketer_segment_created'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The portion 'eventName': 'fsales_trial_events', 'operation': 'performed' in both the 1st and 2nd nodes of the retrieval context corresponds with the 'criteria' in the given output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The date condition 'value': '2021-08-14T18:30:00.000Z', 'operator': 'after', 'timezone': -330 can be found in the 'dateCondition' of the criteria in both the 1st and 2nd nodes."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The AND condition is present at the root of the retrieval context, matching the outer 'condition' in the expected output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The sentence aligns with the criteria of the custom event in the 2nd node, specifically the 'value' of the 'filters' array in the 'matches' object, which contains 'freshmarketer_journey_created'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The portion 'eventName': 'fsales_trial_events', 'operation': 'performed' in both the 1st and 2nd nodes of the retrieval context corresponds with the 'criteria' in the given output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The date condition 'value': '2021-08-14T18:30:00.000Z', 'operator': 'after', 'timezone': -330 can be found in the 'dateCondition' of the criteria in both the 1st and 2nd nodes."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The OR condition matches the 'condition' at the second level of the 'matchGroups' array in the retrieval context, specifically between the groups of 'matches'."
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because every element of the expected output is perfectly aligned with the corresponding elements in the nodes in retrieval context, indicating a flawless contextual recall.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "condition: AND",
+    "type: custom_event",
+    "condition: AND",
+    "eventName: fsales_trial_events",
+    "operator: after",
+    "timezone: -330",
+    "value: 2021-08-14T18:30:00.000Z",
+    "relativeDateCount: null",
+    "operation: performed",
+    "name: FIRST_OCCURRENCE",
+    "type: date",
+    "operator: after",
+    "value: 2021-08-14T18:30:00.000Z",
+    "dateCondition: null",
+    "type: custom_event",
+    "condition: AND",
+    "eventName: fsales_trial_events",
+    "operator: after",
+    "timezone: -330",
+    "value: 2021-08-14T18:30:00.000Z",
+    "relativeDateCount: null",
+    "operation: performed",
+    "name: FIRST_OCCURRENCE",
+    "type: date",
+    "operator: after",
+    "value: 2021-08-14T18:30:00.000Z",
+    "dateCondition: null"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the actual output is fully relevant to the input with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 1.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 1.00 because every element of the expected output is perfectly aligned with the corresponding elements in the nodes in retrieval context, indicating a flawless contextual recall., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the actual output is fully relevant to the input with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed the 'fsales_trial_events' event with 'freshmarketer_segment_created' in the name after 2021-08-14T18:30:00.000Z AND contacts who have performed the 'fsales_trial_events' event with 'freshmarketer_journey_created' in the name after 2021-08-14T18:30:00.000Z
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-08-14T18:30:00.000Z",
+                            "relativeDateCount": null
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-08-14T18:30:00.000Z",
+                            "dateCondition": null
+                        }
+                    }
+                },
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-08-14T18:30:00.000Z",
+                            "relativeDateCount": null
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-08-14T18:30:00.000Z",
+                            "dateCondition": null
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshmarketer_segment_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-08-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "custom_event", "filters": [{"value": "freshmarketer_journey_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-08-14T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-08-14T18:30:00.000Z",\n                            "relativeDateCount": null\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-08-14T18:30:00.000Z",\n                            "dateCondition": null\n                        }\n                    }\n                },\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-08-14T18:30:00.000Z",\n                            "relativeDateCount": null\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-08-14T18:30:00.000Z",\n                            "dateCondition": null\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0yj
+kd9079bns2ax07o1ak5/test-cases

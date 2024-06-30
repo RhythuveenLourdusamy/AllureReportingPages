@@ -1,0 +1,342 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "There is no match for 'freshsales_pipeline_added' with 'contains' comparator and 'performed' operation in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no match for 'freshsales_import_csv' with 'contains' comparator and 'not_performed' operation in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no match for 'freshsales_imap_configured' with 'contains' comparator and 'not_performed' operation in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no match for 'freshsales_workflow_automation_created' with 'contains' comparator and 'not_performed' operation in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no match for 'freshsales_sales_sequence_created' with 'contains' comparator and 'not_performed' operation in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context mentions a 'list_membership' with 'id' of '38720' which is similar but not identical to '38718'."
+    }
+]
+
+
+Score: 0.16666666666666666
+Reason: The score is 0.17 because the retrieval context only contains a partial match to the expected output in the list_membership id (node 1), while all custom events with operations and comparators specified in the expected output are not found in the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "Here is the segment JSON configuration that matches the given criteria:",
+    "condition: AND",
+    "matchGroups is a list of groups",
+    "First group contains a single match with type list_membership",
+    "list_membership has a condition AND",
+    "list_membership criteria includes id 38720",
+    "list_membership criteria includes resourceMatchType specificResource",
+    "list_membership criteria includes operation eq",
+    "Second group contains a single match with type LeadGenEventCriteria",
+    "LeadGenEventCriteria has a condition AND",
+    "LeadGenEventCriteria criteria includes eventName freshsales_pipeline_added",
+    "LeadGenEventCriteria dateCondition includes operator after",
+    "LeadGenEventCriteria dateCondition includes timezone -330",
+    "LeadGenEventCriteria dateCondition includes value 2021-06-20T18:30:00.000Z",
+    "LeadGenEventCriteria occurenceCondition includes name FIRST_OCCURRENCE",
+    "LeadGenEventCriteria occurenceCondition includes type date",
+    "LeadGenEventCriteria occurenceCondition includes operator after",
+    "LeadGenEventCriteria occurenceCondition includes value 2021-06-20T18:30:00.000Z",
+    "LeadGenEventCriteria occurenceCondition dateCondition includes operator anytime",
+    "LeadGenEventCriteria occurenceCondition dateCondition includes timezone -330",
+    "LeadGenEventCriteria occurenceCondition dateCondition includes value 2024-06-18T13:09:00.108Z",
+    "Third group contains matches with type LeadGenEventCriteria",
+    "LeadGenEventCriteria has a condition AND",
+    "LeadGenEventCriteria criteria includes eventName freshsales_import_csv",
+    "LeadGenEventCriteria dateCondition includes operator after",
+    "LeadGenEventCriteria dateCondition includes timezone -330",
+    "LeadGenEventCriteria dateCondition includes value 2021-06-15T18:30:00.000Z",
+    "Another LeadGenEventCriteria has a condition OR",
+    "LeadGenEventCriteria criteria includes eventName freshsales_imap_configured",
+    "LeadGenEventCriteria criteria includes eventName freshsales_workflow_automation_created",
+    "LeadGenEventCriteria criteria includes eventName freshsales_sales_sequence_created",
+    "All LeadGenEventCriteria in the third group share the same dateCondition with operator after, timezone -330, and value 2021-06-15T18:30:00.000Z"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The value '2024-06-18T13:09:00.108Z' does not match the input criteria and hence is irrelevant."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.96875
+Reason: The score is 0.97 because the actual output includes a date value '2024-06-18T13:09:00.108Z' that does not match the specific timeframe requested in the input.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.16666666666666666, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.17 because the retrieval context only contains a partial match to the expected output in the list_membership id (node 1), while all custom events with operations and comparators specified in the expected output are not found in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 0.96875, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.97 because the actual output includes a date value '2024-06-18T13:09:00.108Z' that does not match the specific timeframe requested in the input., error: None)
+
+For test case:
+
+  - input: Get me contacts who are members of list 'Inclusion list - Digital Customers - CRM - June 2021', have performed the 'freshsales_pipeline_added' event anytime after 2021-06-20T18:30:00.000Z, and have not performed the events 'freshsales_import_csv', 'freshsales_imap_configured', 'freshsales_workflow_automation_created', or 'freshsales_sales_sequence_created' anytime after 2021-06-15T18:30:00.000Z
+  - actual output: Here is the segment JSON configuration that matches the given criteria:
+
+```json
+{
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 38720,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "LeadGenEventCriteria",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "freshsales_pipeline_added",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-20T18:30:00.000Z"
+                        },
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-06-20T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "LeadGenEventCriteria",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "freshsales_import_csv",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-15T18:30:00.000Z"
+                        }
+                    }
+                },
+                {
+                    "type": "LeadGenEventCriteria",
+                    "condition": "OR",
+                    "criteria": {
+                        "eventName": "freshsales_imap_configured",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-15T18:30:00.000Z"
+                        }
+                    },
+                    "criteria": {
+                        "eventName": "freshsales_workflow_automation_created",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-15T18:30:00.000Z"
+                        }
+                    },
+                    "criteria": {
+                        "eventName": "freshsales_sales_sequence_created",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-15T18:30:00.000Z"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+
+```
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_pipeline_added", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-06-20T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_import_csv", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_imap_configured ", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-15T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_workflow_automation_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-15T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_sales_sequence_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "not_performed", "dateCondition": {"value": "2021-06-15T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "list_membership", "filters": [], "criteria": {"id": "38718", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['Here is the segment JSON configuration that matches the given criteria:\n\n```json\n{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 38720,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "LeadGenEventCriteria",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "freshsales_pipeline_added",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-20T18:30:00.000Z"\n                        },\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-06-20T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z"\n                            }\n                        }\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "LeadGenEventCriteria",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "freshsales_import_csv",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-15T18:30:00.000Z"\n                        }\n                    }\n                },\n                {\n                    "type": "LeadGenEventCriteria",\n                    "condition": "OR",\n                    "criteria": {\n                        "eventName": "freshsales_imap_configured",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-15T18:30:00.000Z"\n                        }\n                    },\n                    "criteria": {\n                        "eventName": "freshsales_workflow_automation_created",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-15T18:30:00.000Z"\n                        }\n                    },\n                    "criteria": {\n                        "eventName": "freshsales_sales_sequence_created",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-15T18:30:00.000Z"\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}\n\n```']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0y0
+6lb078vns2arv3sh4u7/test-cases

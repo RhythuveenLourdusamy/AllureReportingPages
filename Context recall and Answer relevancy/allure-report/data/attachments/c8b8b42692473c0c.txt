@@ -1,0 +1,235 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 'matchGroups' structure and 'condition' 'AND' are present in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'matches' array with 'type': 'journey_event' is present in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'criteria' in the expected output has an 'id' of 22000, whereas the retrieval context has 'id': 1."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'operation': 'ENTERED' is present in the 'criteria' of the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' operator 'anytime' in the expected output does not match the 'operator': 'after' in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'timezone': -330 is present in the 'dateCondition' of the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'resourceMatchType': 'specificResource' is present in the 'criteria' of the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'condition': 'AND' within the 'matches' array is present in the 1st node of the retrieval context."
+    }
+]
+
+
+Score: 0.75
+Reason: The score is 0.75 because key structures and conditions from the 1st node in retrieval context align with the expected output, but mismatches in 'criteria.id' and 'dateCondition.operator' prevent a perfect score.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups: an array of match groups",
+    "condition within match group: AND",
+    "matches: an array of matches within the match group",
+    "type of match: journey_event",
+    "condition within match: AND",
+    "criteria for match includes an id of 1",
+    "operation for criteria: ENTERED",
+    "dateCondition operator: after",
+    "dateCondition timezone: -330",
+    "dateCondition value: 2021-01-10T18:30:00.000Z",
+    "dateCondition relativeDateCount: 0",
+    "resourceMatchType: specificResource",
+    "occurenceCondition name: LAST_OCCURRENCE",
+    "occurenceCondition type: date",
+    "occurenceCondition operator: after",
+    "occurenceCondition value: 2021-01-10T18:30:00.000Z",
+    "occurenceCondition dateCondition operator: anytime",
+    "occurenceCondition dateCondition timezone: -330",
+    "occurenceCondition dateCondition value: 2024-06-18T13:09:00.108Z",
+    "occurenceCondition dateCondition relativeDateCount: 0"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'criteria for match includes an id of 1' statement is not relevant to the input, which does not specify any id criteria for the contacts in the journey."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition timezone: -330' statement may not be relevant to the input, as it does not specify a timezone requirement for the contacts."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition relativeDateCount: 0' statement is irrelevant to the input, which does not specify any relative date count requirement."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'resourceMatchType: specificResource' statement is irrelevant to the input, as it does not specify a requirement for a specific resource match type."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition type: date' statement is not directly relevant to the input, which does not specify the type of occurrence condition."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition operator: after' statement is irrelevant, as the input does not describe the type of operator to be used for the occurrence condition."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition value: 2021-01-10T18:30:00.000Z' statement is irrelevant to the input, which does not specify a value for the occurrence condition."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition dateCondition operator: anytime' statement is irrelevant as the input specifies a particular date after which the contacts have entered the journey, not 'anytime'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition dateCondition timezone: -330' statement is potentially irrelevant as the input does not specify a timezone requirement for the occurrence condition."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition dateCondition value: 2024-06-18T13:09:00.108Z' statement is irrelevant to the input, which does not specify a future date value for the occurrence condition."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition dateCondition relativeDateCount: 0' statement is irrelevant to the input, which does not specify any relative date count for the occurrence condition."
+    }
+]
+
+
+Score: 0.47619047619047616
+Reason: The score is 0.48 because the output contains a number of statements that are not pertinent to the input's specific request for contacts who entered a journey after a certain date, adding unnecessary details not asked for such as id criteria, timezones, and resource match types.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.75, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.75 because key structures and conditions from the 1st node in retrieval context align with the expected output, but mismatches in 'criteria.id' and 'dateCondition.operator' prevent a perfect score., error: None)
+  - ❌ Answer Relevancy (score: 0.47619047619047616, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.48 because the output contains a number of statements that are not pertinent to the input's specific request for contacts who entered a journey after a certain date, adding unnecessary details not asked for such as id criteria, timezones, and resource match types., error: None)
+
+For test case:
+
+  - input: Get me contacts who have entered the journey 'CS-FD trial expired common - New' anytime after 2021-01-10T18:30:00.000Z
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "journey_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 1,
+                        "operation": "ENTERED",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-01-10T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "resourceMatchType": "specificResource",
+                        "occurenceCondition": {
+                            "name": "LAST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-01-10T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "journey_event", "filters": [], "criteria": {"id": 22000, "operation": "ENTERED", "dateCondition": {"value": "2021-01-10T18:30:00.000Z", "operator": "anytime", "timezone": -330}, "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "journey_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 1,\n                        "operation": "ENTERED",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-01-10T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "resourceMatchType": "specificResource",\n                        "occurenceCondition": {\n                            "name": "LAST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-01-10T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 0.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0y1
+sfo077iup7n6ctgjgzp/test-cases

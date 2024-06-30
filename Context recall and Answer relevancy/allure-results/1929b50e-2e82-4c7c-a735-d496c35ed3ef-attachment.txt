@@ -1,0 +1,357 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "There is no exact match for 'OR' condition at the highest level in the retrieval context, which has 'AND' as the top-level condition."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criteria within the 1st node in the retrieval context contains the fieldId '8b745e0f-82c8-42d2-a79f-1d5f87d74db1' as stated."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The criteria within the 1st node in the retrieval context contains the fieldName 'cf_cf_fdesksignupreferrer' as stated."
+    },
+    {
+        "verdict": "no",
+        "reason": "The columnName 'cf_string_29' does not match any columnName in the retrieval context which are 'cf_str29'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The fieldType 'text' is mentioned in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The comparator 'contains' is mentioned in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=6' is an exact match with the value in the 1st node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=7' is an exact match with the value in the 2nd node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=10' is an exact match with the value in the 3rd node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=11' is an exact match with the value in the 4th node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=12' is an exact match with the value in the 5th node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=13' is an exact match with the value in the 6th node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=14' is an exact match with the value in the 7th node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=15' is an exact match with the value in the 8th node of the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=16' is an exact match with the value in the 9th node of the retrieval context."
+    }
+]
+
+
+Score: 0.8666666666666667
+Reason: The score is 0.87 because the majority of the match criteria, including fieldId, fieldName, fieldType, comparator, and values, are directly reflected in the nodes in retrieval context, with exact matches found across nodes 1 to 9. However, the top-level condition 'OR' and the columnName 'cf_string_29' did not align with the retrieval context, explaining why the score is not a perfect 1.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "The first match condition is AND.",
+    "The type of the first match is 'contact_field'.",
+    "The fieldId is '8b745e0f-82c8-42d2-a79f-1d5f87d74db1'.",
+    "The fieldName is 'cf_cf_fdesksignupreferrer'.",
+    "The columnName is 'cf_str29'.",
+    "The fieldType is 'text'.",
+    "The comparator is 'contains'.",
+    "The value is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=6'.",
+    "The secondValue is empty.",
+    "repeatAnnually is false.",
+    "The second match condition is OR.",
+    "The value for the second match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=7'.",
+    "The value for the third match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=10'.",
+    "The value for the fourth match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=11'.",
+    "The value for the fifth match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=12'.",
+    "The value for the sixth match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=13'.",
+    "The value for the seventh match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=14'.",
+    "The value for the eighth match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=15'.",
+    "The value for the ninth match is 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=16'."
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually is false.' statement is irrelevant to the input, which is about matching contacts based on a custom field containing specific URLs."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.95
+Reason: The score is 0.95 because the output was highly relevant but included an unnecessary comment about the 'repeatAnnually' setting, which was not related to the task of matching contacts based on specified URLs.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 0.8666666666666667, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.87 because the majority of the match criteria, including fieldId, fieldName, fieldType, comparator, and values, are directly reflected in the nodes in retrieval context, with exact matches found across nodes 1 to 9. However, the top-level condition 'OR' and the columnName 'cf_string_29' did not align with the retrieval context, explaining why the score is not a perfect 1., error: None)
+  - ✅ Answer Relevancy (score: 0.95, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.95 because the output was highly relevant but included an unnecessary comment about the 'repeatAnnually' setting, which was not related to the task of matching contacts based on specified URLs., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fdesksignupreferrer' contains any of the following URLs: 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=6', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=7', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=10', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=11', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=12', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=13', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=14', 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=15', or 'https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=16'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=6",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=7",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=10",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=11",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=12",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=13",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=14",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=15",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "OR",
+                    "criteria": {
+                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",
+                        "fieldName": "cf_cf_fdesksignupreferrer",
+                        "columnName": "cf_str29",
+                        "fieldType": "text",
+                        "comparator": "contains",
+                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=16",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "OR", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=6", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=7", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=10", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=11", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=12", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=13", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=14", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=15", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=16", "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1", "fieldName": "cf_cf_fdesksignupreferrer", "fieldType": "text", "columnName": "cf_string_29", "comparator": "contains"}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=6",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=7",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=10",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=11",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=12",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=13",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=14",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=15",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "OR",\n                    "criteria": {\n                        "fieldId": "8b745e0f-82c8-42d2-a79f-1d5f87d74db1",\n                        "fieldName": "cf_cf_fdesksignupreferrer",\n                        "columnName": "cf_str29",\n                        "fieldType": "text",\n                        "comparator": "contains",\n                        "value": "https://freshdesk.com/omnichannel-signup?source=freshdeskpricing&medium=16",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x9
+cs50783ns2a796wz8uv/test-cases

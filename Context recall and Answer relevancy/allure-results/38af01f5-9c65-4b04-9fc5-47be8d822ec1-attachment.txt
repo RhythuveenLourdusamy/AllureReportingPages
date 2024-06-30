@@ -1,0 +1,311 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The sentence cannot be attributed to any nodes as the 'page_visit_event' node in the retrieval context specifies a 'dateCondition' with 'value': '2024-06-18T13:09:00.108Z', while the expected output mentions a 'dateCondition' with 'value': '2019-08-08T18:30:00.000Z'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'list_membership' node criteria for 'id' in the expected output is '4086', whereas in the retrieval context it is '1868'."
+    }
+]
+
+
+Score: 0.0
+Reason: The score is 0.00 because the sentence regarding the 'page_visit_event' (in the expected output) specifies a date condition that does not match the date condition in the node in retrieval context, and the 'list_membership' criteria for 'id' also does not match the corresponding node in the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups: [Array of match conditions]",
+    "condition: AND within matchGroups",
+    "matches: [Array of individual match conditions]",
+    "type: contact_field",
+    "condition: AND within contact_field",
+    "criteria: {Object containing criteria for contact_field}",
+    "fieldId: 6c308555-02d5-4dba-adb1-59b9d4613228",
+    "fieldName: cf_number_of_demos",
+    "columnName: cf_number_of_demos",
+    "fieldType: number",
+    "comparator: eq",
+    "value: 0",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: list_membership",
+    "condition: AND within list_membership",
+    "criteria: {Object containing criteria for list_membership}",
+    "id: 1868",
+    "resourceMatchType: specificResource",
+    "operation: eq",
+    "type: page_visit_event",
+    "condition: AND within page_visit_event",
+    "criteria: {Object containing criteria for page_visit_event}",
+    "url: https://www.freshworks.com/freshsales-crm/signup/#utm_source=salesforce_ebook&utm_medium=email",
+    "operation: not_visited",
+    "comparator: contains",
+    "dateCondition: {Object containing date conditions}",
+    "operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0",
+    "occurenceCondition: {Object containing occurrence conditions}",
+    "name: count",
+    "type: number",
+    "operator: greater_than_or_equals",
+    "value: 1",
+    "dateCondition: {Object containing date conditions for occurrence}",
+    "operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is entirely relevant to the input with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.00 because the sentence regarding the 'page_visit_event' (in the expected output) specifies a date condition that does not match the date condition in the node in retrieval context, and the 'list_membership' criteria for 'id' also does not match the corresponding node in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is entirely relevant to the input with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts who did not visit the URL 'https://www.freshworks.com/freshsales-crm/signup/#utm_source=salesforce_ebook&utm_medium=email' anytime and are members of the list 'freshchat-Zoom car case study Email PDF'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "6c308555-02d5-4dba-adb1-59b9d4613228",
+                        "fieldName": "cf_number_of_demos",
+                        "columnName": "cf_number_of_demos",
+                        "fieldType": "number",
+                        "comparator": "eq",
+                        "value": "0",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 1868,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                },
+                {
+                    "type": "page_visit_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "url": "https://www.freshworks.com/freshsales-crm/signup/#utm_source=salesforce_ebook&utm_medium=email",
+                        "operation": "not_visited",
+                        "comparator": "contains",
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "greater_than_or_equals",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "page_visit_event", "filters": [], "criteria": {"url": "https://www.freshworks.com/freshsales-crm/signup/#utm_source=salesforce_ebook&utm_medium=email", "operation": "not_visited", "comparator": "contains", "dateCondition": {"value": "2019-08-08T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "list_membership", "filters": [], "criteria": {"id": "4086", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "6c308555-02d5-4dba-adb1-59b9d4613228",\n                        "fieldName": "cf_number_of_demos",\n                        "columnName": "cf_number_of_demos",\n                        "fieldType": "number",\n                        "comparator": "eq",\n                        "value": "0",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 1868,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                },\n                {\n                    "type": "page_visit_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "url": "https://www.freshworks.com/freshsales-crm/signup/#utm_source=salesforce_ebook&utm_medium=email",\n                        "operation": "not_visited",\n                        "comparator": "contains",\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "greater_than_or_equals",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0ww
+ltq075yup7nz2d0hhl3/test-cases

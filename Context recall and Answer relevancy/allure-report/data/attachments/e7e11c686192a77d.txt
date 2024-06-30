@@ -1,0 +1,300 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The sentence mentions 'id': '29181', which matches the criteria in the 1st node, but the 'operation': 'eq' is present instead of 'neq' as in the expected output."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldId' mentioned ('c1fb4799-b71c-444f-9bb0-f57b37dbdd8b') does not match any 'fieldId' in the 2nd node of the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' value in the expected output '2021-02-03T18:30:00.000Z' does not match the 'dateCondition' value in the 3rd node of the retrieval context '2024-06-18T13:09:00.108Z'."
+    }
+]
+
+
+Score: 0.0
+Reason: The score is 0.00 because the expected output references specific criteria and values, such as 'id': '29181' with an 'eq' operation, 'fieldId': 'c1fb4799-b71c-444f-9bb0-f57b37dbdd8b', and a 'dateCondition' with the value '2021-02-03T18:30:00.000Z', none of which match the corresponding nodes in the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "type: list_membership",
+    "condition: AND",
+    "criteria: id: 29181",
+    "criteria: resourceMatchType: specificResource",
+    "criteria: operation: eq",
+    "type: contact_field",
+    "condition: AND",
+    "criteria: fieldId: 50f833ab-9523-4975-a161-d0066167217a",
+    "criteria: fieldName: cf_cf_contactunsubscribeddate",
+    "criteria: columnName: cf_datetime07",
+    "criteria: fieldType: date",
+    "criteria: comparator: neq",
+    "criteria: value: 0",
+    "criteria: secondValue: ",
+    "criteria: repeatAnnually: false",
+    "type: email_event",
+    "condition: AND",
+    "criteria: operation: not_sent",
+    "criteria: resourceMatchType: anyResource",
+    "criteria: occurenceCondition: name: count",
+    "criteria: occurenceCondition: type: number",
+    "criteria: occurenceCondition: operator: last_n_days_including_today",
+    "criteria: occurenceCondition: value: 3",
+    "criteria: occurenceCondition: dateCondition: operator: last_n_days_including_today",
+    "criteria: occurenceCondition: dateCondition: timezone: -330",
+    "criteria: occurenceCondition: dateCondition: value: 2024-06-18T13:09:00.108Z",
+    "criteria: occurenceCondition: dateCondition: secondValue: null",
+    "criteria: occurenceCondition: dateCondition: relativeDateCount: 3",
+    "criteria: dateCondition: operator: last_n_days_including_today",
+    "criteria: dateCondition: timezone: -330",
+    "criteria: dateCondition: value: 2024-06-18T13:09:00.108Z",
+    "criteria: dateCondition: secondValue: null",
+    "criteria: dateCondition: relativeDateCount: 3"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because there were no irrelevant statements made in the actual output; it fully addressed the input request.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.00 because the expected output references specific criteria and values, such as 'id': '29181' with an 'eq' operation, 'fieldId': 'c1fb4799-b71c-444f-9bb0-f57b37dbdd8b', and a 'dateCondition' with the value '2021-02-03T18:30:00.000Z', none of which match the corresponding nodes in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because there were no irrelevant statements made in the actual output; it fully addressed the input request., error: None)
+
+For test case:
+
+  - input: Get me contacts who are members of the list 'FY21-Q1-CS-SM-CX-Weekly - List 5', whose status is not 'Unsubscribed,' and have not been sent any email in the last 3 days including today
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 29181,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "50f833ab-9523-4975-a161-d0066167217a",
+                        "fieldName": "cf_cf_contactunsubscribeddate",
+                        "columnName": "cf_datetime07",
+                        "fieldType": "date",
+                        "comparator": "neq",
+                        "value": "0",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "email_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "operation": "not_sent",
+                        "resourceMatchType": "anyResource",
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "last_n_days_including_today",
+                            "value": "3",
+                            "dateCondition": {
+                                "operator": "last_n_days_including_today",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "secondValue": null,
+                                "relativeDateCount": 3
+                            }
+                        },
+                        "dateCondition": {
+                            "operator": "last_n_days_including_today",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "secondValue": null,
+                            "relativeDateCount": 3
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "list_membership", "filters": [], "criteria": {"id": "29181", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Unsubscribed", "fieldId": "c1fb4799-b71c-444f-9bb0-f57b37dbdd8b", "fieldName": "status", "fieldType": "dropdown", "columnName": "status", "comparator": "neq"}, "condition": "AND"}, {"type": "email_event", "filters": [], "criteria": {"id": 0, "operation": "not_sent", "dateCondition": {"value": "2021-02-03T18:30:00.000Z", "operator": "last_n_days_including_today", "timezone": -330, "relativeDateCount": "3"}, "resourceMatchType": "anyResource"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 29181,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "50f833ab-9523-4975-a161-d0066167217a",\n                        "fieldName": "cf_cf_contactunsubscribeddate",\n                        "columnName": "cf_datetime07",\n                        "fieldType": "date",\n                        "comparator": "neq",\n                        "value": "0",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "email_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "operation": "not_sent",\n                        "resourceMatchType": "anyResource",\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "last_n_days_including_today",\n                            "value": "3",\n                            "dateCondition": {\n                                "operator": "last_n_days_including_today",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "secondValue": null,\n                                "relativeDateCount": 3\n                            }\n                        },\n                        "dateCondition": {\n                            "operator": "last_n_days_including_today",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "secondValue": null,\n                            "relativeDateCount": 3\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xh
+0x6078fns2axdh9d6xz/test-cases

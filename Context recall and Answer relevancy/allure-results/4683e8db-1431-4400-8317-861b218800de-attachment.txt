@@ -1,0 +1,267 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context contains the 'condition' 'AND' at the root level."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context contains 'matchGroups' with 'condition' 'AND'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context matches with 'type': 'page_visit_event'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context specifies 'criteria' without 'filters'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context specifies 'criteria' with 'url': 'https://www.freshworks.com/company/partners/home/partner-program-signup/completed7/'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context specifies 'criteria' with 'operation': 'visited'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context specifies 'criteria' with 'comparator': 'contains'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition' 'value' in the retrieval context is '2024-06-18T13:09:00.108Z', not '2020-03-03T18:30:00.000Z' as stated in the expected output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context specifies 'dateCondition' with 'operator': 'anytime'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "1st node in the retrieval context specifies 'dateCondition' with 'timezone': -330."
+    }
+]
+
+
+Score: 0.9
+Reason: The score is 0.90 because the 1st node in retrieval context) aligns well with the expected output, matching on key elements such as 'condition', 'matchGroups', 'type', and 'criteria' structure, but there's a discrepancy in 'dateCondition' value, explaining why the score isn't a perfect 1.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups is an array",
+    "The first object in matchGroups has a condition: AND",
+    "matches is an array inside the first object of matchGroups",
+    "The first object in matches is of type: page_visit_event",
+    "The first object in matches has a condition: AND",
+    "criteria is an object inside the first object in matches",
+    "criteria contains url: https://www.freshworks.com/company/partners/home/partner-program-signup/completed7/",
+    "criteria operation: visited",
+    "criteria comparator: contains",
+    "dateCondition is an object inside criteria",
+    "dateCondition operator: anytime",
+    "dateCondition timezone: -330",
+    "dateCondition value: 2024-06-18T13:09:00.108Z",
+    "dateCondition relativeDateCount: 0",
+    "occurenceCondition is an object inside criteria",
+    "occurenceCondition name: count",
+    "occurenceCondition type: number",
+    "occurenceCondition operator: greater_than_or_equals",
+    "occurenceCondition value: 1",
+    "The occurenceCondition also has a dateCondition object",
+    "The dateCondition inside occurenceCondition has an operator: anytime",
+    "The dateCondition inside occurenceCondition has a timezone: -330",
+    "The dateCondition inside occurenceCondition has a value: 2024-06-18T13:09:00.108Z",
+    "The dateCondition inside occurenceCondition has a relativeDateCount: 0"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition timezone: -330' statement made in the actual output is irrelevant to the input. The input does not specify a timezone for the contacts who visited the URL."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition value: 2024-06-18T13:09:00.108Z' statement made in the actual output is irrelevant to the input. The input does not specify a specific date or time for the contacts who visited the URL."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition relativeDateCount: 0' statement made in the actual output is irrelevant to the input. The input does not specify a relative date count for the contacts who visited the URL."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'The dateCondition inside occurenceCondition has an operator: anytime' statement made in the actual output is redundant as it repeats the date condition already specified."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'The dateCondition inside occurenceCondition has a timezone: -330' statement made in the actual output is irrelevant to the input. The input does not specify a timezone for the contacts who visited the URL."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'The dateCondition inside occurenceCondition has a value: 2024-06-18T13:09:00.108Z' statement made in the actual output is irrelevant to the input. The input does not specify a specific date or time for the contacts who visited the URL."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'The dateCondition inside occurenceCondition has a relativeDateCount: 0' statement made in the actual output is irrelevant to the input. The input does not specify a relative date count for the contacts who visited the URL."
+    }
+]
+
+
+Score: 0.7307692307692307
+Reason: The score is 0.73 because the output contains several irrelevant details regarding timezone, specific date and time, and relative date count, which are not requested in the input.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 0.9, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.90 because the 1st node in retrieval context) aligns well with the expected output, matching on key elements such as 'condition', 'matchGroups', 'type', and 'criteria' structure, but there's a discrepancy in 'dateCondition' value, explaining why the score isn't a perfect 1., error: None)
+  - ✅ Answer Relevancy (score: 0.7307692307692307, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.73 because the output contains several irrelevant details regarding timezone, specific date and time, and relative date count, which are not requested in the input., error: None)
+
+For test case:
+
+  - input: Get me contacts who visited the URL 'https://www.freshworks.com/company/partners/home/partner-program-signup/completed7/' anytime
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "page_visit_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "url": "https://www.freshworks.com/company/partners/home/partner-program-signup/completed7/",
+                        "operation": "visited",
+                        "comparator": "contains",
+                        "dateCondition": {
+                            "operator": "anytime",
+                            "timezone": -330,
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "relativeDateCount": 0
+                        },
+                        "occurenceCondition": {
+                            "name": "count",
+                            "type": "number",
+                            "operator": "greater_than_or_equals",
+                            "value": "1",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "page_visit_event", "filters": [], "criteria": {"url": "https://www.freshworks.com/company/partners/home/partner-program-signup/completed7/", "operation": "visited", "comparator": "contains", "dateCondition": {"value": "2020-03-03T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "page_visit_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "url": "https://www.freshworks.com/company/partners/home/partner-program-signup/completed7/",\n                        "operation": "visited",\n                        "comparator": "contains",\n                        "dateCondition": {\n                            "operator": "anytime",\n                            "timezone": -330,\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "relativeDateCount": 0\n                        },\n                        "occurenceCondition": {\n                            "name": "count",\n                            "type": "number",\n                            "operator": "greater_than_or_equals",\n                            "value": "1",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0x6
+7qk076aup7nmokihyub/test-cases

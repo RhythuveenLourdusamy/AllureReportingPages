@@ -1,0 +1,483 @@
+Evaluating test cases...
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "condition: AND",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: cf_cf_source",
+    "fieldName: cf_cf_source",
+    "columnName: cf_cf_source",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 19001516964",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: cf_visitor_country",
+    "fieldName: cf_visitor_country",
+    "columnName: cf_str66",
+    "fieldType: dropdown",
+    "comparator: in",
+    "value: Afghanistan|Algeria|Bahrain|Central African Republic|Egypt|Ghana|Iran|Iraq|Israel|Jordan|Kenya|Kuwait|Lebanon|Liberia|Mauritius|Namibia|South Africa|UAE|Yemen|Uganda|Nigeria",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "condition: OR",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: cf_cf_source",
+    "fieldName: cf_cf_source",
+    "columnName: cf_cf_source",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 19001516964",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: cf_region",
+    "fieldName: cf_region",
+    "columnName: cf_bigint77",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 180510102637779808",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: cf_cf_madkuduleadowner",
+    "fieldName: cf_cf_madkuduleadowner",
+    "columnName: cf_bigint04",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 19001511037",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output perfectly addresses the input requirements without including any irrelevant information.
+
+======================================================================
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value '19001516964' matches the expected output's criteria value for 'cf_cf_source'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Afghanistan' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Algeria' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Bahrain' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Central African Republic' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Egypt' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Ghana' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Iran' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Iraq' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Israel' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Jordan' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Kenya' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Kuwait' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Lebanon' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Liberia' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Mauritius' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Namibia' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node's criteria value '180510102637779808' matches the expected output's criteria value for 'cf_region'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'South Africa' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'UAE' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Yemen' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Uganda' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node's criteria value 'Nigeria' is part of the 'value' list in 'cf_visitor_country'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node's criteria value '19001511037' matches the expected output's criteria value for 'cf_cf_madkuduleadowner'."
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because every expected output's criteria value directly matches with the corresponding node's criteria value in the retrieval context, indicating perfect recall.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 1.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 1.00 because every expected output's criteria value directly matches with the corresponding node's criteria value in the retrieval context, indicating perfect recall., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output perfectly addresses the input requirements without including any irrelevant information., error: None)
+
+For test case:
+
+  - input: Get me contacts where the field 'cf_cf_source' is '19001516964' and the country field contains any of the following: Afghanistan, Algeria, Bahrain, Central African Republic, Egypt, Ghana, Iran, Iraq, Israel, Jordan, Kenya, Kuwait, Lebanon, Liberia, Mauritius, Namibia, South Africa, UAE, Yemen, Uganda, Nigeria. Additionally, get contacts where 'cf_cf_source' is '19001516964' and 'cf_region' is '180510102637779808', or 'cf_cf_source' is '19001516964' and 'cf_cf_madkuduleadowner' is '19001511037'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "cf_cf_source",
+                        "fieldName": "cf_cf_source",
+                        "columnName": "cf_cf_source",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "19001516964",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "cf_visitor_country",
+                        "fieldName": "cf_visitor_country",
+                        "columnName": "cf_str66",
+                        "fieldType": "dropdown",
+                        "comparator": "in",
+                        "value": "Afghanistan|Algeria|Bahrain|Central African Republic|Egypt|Ghana|Iran|Iraq|Israel|Jordan|Kenya|Kuwait|Lebanon|Liberia|Mauritius|Namibia|South Africa|UAE|Yemen|Uganda|Nigeria",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "OR",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "cf_cf_source",
+                        "fieldName": "cf_cf_source",
+                        "columnName": "cf_cf_source",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "19001516964",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "cf_region",
+                        "fieldName": "cf_region",
+                        "columnName": "cf_bigint77",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "180510102637779808",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "cf_cf_madkuduleadowner",
+                        "fieldName": "cf_cf_madkuduleadowner",
+                        "columnName": "cf_bigint04",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "19001511037",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "OR", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Afghanistan", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Algeria", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Bahrain", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Central African Republic", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Egypt", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Ghana", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Iran", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Iraq", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Israel", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Jordan", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Kenya", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Kuwait", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Lebanon", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Liberia", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Mauritius", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Namibia", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "180510102637779808", "fieldId": "e6fbbb3b-7c9e-480c-a3c6-6a59da606a73", "fieldName": "cf_region", "fieldType": "dropdown", "columnName": "cf_dropdown_077", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "South Africa", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "UAE", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Yemen", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Uganda", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Nigeria", "fieldId": "4099196a-12a1-4ae3-8db5-5bc458fb9f32", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "contains"}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001516964", "fieldId": "eb844285-b758-4142-b0ff-32cdb7c0e4c2", "fieldName": "cf_cf_source", "fieldType": "dropdown", "columnName": "cf_dropdown_144", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "19001511037", "fieldId": "b406605d-e6aa-497f-ae9c-d2e47acab183", "fieldName": "cf_cf_madkuduleadowner", "fieldType": "dropdown", "columnName": "cf_dropdown_088", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "cf_cf_source",\n                        "fieldName": "cf_cf_source",\n                        "columnName": "cf_cf_source",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "19001516964",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "cf_visitor_country",\n                        "fieldName": "cf_visitor_country",\n                        "columnName": "cf_str66",\n                        "fieldType": "dropdown",\n                        "comparator": "in",\n                        "value": "Afghanistan|Algeria|Bahrain|Central African Republic|Egypt|Ghana|Iran|Iraq|Israel|Jordan|Kenya|Kuwait|Lebanon|Liberia|Mauritius|Namibia|South Africa|UAE|Yemen|Uganda|Nigeria",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "OR",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "cf_cf_source",\n                        "fieldName": "cf_cf_source",\n                        "columnName": "cf_cf_source",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "19001516964",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "cf_region",\n                        "fieldName": "cf_region",\n                        "columnName": "cf_bigint77",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "180510102637779808",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "cf_cf_madkuduleadowner",\n                        "fieldName": "cf_cf_madkuduleadowner",\n                        "columnName": "cf_bigint04",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "19001511037",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xu
+kj80776up7n0wpcmvaj/test-cases

@@ -1,0 +1,368 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 1st node in the retrieval context specifies criteria id 39374 with operation \"eq\", not \"neq\" as in the expected output."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 1st node in the retrieval context matches with criteria id \"38718\" and operation \"neq\", which corresponds to the part ...\"id\": 38718...\"operation\": \"neq\"..."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 3rd node in the retrieval context specifies a CustomEventCriteria with eventName \"fsales_trial_event\", not \"fsales_trial_event\" as in the expected output and the operation under \"occurrenceCondition\" is \"after\", not \"anytime\"."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 4th node in the retrieval context specifies a CustomEventCriteria with eventName \"fsales_trial_events\", but the date operation is \"after\", not \"anytime\" as in the expected output."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no mention of \"freshmarketer_campaign_created\" or its criteria in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no mention of \"freshmarketer_segment_created\" or its criteria in the retrieval context."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no mention of \"freshmarketer_offline_event_created\" or its criteria in the retrieval context."
+    }
+]
+
+
+Score: 0.14285714285714285
+Reason: The score is 0.14 because the first node in retrieval context) matches with the incorrect operation for criteria id "39374", and there are discrepancies in event names and date operations for the third and fourth nodes. Additionally, several criteria such as "freshmarketer_campaign_created", "freshmarketer_segment_created", and "freshmarketer_offline_event_created" are not matched in the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "type: list_membership",
+    "condition: AND",
+    "id: 39374",
+    "resourceMatchType: specificResource",
+    "operation: eq",
+    "type: list_membership",
+    "condition: AND",
+    "id: 38718",
+    "resourceMatchType: specificResource",
+    "operation: neq",
+    "type: CustomEventCriteria",
+    "condition: AND",
+    "eventName: fsales_trial_event",
+    "dateCondition operator: after",
+    "timezone: -330",
+    "value: 2021-06-14T18:30:00.000Z",
+    "relativeDateCount: 0",
+    "operation value: performed",
+    "occurrenceCondition name: FIRST_OCCURRENCE",
+    "type: date",
+    "operator: after",
+    "value: 2021-06-14T18:30:00.000Z",
+    "dateCondition operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0",
+    "type: CustomEventCriteria",
+    "condition: AND",
+    "eventName: fsales_trial_events",
+    "dateCondition operator: after",
+    "timezone: -330",
+    "value: 2021-06-14T18:30:00.000Z",
+    "relativeDateCount: 0",
+    "operation value: performed",
+    "occurrenceCondition name: FIRST_OCCURRENCE",
+    "type: date",
+    "operator: after",
+    "value: 2021-06-14T18:30:00.000Z",
+    "dateCondition operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the response precisely addresses the complex criteria specified in the input without any irrelevant content.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.14285714285714285, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.14 because the first node in retrieval context) matches with the incorrect operation for criteria id "39374", and there are discrepancies in event names and date operations for the third and fourth nodes. Additionally, several criteria such as "freshmarketer_campaign_created", "freshmarketer_segment_created", and "freshmarketer_offline_event_created" are not matched in the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the response precisely addresses the complex criteria specified in the input without any irrelevant content., error: None)
+
+For test case:
+
+  - input: Get me contacts who are members of the list 'MC Digital Inclusion List', are not members of the list 'CRM PP MC Day 4-7-14-21 Power Users', and have performed the 'fsales_trial_event' event with the name containing 'freshsales_import_csv' anytime after 2021-06-14T18:30:00.000Z, performed the 'fsales_trial_events' events with the names containing 'freshmarketer_journey_created', 'freshmarketer_campaign_created', 'freshmarketer_segment_created', and 'freshmarketer_offline_event_created' anytime after 2021-06-14T18:30:00.000Z
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 39374,
+                        "resourceMatchType": "specificResource",
+                        "operation": "eq"
+                    }
+                },
+                {
+                    "type": "list_membership",
+                    "condition": "AND",
+                    "criteria": {
+                        "id": 38718,
+                        "resourceMatchType": "specificResource",
+                        "operation": "neq"
+                    }
+                },
+                {
+                    "type": "CustomEventCriteria",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_event",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": {
+                            "value": "performed"
+                        },
+                        "occurrenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "CustomEventCriteria",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": {
+                            "value": "performed"
+                        },
+                        "occurrenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-06-14T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "list_membership", "filters": [], "criteria": {"id": "39294", "operation": "eq", "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "list_membership", "filters": [], "criteria": {"id": "39374", "operation": "neq", "resourceMatchType": "specificResource"}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshsales_import_csv", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshmarketer_journey_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshmarketer_campaign_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshmarketer_segment_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "freshmarketer_offline_event_created", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_events", "operation": "performed", "dateCondition": {"value": "2021-06-14T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 39374,\n                        "resourceMatchType": "specificResource",\n                        "operation": "eq"\n                    }\n                },\n                {\n                    "type": "list_membership",\n                    "condition": "AND",\n                    "criteria": {\n                        "id": 38718,\n                        "resourceMatchType": "specificResource",\n                        "operation": "neq"\n                    }\n                },\n                {\n                    "type": "CustomEventCriteria",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_event",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": {\n                            "value": "performed"\n                        },\n                        "occurrenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "CustomEventCriteria",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": {\n                            "value": "performed"\n                        },\n                        "occurrenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-06-14T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0ya
+98g0795ns2afdc5c8x3/test-cases

@@ -1,0 +1,314 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The sentence can be attributed to the 1st node in the retrieval context that mentions 'allocadia_tactic_id', 'contains', and the value '4580490'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "This is related to the 3rd node in the retrieval context that includes 'allocadia_asset_id', 'contains', and '4477020'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "This corresponds to the 1st node in the retrieval context that specifies 'eventName': 'allocadia_events', 'operation': 'performed', and the 'dateCondition' with any 'value'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context specifies 'operator': 'after' for 'dateCondition', not 'anytime' as in the expected output."
+    }
+]
+
+
+Score: 0.75
+Reason: The score is 0.75 because sentences in the expected output are mostly attributed to the corresponding nodes in retrieval context, such as the 1st node with 'allocadia_tactic_id' and '4580490', the 3rd node with 'allocadia_asset_id' and '4477020', and the 1st node's event specification. However, the 'dateCondition' operator 'after' in the retrieval context differs from 'anytime' as stated in the expected output.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "type: custom_event",
+    "condition: AND",
+    "eventName: allocadia_events",
+    "operator: after",
+    "timezone: -330",
+    "value: 2021-05-12T18:30:00.000Z",
+    "relativeDateCount: 0",
+    "operation: performed",
+    "name: FIRST_OCCURRENCE",
+    "type: date",
+    "operator: after",
+    "value: 2021-05-12T18:30:00.000Z",
+    "operator: anytime",
+    "timezone: -330",
+    "value: 2024-06-18T13:09:00.108Z",
+    "relativeDateCount: 0",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: 8f729dbf-c5f7-4c66-959e-f7c30b2956f2",
+    "fieldName: cf_allocadia_tactic_id",
+    "columnName: cf_decimal03",
+    "fieldType: decimal",
+    "comparator: contains",
+    "value: 4580490",
+    "secondValue: ",
+    "repeatAnnually: false",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: not_provided",
+    "fieldName: not_provided",
+    "columnName: not_provided",
+    "fieldType: not_provided",
+    "comparator: contains",
+    "value: 4477020",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'timezone: -330' statement is irrelevant as the input does not specify a requirement for a particular timezone."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'relativeDateCount: 0' statement is irrelevant as the input does not specify a need for relative date calculations."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'name: FIRST_OCCURRENCE' statement is irrelevant as the input does not mention a requirement to only get the first occurrence of an event."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'operator: anytime' statement could be considered irrelevant as the input specifies 'after' a specific date, not 'anytime'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'timezone: -330' statement is irrelevant as the input does not specify a requirement for a particular timezone."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'value: 2024-06-18T13:09:00.108Z' statement is irrelevant as the input does not specify this date, and it also does not align with the request to search any time after a specified date in 2021."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'relativeDateCount: 0' statement is irrelevant as the input does not specify a need for relative date calculations."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'secondValue: ' statement is irrelevant as the input does not specify a need for a second value in the 'allocadia_tactic_id' field."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually: false' statement is irrelevant as the input does not specify a requirement for annual repetition."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'fieldId: not_provided', 'fieldName: not_provided', 'columnName: not_provided', 'fieldType: not_provided' statements are irrelevant as they do not provide any actionable information or match the input requirements."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually: false' statement is irrelevant as the input does not specify a requirement for annual repetition."
+    }
+]
+
+
+Score: 0.6764705882352942
+Reason: The score is 0.68 because some parts of the output contain relevant information about the 'allocadia_events' and specified fields, but there are multiple irrelevant details that do not pertain to the time frame and specific field values requested in the input.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.75, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.75 because sentences in the expected output are mostly attributed to the corresponding nodes in retrieval context, such as the 1st node with 'allocadia_tactic_id' and '4580490', the 3rd node with 'allocadia_asset_id' and '4477020', and the 1st node's event specification. However, the 'dateCondition' operator 'after' in the retrieval context differs from 'anytime' as stated in the expected output., error: None)
+  - ✅ Answer Relevancy (score: 0.6764705882352942, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.68 because some parts of the output contain relevant information about the 'allocadia_events' and specified fields, but there are multiple irrelevant details that do not pertain to the time frame and specific field values requested in the input., error: None)
+
+For test case:
+
+  - input: Get me contacts who performed the 'allocadia_events' event anytime after 2021-05-12T18:30:00.000Z, where the event contains '4580490' in the 'allocadia_tactic_id' field and '4477020' in the 'allocadia_asset_id' field
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "allocadia_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-05-12T18:30:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurrenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "after",
+                            "value": "2021-05-12T18:30:00.000Z",
+                            "dateCondition": {
+                                "operator": "anytime",
+                                "timezone": -330,
+                                "value": "2024-06-18T13:09:00.108Z",
+                                "relativeDateCount": 0
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "8f729dbf-c5f7-4c66-959e-f7c30b2956f2",
+                        "fieldName": "cf_allocadia_tactic_id",
+                        "columnName": "cf_decimal03",
+                        "fieldType": "decimal",
+                        "comparator": "contains",
+                        "value": "4580490",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "not_provided",
+                        "fieldName": "not_provided",
+                        "columnName": "not_provided",
+                        "fieldType": "not_provided",
+                        "comparator": "contains",
+                        "value": "4477020",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "4580490", "fieldId": "allocadia_tactic_id", "fieldName": "allocadia_tactic_id", "fieldType": "string", "columnName": "ef_string_07", "comparator": "contains"}, {"value": "4477020", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "contains"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-05-12T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "allocadia_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-05-12T18:30:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurrenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "after",\n                            "value": "2021-05-12T18:30:00.000Z",\n                            "dateCondition": {\n                                "operator": "anytime",\n                                "timezone": -330,\n                                "value": "2024-06-18T13:09:00.108Z",\n                                "relativeDateCount": 0\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "8f729dbf-c5f7-4c66-959e-f7c30b2956f2",\n                        "fieldName": "cf_allocadia_tactic_id",\n                        "columnName": "cf_decimal03",\n                        "fieldType": "decimal",\n                        "comparator": "contains",\n                        "value": "4580490",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "not_provided",\n                        "fieldName": "not_provided",\n                        "columnName": "not_provided",\n                        "fieldType": "not_provided",\n                        "comparator": "contains",\n                        "value": "4477020",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0y7
+wqz0793ns2aca0xqivy/test-cases

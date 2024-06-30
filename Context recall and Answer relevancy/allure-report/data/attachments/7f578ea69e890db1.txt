@@ -1,0 +1,297 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_tactic_id' or 'ef_string_07'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_asset_id' valued '4277486' or 'ef_string_06'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_asset_id' valued '3881953' or 'ef_string_06'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_asset_id' valued '4084321' or 'ef_string_06'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_asset_id' valued '3866841' or 'ef_string_06'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_asset_id' valued '3708275' or 'ef_string_06'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The retrieval context does not contain a match with 'allocadia_asset_id' valued '3702344' or 'ef_string_06'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node in the retrieval context matches 'country' field with 'United States' and 'Canada' values. Quote: '\"fieldName\": \"cf_ls_du_company_country\", ... \"value\": \"United States,Canada\"'"
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 2nd node in the retrieval context matches 'country' field with 'United States' and 'Canada' values. Quote: '\"fieldName\": \"cf_ls_du_company_country\", ... \"value\": \"United States,Canada\"'"
+    }
+]
+
+
+Score: 0.2222222222222222
+Reason: The score is 0.22 because the 2nd node in the retrieval context only matches the 'country' field with 'United States' and 'Canada', while there is no match for 'allocadia_tactic_id' or 'allocadia_asset_id' in any nodes in the retrieval context, which are present in multiple sentences of the expected output.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "condition: AND within matchGroups",
+    "type: custom_event",
+    "condition: AND within matches",
+    "eventName: allocadia_events",
+    "dateCondition operator: after",
+    "timezone: -330 for dateCondition",
+    "value: 2021-03-04T00:00:00.000Z for dateCondition",
+    "relativeDateCount: 0 for dateCondition",
+    "operation: performed",
+    "occurenceCondition name: FIRST_OCCURRENCE",
+    "occurenceCondition type: date",
+    "occurenceCondition operator: before",
+    "occurenceCondition value: 2024-06-18T13:09:00.108Z",
+    "dateCondition operator: anytime for occurenceCondition",
+    "resourceMatchType: specificResource",
+    "id: 4277486",
+    "type: contact_field",
+    "condition: AND within matches of second matchGroup",
+    "fieldId: 40938122-d041-47db-bafd-9f26d849fe49",
+    "fieldName: cf_ls_du_company_country",
+    "columnName: cf_bigint103",
+    "fieldType: Select option",
+    "comparator: in",
+    "value: United States,Canada"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'timezone: -330 for dateCondition' statement made in the actual output is irrelevant to the input, which does not specify any timezone requirements for the contacts' events data."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'relativeDateCount: 0 for dateCondition' statement made in the actual output is irrelevant to the input, which does not specify any relative date conditions for the contacts' events data."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition name: FIRST_OCCURRENCE' statement made in the actual output is irrelevant to the input, which does not request the first occurrence specifically."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition operator: before' statement made in the actual output is irrelevant to the input, which does not specify any conditions requiring actions before a certain date."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition value: 2024-06-18T13:09:00.108Z' statement made in the actual output is irrelevant to the input, which does not specify any end date for the contacts' events data."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'dateCondition operator: anytime for occurenceCondition' statement made in the actual output is irrelevant to the input, which specifies a date condition after 2021-03-04, not anytime."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.76
+Reason: The score is 0.76 because the output contains several irrelevant time-based conditions and operators not requested in the input, which reduce the relevance of the provided information to the specific query regarding custom event criteria, date range, and country filters.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.2222222222222222, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.22 because the 2nd node in the retrieval context only matches the 'country' field with 'United States' and 'Canada', while there is no match for 'allocadia_tactic_id' or 'allocadia_asset_id' in any nodes in the retrieval context, which are present in multiple sentences of the expected output., error: None)
+  - ✅ Answer Relevancy (score: 0.76, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.76 because the output contains several irrelevant time-based conditions and operators not requested in the input, which reduce the relevance of the provided information to the specific query regarding custom event criteria, date range, and country filters., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed a custom event named 'allocadia_events' with tactic ID '4331773' anytime after 2021-03-04, and have also performed a custom event named 'allocadia_events' with one of the following asset IDs: '4277486', '3881953', '4084321', '3866841', '3708275', '3702344' anytime after 2021-03-04. Additionally, the contacts should be from either 'United States' or 'Canada'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "allocadia_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-03-04T00:00:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "before",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime"
+                            }
+                        }
+                    }
+                },
+                {
+                    "type": "custom_event",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "allocadia_events",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-03-04T00:00:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "before",
+                            "value": "2024-06-18T13:09:00.108Z",
+                            "dateCondition": {
+                                "operator": "anytime"
+                            }
+                        },
+                        "resourceMatchType": "specificResource",
+                        "id": "4277486"
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "40938122-d041-47db-bafd-9f26d849fe49",
+                        "fieldName": "cf_ls_du_company_country",
+                        "columnName": "cf_bigint103",
+                        "fieldType": "Select option",
+                        "comparator": "in",
+                        "value": "United States,Canada"
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "4331773", "fieldId": "allocadia_tactic_id", "fieldName": "allocadia_tactic_id", "fieldType": "string", "columnName": "ef_string_07", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}, {"matches": [{"type": "custom_event", "filters": [{"value": "4277486", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "3881953", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "4084321", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "3866841", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "3708275", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}, {"type": "custom_event", "filters": [{"value": "3702344", "fieldId": "allocadia_asset_id", "fieldName": "allocadia_asset_id", "fieldType": "string", "columnName": "ef_string_06", "comparator": "eq"}], "criteria": {"eventName": "allocadia_events", "operation": "performed", "dateCondition": {"value": "2021-03-04T18:30:00.000Z", "operator": "anytime", "timezone": -330}}, "condition": "AND"}], "condition": "OR"}, {"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "United States", "fieldId": "72cf7662-d9bf-4cbf-8dac-aefa182ef7e2", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "Canada", "fieldId": "72cf7662-d9bf-4cbf-8dac-aefa182ef7e2", "fieldName": "country", "fieldType": "text", "columnName": "country", "comparator": "eq"}, "condition": "AND"}], "condition": "OR"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "allocadia_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-03-04T00:00:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "before",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime"\n                            }\n                        }\n                    }\n                },\n                {\n                    "type": "custom_event",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "allocadia_events",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-03-04T00:00:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "before",\n                            "value": "2024-06-18T13:09:00.108Z",\n                            "dateCondition": {\n                                "operator": "anytime"\n                            }\n                        },\n                        "resourceMatchType": "specificResource",\n                        "id": "4277486"\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "40938122-d041-47db-bafd-9f26d849fe49",\n                        "fieldName": "cf_ls_du_company_country",\n                        "columnName": "cf_bigint103",\n                        "fieldType": "Select option",\n                        "comparator": "in",\n                        "value": "United States,Canada"\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xi
+fxk076oup7nzqmbfwxd/test-cases

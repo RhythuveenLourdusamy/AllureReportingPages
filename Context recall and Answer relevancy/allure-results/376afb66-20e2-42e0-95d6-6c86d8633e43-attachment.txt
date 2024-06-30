@@ -1,0 +1,149 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "Sentence matches with the 1st node in the retrieval context citing 'type': 'contact_field', 'fieldId': '9e1bd83e-c2c5-4277-98aa-04d605e59721', 'fieldName': 'cf_cf_fservicecustomerstatus', 'fieldType': 'dropdown', 'columnName': 'cf_dropdown_102', 'comparator': 'eq', 'value': '127000008897'..."
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the expected output perfectly aligns with the 1st node in the retrieval context, showcasing an accurate and complete reflection of the relevant details.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "AND",
+    "condition: AND",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: 9e1bd83e-c2c5-4277-98aa-04d605e59721",
+    "fieldName: cf_cf_fservicecustomerstatus",
+    "columnName: cf_bigint102",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 127000008897",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'repeatAnnually: false' statement is irrelevant to the input, which requests contacts by a specific custom field value."
+    }
+]
+
+
+Score: 0.9166666666666666
+Reason: The score is 0.92 because the output included an unnecessary detail about 'repeatAnnually: false' which was not pertinent to the input request for contacts with a specific custom field value.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 1.0, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the expected output perfectly aligns with the 1st node in the retrieval context, showcasing an accurate and complete reflection of the relevant details., error: None)
+  - ✅ Answer Relevancy (score: 0.9166666666666666, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.92 because the output included an unnecessary detail about 'repeatAnnually: false' which was not pertinent to the input request for contacts with a specific custom field value., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fservicecustomerstatus' is '127000008897'.
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",
+                        "fieldName": "cf_cf_fservicecustomerstatus",
+                        "columnName": "cf_bigint102",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "127000008897",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008897", "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721", "fieldName": "cf_cf_fservicecustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_102", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "9e1bd83e-c2c5-4277-98aa-04d605e59721",\n                        "fieldName": "cf_cf_fservicecustomerstatus",\n                        "columnName": "cf_bigint102",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "127000008897",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wq
+7e3075iup7n3o808oen/test-cases

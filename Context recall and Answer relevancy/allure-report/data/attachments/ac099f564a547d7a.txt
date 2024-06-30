@@ -1,0 +1,173 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The fieldId in the expected output ('d0cc75e9-9224-429e-8bcd-2cdc0d80ed10') does not match the fieldId in the retrieval context ('f0d551a1-3ddc-4bc8-818e-0041683f1c14')."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The value '19001533629' is present in the retrieval context's 1st node criteria: 'value': '19001533629'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The fieldName 'cf_cf_fdeskhelpwidgetcodetab' matches the fieldName in the retrieval context's 1st node criteria: 'fieldName': 'cf_cf_fdeskhelpwidgetcodetab'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The fieldType 'dropdown' matches the fieldType in the retrieval context's 1st node criteria: 'fieldType': 'dropdown'."
+    },
+    {
+        "verdict": "no",
+        "reason": "The columnName 'cf_dropdown_225' does not match the columnName in the retrieval context ('cf_bigint91')."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The comparator 'eq' matches the comparator in the retrieval context's 1st node criteria: 'comparator': 'eq'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The condition 'AND' matches the condition in both the expected output and the retrieval context's 1st node."
+    }
+]
+
+
+Score: 0.7142857142857143
+Reason: The score is 0.71 because the expected output closely aligns with the retrieval context's 1st node, with the 'value', 'fieldName', 'fieldType', 'comparator', and top-level 'condition' matching exactly. However, discrepancies in the 'fieldId' and 'columnName' prevent a perfect score.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups condition: AND",
+    "type: contact_field",
+    "condition: AND",
+    "fieldId: f0d551a1-3ddc-4bc8-818e-0041683f1c14",
+    "fieldName: cf_cf_fdeskhelpwidgetcodetab",
+    "columnName: cf_bigint91",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 19001533629",
+    "secondValue: ",
+    "repeatAnnually: false"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    }
+]
+
+
+Score: 1.0
+Reason: The score is 1.00 because the output is completely relevant to the input with no irrelevant statements.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.7142857142857143, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.71 because the expected output closely aligns with the retrieval context's 1st node, with the 'value', 'fieldName', 'fieldType', 'comparator', and top-level 'condition' matching exactly. However, discrepancies in the 'fieldId' and 'columnName' prevent a perfect score., error: None)
+  - ✅ Answer Relevancy (score: 1.0, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 1.00 because the output is completely relevant to the input with no irrelevant statements., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fdeskhelpwidgetcodetab' is '19001533629'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "f0d551a1-3ddc-4bc8-818e-0041683f1c14",
+                        "fieldName": "cf_cf_fdeskhelpwidgetcodetab",
+                        "columnName": "cf_bigint91",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "19001533629",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "19001533629", "fieldId": "d0cc75e9-9224-429e-8bcd-2cdc0d80ed10", "fieldName": "cf_cf_fdeskhelpwidgetcodetab", "fieldType": "dropdown", "columnName": "cf_dropdown_225", "comparator": "eq"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "f0d551a1-3ddc-4bc8-818e-0041683f1c14",\n                        "fieldName": "cf_cf_fdeskhelpwidgetcodetab",\n                        "columnName": "cf_bigint91",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "19001533629",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0wy
+nr40762up7n1j2cz7tw/test-cases

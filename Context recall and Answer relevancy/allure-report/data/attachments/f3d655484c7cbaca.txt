@@ -1,0 +1,203 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "The 'condition' matches the 1st node in the retrieval context with 'AND' stated."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'matchGroups' with 'condition' 'AND' is present in the 1st node in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'type' 'custom_event' matches the 'type' 'CUSTOM_EVENT' in the 1st node in the retrieval context, considering case insensitivity."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'filters' with 'value' 'freshsales_imap_configured' can be inferred from 'eventName' 'fsales_trial_event' in the 1st node of the retrieval context as both are event-specific strings."
+    },
+    {
+        "verdict": "no",
+        "reason": "There is no 'filters' array or 'fieldId', 'fieldName', 'fieldType', 'columnName', 'comparator' in the provided retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'criteria' with 'eventName' 'fsales_trial_event' and 'operation' 'performed' is specifically found in the 1st node in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'dateCondition' object matches the 'dateCondition' in the 1st node in the retrieval context, albeit with a different 'value'."
+    },
+    {
+        "verdict": "yes",
+        "reason": "The 'condition' 'AND' within 'matches' matches the 'condition' inside the 'matchGroups' in the 1st node in the retrieval context."
+    }
+]
+
+
+Score: 0.875
+Reason: The score is 0.88 because most elements in the expected output, such as 'condition', 'type', 'criteria', and 'dateCondition', are represented in the 1st node in the retrieval context, but some specific 'filters' details are absent.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups contains at least one group",
+    "Each group has a condition: AND",
+    "Groups contain matches",
+    "type: CUSTOM_EVENT",
+    "condition within matches: AND",
+    "eventName: fsales_trial_event",
+    "dateCondition operator: after",
+    "timezone: -330",
+    "value for dateCondition: 2021-03-30T00:00:00.000Z",
+    "relativeDateCount: 0",
+    "operation: performed",
+    "occurenceCondition name: FIRST_OCCURRENCE",
+    "occurenceCondition type: date",
+    "occurenceCondition operator: anytime",
+    "occurenceCondition value is blank"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "no",
+        "reason": "The 'condition: AND' statement does not directly address the input concerning the specifics of the event name or the date criteria."
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'relativeDateCount: 0' statement is irrelevant as it does not provide any information about the event name or the date condition relevant to the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "idk",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition type: date' statement does not provide information about the event name containing 'freshsales_imap_configured' or the specific date after which the event should have occurred."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition operator: anytime' statement does not address the criteria specified in the input regarding the event name or the date after which the event should have occurred."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'occurenceCondition value is blank' statement is irrelevant as it does not give information about the event name or the date condition as requested in the input."
+    }
+]
+
+
+Score: 0.6875
+Reason: The score is 0.69 because the output includes multiple statements that do not pertain to the specific custom event 'fsales_trial_event' and the exact date condition after 2021-03-30, which are critical to the input request.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ✅ Contextual Recall (score: 0.875, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.88 because most elements in the expected output, such as 'condition', 'type', 'criteria', and 'dateCondition', are represented in the 1st node in the retrieval context, but some specific 'filters' details are absent., error: None)
+  - ✅ Answer Relevancy (score: 0.6875, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.69 because the output includes multiple statements that do not pertain to the specific custom event 'fsales_trial_event' and the exact date condition after 2021-03-30, which are critical to the input request., error: None)
+
+For test case:
+
+  - input: Get me contacts who have performed a custom event named 'fsales_trial_event' after 2021-03-30 with the event name containing 'freshsales_imap_configured'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "CUSTOM_EVENT",
+                    "condition": "AND",
+                    "criteria": {
+                        "eventName": "fsales_trial_event",
+                        "dateCondition": {
+                            "operator": "after",
+                            "timezone": -330,
+                            "value": "2021-03-30T00:00:00.000Z",
+                            "relativeDateCount": 0
+                        },
+                        "operation": "performed",
+                        "occurenceCondition": {
+                            "name": "FIRST_OCCURRENCE",
+                            "type": "date",
+                            "operator": "anytime",
+                            "value": ""
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "custom_event", "filters": [{"value": "freshsales_imap_configured", "fieldId": "name", "fieldName": "name", "fieldType": "string", "columnName": "ef_string_01", "comparator": "contains"}], "criteria": {"eventName": "fsales_trial_event", "operation": "performed", "dateCondition": {"value": "2021-03-30T18:30:00.000Z", "operator": "after", "timezone": -330}}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "CUSTOM_EVENT",\n                    "condition": "AND",\n                    "criteria": {\n                        "eventName": "fsales_trial_event",\n                        "dateCondition": {\n                            "operator": "after",\n                            "timezone": -330,\n                            "value": "2021-03-30T00:00:00.000Z",\n                            "relativeDateCount": 0\n                        },\n                        "operation": "performed",\n                        "occurenceCondition": {\n                            "name": "FIRST_OCCURRENCE",\n                            "type": "date",\n                            "operator": "anytime",\n                            "value": ""\n                        }\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 100.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0xm
+tnl076sup7nwfmtrxn5/test-cases

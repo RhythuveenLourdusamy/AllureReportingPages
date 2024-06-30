@@ -1,0 +1,345 @@
+Evaluating test cases...
+**************************************************
+Contextual Recall Verbose Logs
+**************************************************
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": "Sentence can be attributed to the 1st node in the retrieval context which mentions 'cf_cf_fteamcustomerstatus', 'cf_bigint109', 'dropdown', 'eq', '127000008969'..."
+    },
+    {
+        "verdict": "no",
+        "reason": "The 'email' field and 'does_not_contain' comparator for 'freshworks' are not present in the retrieval context."
+    },
+    {
+        "verdict": "yes",
+        "reason": "Sentence can be attributed to the 2nd node in the retrieval context which mentions 'cf_cf_fteamsignupdate', 'cf_datetime15', 'date_time', 'after', '2019-07-30T18:30:00.000Z'..."
+    }
+]
+
+
+Score: 0.6666666666666666
+Reason: The score is 0.67 because sentence 1 and sentence 3 correctly align with nodes 1 and 2 in retrieval context, respectively, demonstrating accurate recall of field names, types, and values. However, sentence 2's information about the 'email' field and its comparator is missing from the retrieval context.
+
+======================================================================
+**************************************************
+Answer Relevancy Verbose Logs
+**************************************************
+
+Statements:
+[
+    "condition: AND",
+    "matchGroups: [Array of match groups]",
+    "condition: AND within matchGroups array index 0",
+    "matches: [Array of matches within match group index 0]",
+    "type: contact_field within matches array index 0 of match group index 0",
+    "condition: AND within matches array index 0 of match group index 0",
+    "criteria: {Object with criteria fields} within matches array index 0 of match group index 0",
+    "fieldId: 4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+    "fieldName: cf_cf_fteamcustomerstatus",
+    "columnName: cf_bigint109",
+    "fieldType: dropdown",
+    "comparator: eq",
+    "value: 127000008969",
+    "secondValue: ",
+    "repeatAnnually: false within matches array index 0 of match group index 0",
+    "type: contact_field within matches array index 1 of match group index 0",
+    "condition: AND within matches array index 1 of match group index 0",
+    "criteria: {Object with criteria fields} within matches array index 1 of match group index 0",
+    "fieldId: 456bf883-0b5c-4b22-bc5a-cf038490433b",
+    "fieldName: cf_cf_fteamsignupdate",
+    "columnName: cf_datetime15",
+    "fieldType: date_time",
+    "comparator: after",
+    "value: 2019-07-30T18:30:00.000Z",
+    "secondValue: ",
+    "repeatAnnually: false within matches array index 1 of match group index 0",
+    "condition: OR within matchGroups array index 1",
+    "matches: [Array of matches within match group index 1]",
+    "type: contact_field within matches array index 0 of match group index 1",
+    "condition: AND within matches array index 0 of match group index 1",
+    "criteria: {Object with criteria fields} within matches array index 0 of match group index 1",
+    "fieldId: a9af4012-3b4b-4964-825c-d34b5cf8b274",
+    "fieldName: cf_contact_assignment_status",
+    "columnName: cf_str41",
+    "fieldType: text",
+    "comparator: does_not_contain",
+    "value: freshworks",
+    "secondValue: ",
+    "repeatAnnually: false within matches array index 0 of match group index 1"
+]
+
+
+Verdicts:
+[
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The fieldId is an implementation detail that is irrelevant to the criteria specified in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The columnName is an implementation detail that is irrelevant to the criteria specified in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The fieldId is an implementation detail that is irrelevant to the criteria specified in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The condition 'OR' is not mentioned in the input, and it's unclear how this condition is relevant without additional context."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "no",
+        "reason": "The fieldId is an implementation detail that is irrelevant to the criteria specified in the input."
+    },
+    {
+        "verdict": "no",
+        "reason": "The fieldName 'cf_contact_assignment_status' is not specified in the input and is therefore irrelevant to the criteria."
+    },
+    {
+        "verdict": "no",
+        "reason": "The columnName is an implementation detail that is irrelevant to the criteria specified in the input."
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    },
+    {
+        "verdict": "yes",
+        "reason": null
+    }
+]
+
+
+Score: 0.8409090909090909
+Reason: The score is 0.84 because the output contains several implementation details like 'fieldId' and 'columnName' that were not requested in the input, and it includes an 'OR' condition and an unspecified fieldName which are not relevant to the specified criteria.
+
+======================================================================
+✨ You're running DeepEval's latest Contextual Recall Metric! (using azure open…
+✨ You're running DeepEval's latest Answer Relevancy Metric! (using azure opena…
+
+======================================================================
+
+Metrics Summary
+
+  - ❌ Contextual Recall (score: 0.6666666666666666, threshold: 0.8, strict: False, evaluation model: azure openai, reason: The score is 0.67 because sentence 1 and sentence 3 correctly align with nodes 1 and 2 in retrieval context, respectively, demonstrating accurate recall of field names, types, and values. However, sentence 2's information about the 'email' field and its comparator is missing from the retrieval context., error: None)
+  - ✅ Answer Relevancy (score: 0.8409090909090909, threshold: 0.6, strict: False, evaluation model: azure openai, reason: The score is 0.84 because the output contains several implementation details like 'fieldId' and 'columnName' that were not requested in the input, and it includes an 'OR' condition and an unspecified fieldName which are not relevant to the specified criteria., error: None)
+
+For test case:
+
+  - input: Get me contacts whose custom field 'cf_cf_fteamcustomerstatus' is '127000008969', their email does not contain 'freshworks', and their custom field 'cf_cf_fteamsignupdate' is after '2019-07-30T18:30:00.000Z'
+  - actual output: {
+    "condition": "AND",
+    "matchGroups": [
+        {
+            "condition": "AND",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",
+                        "fieldName": "cf_cf_fteamcustomerstatus",
+                        "columnName": "cf_bigint109",
+                        "fieldType": "dropdown",
+                        "comparator": "eq",
+                        "value": "127000008969",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                },
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "456bf883-0b5c-4b22-bc5a-cf038490433b",
+                        "fieldName": "cf_cf_fteamsignupdate",
+                        "columnName": "cf_datetime15",
+                        "fieldType": "date_time",
+                        "comparator": "after",
+                        "value": "2019-07-30T18:30:00.000Z",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        },
+        {
+            "condition": "OR",
+            "matches": [
+                {
+                    "type": "contact_field",
+                    "condition": "AND",
+                    "criteria": {
+                        "fieldId": "a9af4012-3b4b-4964-825c-d34b5cf8b274",
+                        "fieldName": "cf_contact_assignment_status",
+                        "columnName": "cf_str41",
+                        "fieldType": "text",
+                        "comparator": "does_not_contain",
+                        "value": "freshworks",
+                        "secondValue": "",
+                        "repeatAnnually": false
+                    }
+                }
+            ]
+        }
+    ]
+}
+  - expected output: {"condition": "AND", "matchGroups": [{"matches": [{"type": "contact_field", "filters": [], "criteria": {"value": "127000008969", "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e", "fieldName": "cf_cf_fteamcustomerstatus", "fieldType": "dropdown", "columnName": "cf_dropdown_109", "comparator": "eq"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "freshworks", "fieldId": "3eb39ea9-618d-4c0a-a6e2-a5c27020fddc", "fieldName": "email", "fieldType": "text", "columnName": "email", "comparator": "does_not_contain"}, "condition": "AND"}, {"type": "contact_field", "filters": [], "criteria": {"value": "2019-07-30T18:30:00.000Z", "fieldId": "456bf883-0b5c-4b22-bc5a-cf038490433b", "fieldName": "cf_cf_fteamsignupdate", "fieldType": "date_time", "columnName": "cf_datetime_15", "comparator": "after"}, "condition": "AND"}], "condition": "AND"}]}
+  - context: None
+  - retrieval context: ['{\n    "condition": "AND",\n    "matchGroups": [\n        {\n            "condition": "AND",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "4a44c7d9-4af9-4f41-95b7-aef64a9d884e",\n                        "fieldName": "cf_cf_fteamcustomerstatus",\n                        "columnName": "cf_bigint109",\n                        "fieldType": "dropdown",\n                        "comparator": "eq",\n                        "value": "127000008969",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                },\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "456bf883-0b5c-4b22-bc5a-cf038490433b",\n                        "fieldName": "cf_cf_fteamsignupdate",\n                        "columnName": "cf_datetime15",\n                        "fieldType": "date_time",\n                        "comparator": "after",\n                        "value": "2019-07-30T18:30:00.000Z",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        },\n        {\n            "condition": "OR",\n            "matches": [\n                {\n                    "type": "contact_field",\n                    "condition": "AND",\n                    "criteria": {\n                        "fieldId": "a9af4012-3b4b-4964-825c-d34b5cf8b274",\n                        "fieldName": "cf_contact_assignment_status",\n                        "columnName": "cf_str41",\n                        "fieldType": "text",\n                        "comparator": "does_not_contain",\n                        "value": "freshworks",\n                        "secondValue": "",\n                        "repeatAnnually": false\n                    }\n                }\n            ]\n        }\n    ]\n}']
+
+======================================================================
+
+Overall Metric Pass Rates
+
+Contextual Recall: 0.00% pass rate
+Answer Relevancy: 100.00% pass rate
+
+======================================================================
+
+✅ Tests finished! View results on 
+https://app.confident-ai.com/project/clwzxg76s000clc0ch0w2kpcw/unit-tests/cly0ws
+ojl075oup7ns0gmjsxd/test-cases
